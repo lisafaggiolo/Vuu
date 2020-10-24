@@ -35,7 +35,7 @@ module Api
     private 
     
     def city_params
-      params.permit(:name, :city, :population, :local_temp)
+      params.permit(:name, :province, :population, :local_temperature)
     end
     
     def city_search
