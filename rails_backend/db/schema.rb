@@ -19,14 +19,33 @@ ActiveRecord::Schema.define(version: 2020_10_24_183619) do
     t.string "name"
     t.string "province"
     t.string "population"
-    t.string "local_temperature"
+    t.integer "local_temperature"
+    t.string "time_zone"
+    t.integer "crime_index"
+    t.integer "air_pollution_index"
+    t.string "main_mode_of_transport"
+    t.string "average_cost_of_living"
+    t.integer "quality of life index"
+    t.string "health_system_quality"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+   
+  create_table "city_demographics", force: :cascade do |t|
+    t.string "mobility_status"
+    t.string "distribution_of_population_by_age_groups"
+    t.string "local_knowledge_of_official_languages"
+    t.string "visible_minority_makeup"
+    t. "shelter_cost_to_income_ratio"
   end
 
   create_table "provinces", force: :cascade do |t|
     t.string "name"
     t.text "description"
+    t.text "avg_rent_per_month"
+    t.integer "total_COVID_hospitalizations"
+    t.integer "current_active_cases"
+    t.string "current_phase_of_COVID"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
