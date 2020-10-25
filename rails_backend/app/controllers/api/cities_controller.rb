@@ -2,7 +2,7 @@ module Api
   class CitiesController < ApplicationController
   
     def index
-      @cities = City.order('created_at DESC');
+      @cities = City.order(created_at: :desc);
       render json: { status: 'SUCCESS', message: 'Loaded cities', data:cities }, status: :ok
     end
     
@@ -30,15 +30,14 @@ module Api
         render json: { status: 'ERROR', message: 'Could not update city', data:city.errors }, status: :unprocessable_entity 
       end
       
-   end
+    end
    
-    private 
-    
-    def city_params
-      params.permit(:name, :province, :population, :local_temperature)
+    def city_search
     end
     
-    def city_search
+    private 
+    def city_params
+      params.permit(:name, :province, :population, :local_temperature)
     end
     
   end

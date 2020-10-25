@@ -2,8 +2,8 @@ Rails.application.routes.draw do
   # root to: ''
   
   namespace :api do
-    resources :users, only: [:index]
-    resources :cities, only: [:index, :show]
+    resources :users, only: [:index, :create, :show]
+    resources :cities, only: [:index, :show, :create]
     resources :provinces, only: [:index, :show]    
   end
   #routes for later lol

@@ -1,7 +1,7 @@
 module Api
   class ProvincesController < ApplicationControlle
     def index
-      @provinces = Province.order('created_at DESC');
+      @provinces = Province.order(created_at: :desc)
       render json: { status: 'SUCCESS', message: 'Loaded provinces', data:provinces }, status: :ok
     end
     
@@ -32,8 +32,7 @@ module Api
       
    end
    
-    private 
-    
+    private  
     def province_params
       params.permit(:name, :description)
     end
