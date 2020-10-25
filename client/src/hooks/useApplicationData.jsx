@@ -4,7 +4,7 @@ import axios from "axios";
 const useApplicationData = () => {
     useEffect(() =>{
         //this is where the Axios calls to harness the data will be used
-    // reference from 
+    // quick reference from scheduler of hell 
         // Promise.all([
         //     axios.get("http://localhost:8001/api/days"),
         //     axios.get("http://localhost:8001/api/appointments"),

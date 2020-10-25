@@ -4,7 +4,7 @@ import React from 'react';
 
 const Form = () =>{
     return (
-     <h1>Hello I am Form</h1>
+     <h1>Hello I am Form View</h1>
     );
   }
   
