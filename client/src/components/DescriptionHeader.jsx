@@ -8,5 +8,4 @@ const DescriptionHeader = () =>{
      </h1>
     );
 }
-  export default DescriptionHeader
-;
+export default DescriptionHeader;
