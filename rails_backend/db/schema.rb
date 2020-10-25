@@ -36,7 +36,7 @@ ActiveRecord::Schema.define(version: 2020_10_24_183619) do
     t.string "distribution_of_population_by_age_groups"
     t.string "local_knowledge_of_official_languages"
     t.string "visible_minority_makeup"
-    t. "shelter_cost_to_income_ratio"
+    t.string "shelter_cost_to_income_ratio"
   end
 
   create_table "provinces", force: :cascade do |t|
