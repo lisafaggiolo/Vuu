@@ -8,7 +8,7 @@ const Province = (props) =>{
 
     const cities = {
        //function returning an interation over the cities for the province
-       //helper function getCitiesForProvince(state, state.province)
+       //helper function getCityForProvince(state, state.province)
     }
     return (
       <main>
