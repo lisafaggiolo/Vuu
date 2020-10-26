@@ -7,8 +7,7 @@ const Questionnaire = () =>{
     <div>
       <h1>Hello I am Questionnaire View</h1>
       <Form />
-    </div>
-      
+    </div>  
   );
 };
   

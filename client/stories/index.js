@@ -9,7 +9,7 @@ import Questionnaire from '../src/components/Questionnaire';
 
 import Button from '../src/components/Button';
 import Citylist from '../src/components/CityList';
-import CityListItems from '../src/components/CityListItems';
+import CityListItems from '../src/components/CityListItem';
 import Description from '../src/components/Description';
 import Footer from '../src/components/Footer';
 import Header from '../src/components/Header';
