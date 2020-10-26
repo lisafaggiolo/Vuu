@@ -9,36 +9,44 @@ import Questionnaire from '../src/components/Questionnaire';
 
 import Button from '../src/components/Button';
 import Citylist from '../src/components/CityList';
-import CityListItems from '../src/components/CityListItem';
+import CityListItem from '../src/components/CityListItem';
 import Description from '../src/components/Description';
 import Footer from '../src/components/Footer';
 import Header from '../src/components/Header';
-import Icons from '../src/components/Icons';
+import Icon from '../src/components/Icon';
 
 storiesOf("City", module)
   .addParameters({
     backgrounds: [{ name: "dark", value: "#222f3e", default: true }]
   }) 
-  .add()
+  .add("Montreal", () => (
+    <City />
+  ))
 
 storiesOf("Province", module)
   .addParameters({
     backgrounds: [{ name: "dark", value: "#222f3e", default: true }]
 
-  }) 
-  .add()
+  })
+  .add("Quebec", () => (
+    <Province />
+  ))
 
 storiesOf("Questionnaire", module)
   .addParameters({
     backgrounds: [{ name: "dark", value: "#222f3e", default: true }]
   }) 
-  .add()
+  .add("Question 0", () => (
+    <Questionnaire />
+  ))
 
 storiesOf("Button", module)
   .addParameters({
     backgrounds: [{ name: "dark", value: "#222f3e", default: true }]
   }) 
-  .add()
+  .add("Get Started in Canada", () => (
+    <Button />
+  ))
 
 storiesOf("CityList", module)
   .addParameters({
@@ -50,28 +58,39 @@ storiesOf("CityListItem", module)
   .addParameters({
     backgrounds: [{ name: "dark", value: "#222f3e", default: true }]
   }) 
-  .add()
+  .add("Montreal", () => (
+    <CityListItem />
+  ))
 
 storiesOf("Description", module)
   .addParameters({
     backgrounds: [{ name: "dark", value: "#222f3e", default: true }]
   }) 
-  .add()
+  .add("Quebec", () => (
+    <Description />
+  ))
 
 storiesOf("Footer", module)
   .addParameters({
     backgrounds: [{ name: "dark", value: "#222f3e", default: true }]
   }) 
-  .add()
+  .add("Footer", () => (
+    <Footer />
+  ))
 
 storiesOf("Header", module)
   .addParameters({
     backgrounds: [{ name: "dark", value: "#222f3e", default: true }]
   }) 
-  .add()
+  .add("Header", () => (
+    <Header />
+  ))
 
-storiesOf("Icons", module)
+storiesOf("Icon", module)
   .addParameters({
     backgrounds: [{ name: "dark", value: "#222f3e", default: true }]
   }) 
-  .add()
+  .add("Ocean View", () =>(<Icon />))
+  .add("Country Side", () =>(<Icon />))
+  .add("Mountain View", () =>(<Icon />))
+
