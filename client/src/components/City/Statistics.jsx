@@ -1,13 +1,13 @@
 import React from 'react';
 
-const Satistics = () =>{
+const Statistics = () =>{
   return (
     <div>
-      <h1>Hello I am Satistics View</h1>
+      <h1>Hello I am Statistics View</h1>
 
     </div>
       
   );
 };
   
-export default Satistics;
+export default Statistics;
