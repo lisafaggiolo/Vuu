@@ -3,3 +3,4 @@ class Province < ApplicationRecord
   validates :description, presence: true
   has_many :cities
 end
+
