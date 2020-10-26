@@ -26,7 +26,7 @@ storiesOf("City", module)
 storiesOf("Province", module)
   .addParameters({
     backgrounds: [{ name: "dark", value: "#222f3e", default: true }]
-
+  
   })
   .add("Quebec", () => (
     <Province />
@@ -52,13 +52,15 @@ storiesOf("CityList", module)
   .addParameters({
     backgrounds: [{ name: "dark", value: "#222f3e", default: true }]
   }) 
-  .add()
+  .add("Montreal", () => (<Citylist />))
+  .add("Quebec City", () => (<Citylist />))
+  .add("Perce", () => (<Citylist />))
 
 storiesOf("CityListItem", module)
   .addParameters({
     backgrounds: [{ name: "dark", value: "#222f3e", default: true }]
   }) 
-  .add("Montreal", () => (
+  .add("Clickable", () => (
     <CityListItem />
   ))
 
