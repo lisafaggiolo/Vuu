@@ -10,10 +10,54 @@ import Questionnaire from '../src/components/Questionnaire';
 import Button from '../src/components/Button';
 import Citylist from '../src/components/CityList';
 import CityListItem from '../src/components/CityListItem';
-import Description from '../src/components/Description';
+import DropDownMenu from '../src/components/DropDownMenu';
+import DropDownMenuItem from '../src/components/DropDownMenuItem'
 import Footer from '../src/components/Footer';
 import Header from '../src/components/Header';
 import Icon from '../src/components/Icon';
+import Form from "../src/components/Questionnaire/Form";
+
+const province = {
+  id: 1,
+  name: "Quebec", 
+  description: "Quebec is the second most populous Canadian province and known primarily for its French-speaking population, culture, and heritage. It is the country's largest province by land area. Most residents live along and near the St. Lawrence River, especially in and between Montreal and Quebec City, the two major cities."
+}
+
+const cities = [
+  {  
+    id: 1,
+    name: "Montreal",
+    province_id: 1,
+    description: "",
+    timeZone: "UTC−4"
+  }
+]
+
+const city = {
+  id: 1,
+  name: "Montreal",
+  province_id: 1,
+  description: "This is a city description",
+  timeZone: "UTC−4"
+}
+
+const questions = [
+  {
+    id: 1,
+    question: "Which Province would you like to visit?",
+    answer:"Province string" // or figure out a dropdown menue with the provinces as a choice!!
+  },
+  {
+    id: 2,
+    question: "Are you planning on changing your office location for a duration longer than 6 months?",
+    answer: false
+  },
+  {
+    id: 3,
+    question: "In which timeZone is your home office located?",
+    answer:""//drop down menu of canadian timeZones
+  }
+]
 
 storiesOf("City", module)
   .addParameters({
@@ -29,48 +73,60 @@ storiesOf("Province", module)
   
   })
   .add("Quebec", () => (
-    <Province />
+    <Province 
+      id={province.id}
+      name={province.name}
+      description={province.description}
+      />
+    
   ))
 
 storiesOf("Questionnaire", module)
   .addParameters({
     backgrounds: [{ name: "dark", value: "#222f3e", default: true }]
   }) 
-  .add("Question 0", () => (
+  .add("Questionnaire", () => (
     <Questionnaire />
   ))
+  .add("Questionnaire with question", () => (
+    <Form
+    questionId={questions[0].id} 
+    question={questions[0].question} 
+    answer={questions[0].answer}
+    onClick={action("onConfirm")}
+    onCancel={action("onCancel")}
+  />))
 
 storiesOf("Button", module)
   .addParameters({
     backgrounds: [{ name: "dark", value: "#222f3e", default: true }]
   }) 
-  .add("Get Started in Canada", () => (
-    <Button />
+  .add("base", () => (<Button>Base</Button>
   ))
+  .add("Confirm", () => (<Button confirm>Confirm</Button>
+  ))
+  .add("Danger", () => (<Button danger>Danger</Button>
+  ))
+  .add("Clickable", () => (<Button onClick={action('button-clicked')}>Clickable</Button>
+  ))
+  .add("Disabled", () => (<Button disabled onClick={action('button-clicked')}>Disabled</Button>
+  ))
+
 
 storiesOf("CityList", module)
   .addParameters({
     backgrounds: [{ name: "dark", value: "#222f3e", default: true }]
   }) 
-  .add("Montreal", () => (<Citylist />))
-  .add("Quebec City", () => (<Citylist />))
-  .add("Perce", () => (<Citylist />))
+  .add("Quebec", () => (<Citylist cities={cities} province={"Quebec"}/>))
 
 storiesOf("CityListItem", module)
   .addParameters({
     backgrounds: [{ name: "dark", value: "#222f3e", default: true }]
   }) 
-  .add("Clickable", () => (
-    <CityListItem />
+  .add("Montreal", () => (
+    <CityListItem id={city.id} name={city.name} description={city.description} />
   ))
 
-storiesOf("Description", module)
-  .addParameters({
-    backgrounds: [{ name: "dark", value: "#222f3e", default: true }]
-  }) 
-  .add("Quebec", () => (
-    <Description />
-  ))
 
 storiesOf("Footer", module)
   .addParameters({
@@ -86,6 +142,23 @@ storiesOf("Header", module)
   }) 
   .add("Header", () => (
     <Header />
+  ))
+
+
+/////////////////////////// Wish List <3 ////////////////////////////
+
+storiesOf("DropDownMenu", module)
+  .addParameters({
+    backgrounds: [{ name: "dark", value: "#222f3e", default: true }]
+  }) 
+  .add("Quebec", () => (<DropDownMenu questionId={questions[0]} Options/>))
+
+storiesOf("DropDownMenuItem", module)
+  .addParameters({
+    backgrounds: [{ name: "dark", value: "#222f3e", default: true }]
+  }) 
+  .add("Montreal", () => (
+    <DropDownMenuItem id={city.id} name={city.name} description={city.description} />
   ))
 
 storiesOf("Icon", module)
