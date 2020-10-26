@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from '../Header';
 import Footer from '../Footer';
+import CityList from '../CityList'
 
 
 const Province = (props) =>{
@@ -12,7 +13,8 @@ const Province = (props) =>{
     return (
       <main>
           <Header />
-          <h1>Hello I am Province View</h1>
+            <h1>Hello I am Province View</h1>
+            <CityList />
           <Footer />
       </main>
       

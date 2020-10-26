@@ -4,8 +4,11 @@ import React from 'react';
 
 const Form = () =>{
     return (
-     <h1>Hello I am Form</h1>
+      <div>
+        <h1>Hello I am Form component</h1>
+      </div>
+     
     );
-  }
+};
   
 export default Form;

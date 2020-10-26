@@ -1,13 +1,12 @@
 import React from 'react';
 import './App.css';
-import Header from './components/Header';
-import Button from './components/Button'
+import Province from './components/Province'
+import Header from './components/Header'
 
 const App = (props) =>{
   return (
     <main>
-      <Header />
-      <Button />
+      <h1>Better add all that view Shenanigans here</h1>
     </main>
   );
 }

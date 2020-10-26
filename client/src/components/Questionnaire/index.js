@@ -1,11 +1,15 @@
 import React from 'react';
+import Form from './Form';
 
 
-
-const Form = () =>{
-    return (
-     <h1>Hello I am Form View</h1>
-    );
-  }
+const Questionnaire = () =>{
+  return (
+    <div>
+      <h1>Hello I am Questionnaire View</h1>
+      <Form />
+    </div>
+      
+  );
+};
   
-export default Form;
+export default Questionnaire;

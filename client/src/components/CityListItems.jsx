@@ -2,10 +2,12 @@ import React from 'react';
 
 //component of city description with picture
 
-const City = () =>{
+const CityListItem = () =>{
     return (
-     <h1>Hello I am City</h1>
+      <div>
+        <h1>Hello I am CityListItem</h1>
+      </div>
     );
   }
   
-export default City;
+export default CityListItem;
