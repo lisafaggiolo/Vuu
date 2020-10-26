@@ -4,7 +4,7 @@ class CreateCities < ActiveRecord::Migration[6.0]
       t.string :name
       t.string :province
       t.string :population
-      t.string :local_temp
+      t.string :local_temperature
 
       t.timestamps
     end
