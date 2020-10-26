@@ -4,18 +4,20 @@ import { action } from "@storybook/addon-actions";
 import "index.scss";
 
 import City from '../src/components/City';
+
 import Province from '../src/components/Province';
+import Citylist from '../src/components/Province/CityList';
+import CityListItem from '../src/components/Province/CityListItem';
+
 import Questionnaire from '../src/components/Questionnaire';
+import Form from "../src/components/Questionnaire/Form";
+import DropDownMenu from '../src/components/Questionnaire/DropDownMenu';
+import DropDownMenuItem from '../src/components/Questionnaire/DropDownMenuItem'
 
 import Button from '../src/components/Button';
-import Citylist from '../src/components/CityList';
-import CityListItem from '../src/components/CityListItem';
-import DropDownMenu from '../src/components/DropDownMenu';
-import DropDownMenuItem from '../src/components/DropDownMenuItem'
 import Footer from '../src/components/Footer';
 import Header from '../src/components/Header';
 import Icon from '../src/components/Icon';
-import Form from "../src/components/Questionnaire/Form";
 
 const province = {
   id: 1,
@@ -63,9 +65,26 @@ storiesOf("City", module)
   .addParameters({
     backgrounds: [{ name: "dark", value: "#222f3e", default: true }]
   }) 
-  .add("Montreal", () => (
-    <City />
+  .add("City", () => (
+    <City cityId={city.id} name={city.name} description={city.description}/>
   ))
+
+storiesOf("Statistics", module)
+  .addParameters({
+    backgrounds: [{ name: "dark", value: "#222f3e", default: true }]
+  }) 
+  .add("Statistics", () => (
+    <Statistics cityId={city.id} /*statistics={statistics}*//>
+  ))
+
+storiesOf("StatisticsItem", module)
+  .addParameters({
+    backgrounds: [{ name: "dark", value: "#222f3e", default: true }]
+  }) 
+  .add("StatisticsItem", () => (
+    <StatisticsItem cityId={city.id} /*statistics={statistics}*//>
+  ))
+
 
 storiesOf("Province", module)
   .addParameters({
@@ -158,7 +177,7 @@ storiesOf("DropDownMenuItem", module)
     backgrounds: [{ name: "dark", value: "#222f3e", default: true }]
   }) 
   .add("Montreal", () => (
-    <DropDownMenuItem id={city.id} name={city.name} description={city.description} />
+    <DropDownMenuItem id={province.id} name={province.name} description={province.description} />
   ))
 
 storiesOf("Icon", module)
