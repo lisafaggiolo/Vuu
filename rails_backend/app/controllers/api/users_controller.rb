@@ -20,20 +20,3 @@ class Api::UsersController < ApplicationController
   
 end
 
-const questions = ["Name?","Sex?","Age?"]
-const answers = []
-console.log(questions[answers.length])
-answers.push("Francis")
-console.log(questions[answers.length])
-answers.push("Male")
-console.log(questions[answers.length])
-answers.push("34")
-question = {text:"Name?", type:"text", range:null}
-question = {text:"Sex?", type:"select", range:['m','f','o']}
-question = {text:"Age?", type:"number", range:[19,99]}
-type === select && 
-<select>
-  range.map(val => <option value="val">Name of val</option>)
-</select>
-type === text &&
-  <input type="text"/>
