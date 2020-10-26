@@ -1,7 +1,7 @@
-import React, { Fragment } from "react";
+import React from "react";
 import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
-import "index.scss";
+//import "index.scss";
 
 import City from '../src/components/City';
 
@@ -31,7 +31,24 @@ const cities = [
     name: "Montreal",
     province_id: 1,
     description: "",
-    timeZone: "UTC−4"
+    timeZone: "UTC−4",
+    image:"ImageURL"
+  },
+  {  
+    id: 2,
+    name: "Quebec City",
+    province_id: 1,
+    description: "",
+    timeZone: "UTC−4",
+    image:"ImageURL"
+  },
+  {  
+    id: 3,
+    name: "Perce",
+    province_id: 1,
+    description: "",
+    timeZone: "UTC−4",
+    image:"ImageURL"
   }
 ]
 
@@ -40,14 +57,15 @@ const city = {
   name: "Montreal",
   province_id: 1,
   description: "This is a city description",
-  timeZone: "UTC−4"
+  timeZone: "UTC−4",
+  image:"ImageURL"
 }
 
 const questions = [
   {
     id: 1,
     question: "Which Province would you like to visit?",
-    answer:"Province string" // or figure out a dropdown menue with the provinces as a choice!!
+    answer:"Province string"// dropdown menue with the provinces?
   },
   {
     id: 2,
@@ -57,9 +75,19 @@ const questions = [
   {
     id: 3,
     question: "In which timeZone is your home office located?",
-    answer:""//drop down menu of canadian timeZones
+    answer:""//drop down menu of canadian timeZones?
+  },
+  {
+    id: 4,
+    question: "Is staying in the same time Zone a requirement for work?",
+    answer: true
   }
 ]
+
+
+
+
+////////////////////////////////////////////////////////////////////////////////////
 
 storiesOf("City", module)
   .addParameters({
@@ -86,6 +114,8 @@ storiesOf("StatisticsItem", module)
   ))
 
 
+////////////////////////////////////////////////////////////////////////////////////
+
 storiesOf("Province", module)
   .addParameters({
     backgrounds: [{ name: "dark", value: "#222f3e", default: true }]
@@ -96,9 +126,35 @@ storiesOf("Province", module)
       id={province.id}
       name={province.name}
       description={province.description}
-      />
-    
+      />  
   ))
+
+storiesOf("CityList", module)
+  .addParameters({
+    backgrounds: [{ name: "dark", value: "#222f3e", default: true }]
+  }) 
+  .add("Quebec", () => (
+    <Citylist 
+      cities={cities} 
+      provinceId={province.id}
+      />
+  ))
+
+storiesOf("CityListItem", module)
+  .addParameters({
+    backgrounds: [{ name: "dark", value: "#222f3e", default: true }]
+  }) 
+  .add("Montreal", () => (
+    <CityListItem 
+      id={city.id} 
+      name={city.name} 
+      description={city.description}
+      />
+  ))
+
+
+
+////////////////////////////////////////////////////////////////////////////////////
 
 storiesOf("Questionnaire", module)
   .addParameters({
@@ -132,19 +188,6 @@ storiesOf("Button", module)
   ))
 
 
-storiesOf("CityList", module)
-  .addParameters({
-    backgrounds: [{ name: "dark", value: "#222f3e", default: true }]
-  }) 
-  .add("Quebec", () => (<Citylist cities={cities} province={"Quebec"}/>))
-
-storiesOf("CityListItem", module)
-  .addParameters({
-    backgrounds: [{ name: "dark", value: "#222f3e", default: true }]
-  }) 
-  .add("Montreal", () => (
-    <CityListItem id={city.id} name={city.name} description={city.description} />
-  ))
 
 
 storiesOf("Footer", module)
@@ -166,18 +209,28 @@ storiesOf("Header", module)
 
 /////////////////////////// Wish List <3 ////////////////////////////
 
+//Goes in Questionnaire component
 storiesOf("DropDownMenu", module)
   .addParameters({
     backgrounds: [{ name: "dark", value: "#222f3e", default: true }]
   }) 
-  .add("Quebec", () => (<DropDownMenu questionId={questions[0]} Options/>))
+  .add("DropDownMenu", () => (
+    <DropDownMenu 
+      questionId={questions[0]} 
+     // Options={}
+      />
+  ))
 
 storiesOf("DropDownMenuItem", module)
   .addParameters({
     backgrounds: [{ name: "dark", value: "#222f3e", default: true }]
   }) 
   .add("Montreal", () => (
-    <DropDownMenuItem id={province.id} name={province.name} description={province.description} />
+    <DropDownMenuItem 
+      id={province.id} 
+      name={province.name} 
+      description={province.description} 
+      />
   ))
 
 storiesOf("Icon", module)
