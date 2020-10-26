@@ -1,7 +1,7 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
-//import "index.scss";
+import "index.scss";
 
 import City from '../src/components/City';
 
@@ -91,7 +91,7 @@ const questions = [
 
 storiesOf("City", module)
   .addParameters({
-    backgrounds: [{ name: "dark", value: "#222f3e", default: true }]
+    backgrounds: [{ name: "light", value: "#FEF5EB", default: true }]
   }) 
   .add("City", () => (
     <City cityId={city.id} name={city.name} description={city.description}/>
@@ -99,7 +99,7 @@ storiesOf("City", module)
 
 storiesOf("Statistics", module)
   .addParameters({
-    backgrounds: [{ name: "dark", value: "#222f3e", default: true }]
+    backgrounds: [{ name: "light", value: "#FEF5EB", default: true }]
   }) 
   .add("Statistics", () => (
     <Statistics cityId={city.id} /*statistics={statistics}*//>
@@ -107,7 +107,7 @@ storiesOf("Statistics", module)
 
 storiesOf("StatisticsItem", module)
   .addParameters({
-    backgrounds: [{ name: "dark", value: "#222f3e", default: true }]
+    backgrounds: [{ name: "light", value: "#FEF5EB", default: true }]
   }) 
   .add("StatisticsItem", () => (
     <StatisticsItem cityId={city.id} /*statistics={statistics}*//>
@@ -118,7 +118,7 @@ storiesOf("StatisticsItem", module)
 
 storiesOf("Province", module)
   .addParameters({
-    backgrounds: [{ name: "dark", value: "#222f3e", default: true }]
+    backgrounds: [{ name: "light", value: "#FEF5EB", default: true }]
   
   })
   .add("Quebec", () => (
@@ -131,7 +131,7 @@ storiesOf("Province", module)
 
 storiesOf("CityList", module)
   .addParameters({
-    backgrounds: [{ name: "dark", value: "#222f3e", default: true }]
+    backgrounds: [{ name: "light", value: "#FEF5EB", default: true }]
   }) 
   .add("Quebec", () => (
     <Citylist 
@@ -142,7 +142,7 @@ storiesOf("CityList", module)
 
 storiesOf("CityListItem", module)
   .addParameters({
-    backgrounds: [{ name: "dark", value: "#222f3e", default: true }]
+    backgrounds: [{ name: "light", value: "#FEF5EB", default: true }]
   }) 
   .add("Montreal", () => (
     <CityListItem 
@@ -158,7 +158,7 @@ storiesOf("CityListItem", module)
 
 storiesOf("Questionnaire", module)
   .addParameters({
-    backgrounds: [{ name: "dark", value: "#222f3e", default: true }]
+    backgrounds: [{ name: "light", value: "#FEF5EB", default: true }]
   }) 
   .add("Questionnaire", () => (
     <Questionnaire />
@@ -174,7 +174,7 @@ storiesOf("Questionnaire", module)
 
 storiesOf("Button", module)
   .addParameters({
-    backgrounds: [{ name: "dark", value: "#222f3e", default: true }]
+    backgrounds: [{ name: "light", value: "#FEF5EB", default: true }]
   }) 
   .add("base", () => (<Button>Base</Button>
   ))
@@ -192,7 +192,7 @@ storiesOf("Button", module)
 
 storiesOf("Footer", module)
   .addParameters({
-    backgrounds: [{ name: "dark", value: "#222f3e", default: true }]
+    backgrounds: [{ name: "light", value: "#FEF5EB", default: true }]
   }) 
   .add("Footer", () => (
     <Footer />
@@ -200,7 +200,7 @@ storiesOf("Footer", module)
 
 storiesOf("Header", module)
   .addParameters({
-    backgrounds: [{ name: "dark", value: "#222f3e", default: true }]
+    backgrounds: [{ name: "light", value: "#FEF5EB", default: true }]
   }) 
   .add("Header", () => (
     <Header />
@@ -212,7 +212,7 @@ storiesOf("Header", module)
 //Goes in Questionnaire component
 storiesOf("DropDownMenu", module)
   .addParameters({
-    backgrounds: [{ name: "dark", value: "#222f3e", default: true }]
+    backgrounds: [{ name: "light", value: "#FEF5EB", default: true }]
   }) 
   .add("DropDownMenu", () => (
     <DropDownMenu 
@@ -223,7 +223,7 @@ storiesOf("DropDownMenu", module)
 
 storiesOf("DropDownMenuItem", module)
   .addParameters({
-    backgrounds: [{ name: "dark", value: "#222f3e", default: true }]
+    backgrounds: [{ name: "light", value: "#FEF5EB", default: true }]
   }) 
   .add("Montreal", () => (
     <DropDownMenuItem 
@@ -235,7 +235,7 @@ storiesOf("DropDownMenuItem", module)
 
 storiesOf("Icon", module)
   .addParameters({
-    backgrounds: [{ name: "dark", value: "#222f3e", default: true }]
+    backgrounds: [{ name: "light", value: "#FEF5EB", default: true }]
   }) 
   .add("Ocean View", () =>(<Icon />))
   .add("Country Side", () =>(<Icon />))

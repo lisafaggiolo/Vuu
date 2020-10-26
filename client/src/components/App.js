@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
-import Province from './components/Province'
-import Header from './components/Header'
+import Province from './Province'
+import Header from './Header'
 
 const App = (props) =>{
   return (
