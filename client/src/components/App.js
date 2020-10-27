@@ -25,6 +25,62 @@ const App = (props) => {
         setUsers(users)
         // setState(prev => ({ ...prev, cities : all[0].data, provinces: all[1].data,  users: all[2].data}));
       }).catch((error) => console.log(error.errno));
+
+      function getCOVIDinfo(total_hospitalizations, active_cases, current_phase) {
+        return axios.get('https://api.covid19tracker.ca/provinces')
+        .then((response)=>{
+          console.log(response)
+        })
+        .catch((error)=>{
+          console.log(error)
+        })
+      }
+      
+      function getWeatherAndTimeZone (weather, time_zone) { 
+        return axios.get("https://community-open-weather-map.p.rapidapi.com/weather")
+        .then((response)=>{
+          console.log(response)
+        })
+        .catch((error)=>{
+          console.log(error)
+        })
+      }
+      
+      function getAverageCostOfLiving() {
+        
+      }
+      
+      function getHealthSystemQuality() {
+        
+      }
+      
+      function getQualityOfLifeIndex() {
+        
+      }
+      
+      function getVisibleMinorityMakeup() {
+        
+      }
+      
+      function getShelterCostToIncomeRatio() {
+        
+      }
+      
+      function getAverageShelterCosts() {
+        
+      }
+      
+      function getCrimeIndex() {
+        
+      }
+      
+      function getDistributionofPopulationByAgeGroup() {
+        
+      }
+      
+      function getAirPollution() {
+        
+      } 
 }, []);
   
   return (
