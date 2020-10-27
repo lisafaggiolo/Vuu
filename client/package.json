@@ -44,7 +44,7 @@
     "@storybook/addon-links": "^5.0.10",
     "@storybook/addons": "^5.0.10",
     "@storybook/react": "^5.0.10",
-    "babel-loader": "^8.1.0",
+    "babel-loader": "^8.0.5",
     "node-sass": "^4.11.0",
     "react-is": "^16.9.0",
     "prop-types": "^15.7.2"
