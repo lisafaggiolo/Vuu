@@ -28,59 +28,71 @@ const App = (props) => {
 
       function getCOVIDinfo(total_hospitalizations, active_cases, current_phase) {
         return axios.get('https://api.covid19tracker.ca/provinces')
-        .then((response)=>{
-          console.log(response)
-        })
-        .catch((error)=>{
-          console.log(error)
-        })
       }
       
       function getWeatherAndTimeZone (weather, time_zone) { 
         return axios.get("https://community-open-weather-map.p.rapidapi.com/weather")
-        .then((response)=>{
-          console.log(response)
-        })
-        .catch((error)=>{
-          console.log(error)
-        })
       }
       
-      function getAverageCostOfLiving() {
-        
+      function getAveragePriceOfItems() {
+        return axios.get("http://www.numbeo.com:8008/api/city_prices?api_key=your_api_key&query=${city},%20Canada",
+                axios.get("/api/city_prices_raw?api_key=your_api_key&query=Belgrade, Serbia") 
       }
       
       function getHealthSystemQuality() {
-        
+        return axios.get("/api/city_healthcare?api_key=your_api_key&query=Belgrade, Serbia")
       }
       
       function getQualityOfLifeIndex() {
-        
+        return axios.get("https://community-open-weather-map.p.rapidapi.com/weather")
       }
       
-      function getVisibleMinorityMakeup() {
-        
+      function getVisibleMinorityMakeup() { 
+        return axios.get("https://community-open-weather-map.p.rapidapi.com/weather")
       }
       
       function getShelterCostToIncomeRatio() {
-        
+        return axios.get("https://community-open-weather-map.p.rapidapi.com/weather")
       }
       
       function getAverageShelterCosts() {
-        
+        return axios.get("https://community-open-weather-map.p.rapidapi.com/weather")
       }
       
       function getCrimeIndex() {
-        
+        return axios.get("/api/city_crime?api_key=your_api_key&query=Belgrade, Serbia")
       }
       
       function getDistributionofPopulationByAgeGroup() {
-        
+        return axios.get("https://community-open-weather-map.p.rapidapi.com/weather")
       }
       
       function getAirPollution() {
-        
-      } 
+        return axios.get("/api/city_pollution?api_key=your_api_key&query=Belgrade, Serbia")
+      }
+      
+      function getCanadaIndices() {
+        return axios.get("/api/country_indices?api_key=your_api_key&country=Kuwait")
+      }
+      
+      Promise.all([getCOVIDinfo(), getAverageShelterCosts(), getCrimeIndex(), getDistributionofPopulationByAgeGroup(), getHealthSystemQuality(),
+                   getQualityOfLifeIndex(), getAirPollution(), getCanadaIndices(), getShelterCostToIncomeRatio(), getVisibleMinorityMakeup(), getWeatherAndTimeZone()])
+      .then(function (results) {
+        const COVIDtracker = results[0];
+        const shelterCosts = results[1];
+        const crime = results[2];
+        const ageDistribution = results[3];
+        const health = results[4];
+        const quality = results[5];
+        const air = results[6];
+        const canadaIndices = results[7];
+        const SCIRatio = results[8];
+        const visMin = results[9];
+        console.log(results);    
+      })
+      .catch(function (error) {
+        console.log(error, errno)
+      }); 
 }, []);
   
   return (
