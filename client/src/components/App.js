@@ -1,11 +1,9 @@
 import React from 'react';
 import {useState, useEffect} from "react";
 import './App.css';
-import Province from './components/Province'
-import Header from './components/Header'
+import Header from './components/Header';
 import Footer from './components/Footer';
-import useApplicationData from "./hooks/useApplicationData";
-import axios from "axios"
+import axios from "axios";
 
 const App = (props) => {
   const [cities, setCities] = useState([]);
