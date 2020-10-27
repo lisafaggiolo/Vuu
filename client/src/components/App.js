@@ -1,10 +1,40 @@
-import React from 'react';
-import {useState, useEffect} from "react";
+import React, {useState, useEffect} from "react";
 import './App.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import axios from "axios";
+import { render } from "node-sass";
 
+export default class FetchRandomUser extends React.Component {
+  state = {
+    loading: true,
+    province: null
+  };
+
+  async componentDidMount() {
+    const url = "https://api.covid19tracker.ca/provinces";
+    const response = await fetch(url);
+    const data = await response.json();
+    this.setState({ province: data.results[0], loading: false });
+  }
+
+  render() {
+    if (this.state.loading) {
+      return <div>loading...</div>;
+    }
+
+    if (!this.state.province) {
+      return <div>didn't get a province</div>;
+    }
+
+    return (
+      <div>
+        <div>{this.state.province.name}</div>
+        <div>{this.state.province.name}</div>
+      </div>
+    );
+  }
+}
 
 const App = (props) => {
   const [cities, setCities] = useState([]);
@@ -26,9 +56,10 @@ const App = (props) => {
         setUsers(users)
         // setState(prev => ({ ...prev, cities : all[0].data, provinces: all[1].data,  users: all[2].data}));
       }).catch((error) => console.log(error.errno));
+  });
 
-      componentDidMount() {
-        function getCOVIDinfo(total_hospitalizations, active_cases, current_phase) {
+  componentDidMount() {
+    function getCOVIDinfo(total_hospitalizations, active_cases, current_phase) {
           return axios.get('https://api.covid19tracker.ca/provinces')
           .then(res => {
             const province = res.data;
@@ -38,7 +69,7 @@ const App = (props) => {
           .catch(error => {
             console.log(error);
           });
-        }
+      }
         
         function getWeatherAndTimeZone (weather, time_zone) { 
           return axios.get("https://community-open-weather-map.p.rapidapi.com/weather")
@@ -53,7 +84,7 @@ const App = (props) => {
         }
         
         function getAveragePriceOfItems() {
-          return axios.get("http://www.numbeo.com:8008/api/city_prices?api_key=your_api_key&query=${city},%20Canada",
+          axios.get("http://www.numbeo.com:8008/api/city_prices?api_key=your_api_key&query=${city},%20Canada"),
                   axios.get("/api/city_prices_raw?api_key=your_api_key&query=Belgrade, Serbia")
                   .then(res => {
                     const city = res.data;
@@ -132,37 +163,33 @@ const App = (props) => {
         function getCanadaIndices() {
           return axios.get("/api/country_indices?api_key=your_api_key&country=Kuwait")
         }
-      }
-    }                         
+  
+    };                         
       Promise.all([getCOVIDinfo(), getAverageShelterCosts(), getCrimeIndex(), getDistributionofPopulationByAgeGroup(), getHealthSystemQuality(),
-                   getQualityOfLifeIndex(), getAirPollution(), getCanadaIndices(), getShelterCostToIncomeRatio(), getVisibleMinorityMakeup(), getWeatherAndTimeZone()])
-      .then(function (results) {
-        const COVIDtracker = results[0];
-        const shelterCosts = results[1];
-        const crime = results[2];
-        const ageDistribution = results[3];
-        const health = results[4];
-        const quality = results[5];
-        const air = results[6];
-        const canadaIndices = results[7];
-        const SCIRatio = results[8];
-        const visMin = results[9];
-        console.log(results);    
-      }) 
-}, []);
-            
-render() {
+        getQualityOfLifeIndex(), getAirPollution(), getCanadaIndices(), getShelterCostToIncomeRatio(), getVisibleMinorityMakeup(), getWeatherAndTimeZone()])
+        .then(function (results) {
+          const COVIDtracker = results[0];
+          const shelterCosts = results[1];
+          const crime = results[2];
+          const ageDistribution = results[3];
+          const health = results[4];
+          const quality = results[5];
+          const air = results[6];
+          const canadaIndices = results[7];
+          const SCIRatio = results[8];
+          const visMin = results[9];
+          console.log(results);    
+        })
+render() {            
   return (
     <ul>
       { this.state.province.map(province => <li>{province.name}</li>)}
     </ul>
-     <main>
-     <Header />
-     <Footer />
-     
-   </main>
-  )
-} 
-
+    <main>
+      <Header />
+      <Footer />
+    </main>
+  ) 
+}
 
 export default App;

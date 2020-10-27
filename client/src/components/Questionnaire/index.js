@@ -1,15 +1,14 @@
-import React from 'react';
-import Form from './Form';
+import React from "react";
+import Form from "./Form";
 import useApplicationData from "../hooks/useApplicationData";
 
-
-const Questionnaire = () =>{
+const Questionnaire = () => {
   return (
     <div>
       <h1>Hello I am Questionnaire View</h1>
       <Form />
-    </div>  
+    </div>
   );
 };
-  
+
 export default Questionnaire;
