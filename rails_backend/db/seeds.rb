@@ -225,3 +225,7 @@ City.create(id: 50, name: "Gander", province_id: 1, population: 11688,
 City.create(id: 51, name: "Twillingate", province_id: 1, population: 2196, 
             description: "Twillingate is a town of 2,196 people[2] located on the Twillingate Islands ("Toulinquet") in Notre Dame Bay, off the north eastern shore of the island of Newfoundland in the province of Newfoundland and Labrador, Canada. The town is about 100 kilometres (62 mi) north of Lewisporte and Gander.", 
             location_type: "town", view_type: "coast", time_zone: "NDT")
+
+City.create(id: 52, name: "Yellowknife", province_id: 12, population: 2196, 
+            description: "Yellowknife, population of almost 20,000, is the capital of the Northwest Territories. The most common Dene name for Yellowknife is Somba K'e which translates to "Where the money is," which makes sense for a town with a gold-mining history. Here you'll find excellent restaurants, comfy accommodations and a whole host of colourful locals that make up this vibrant and cosmopolitan place. Regardless of what time of year you visit, there's always something happening in Yellowknife from a weekend music festival in the sand, to month-long activities at a snow castle on the frozen bay.", 
+            location_type: "city-small", view_type: ["urban", "river"], time_zone: "MDT")
