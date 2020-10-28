@@ -48,7 +48,7 @@ City.create(id: 6, name: "Wasaga Beach", province_id: 6, population: 20675,
             description: "Wasaga Beach is not only the longest freshwater beach in the world with 14 km of safe, sandy shore, but the sunsets there are breathtaking. Wasaga Beach is the first provincial park in Canada to be awarded the “Blue Flag” designation for its banks management efforts under the international environmental standards. For more information, visit www.BlueFlag.ca", 
             location_type: "town", view_type: "lake", time_zone: "EDT")
 
-City.create(id: 7, name: "Strathcona County", province_id: 9, population: 3103, 
+City.create(id: 7, name: "Strathcona County", province_id: 9, population: 98044, 
             description: "Strathcona County is perfect for those who enjoy the fine balance of a rural and an urban territory. For this reason, the area of Strathcona County is a specialized municipality as it does a fine job of supporting the needs of those living in the rural area of the city as well as those who live in the urban portion of the city. In a city where the crime rate and the unemployment rate is low, there is no doubt that it is one of the best places to live in Alberta, and Canada as well.", 
             location_type: "town", view_type: , time_zone: "MDT")
 
@@ -84,45 +84,58 @@ City.create(id: 15, name: "Whitehorse", province_id: 11, population: 25085,
             location_type: "city-small", view_type: ["forest", "mountain"], time_zone: "PDT")
 
 City.create(id: 16, name: "Winnepeg", province_id: 7, population: 749534, 
-            description: "", location_type: "city-small", view_type: "urban", time_zone: "CDT")
+            description: "A cosmopolitan city known as the 'cultural cradle of Canada', Winnipeg is family friendly with plenty of charm. It boasts a dazzling arts, theatre and indie music scene, as well as lip-smacking dining options to tantalize every taste bud. Experience nine acres of shopping and interactive fun at the Forks Market or explore Winnipeg’s diverse neighborhoods like the historic French Quarter and Exchange District or the boho chic Osborne Village.", 
+            location_type: "city-small", view_type: "urban", time_zone: "CDT")
 
 City.create(id: 17, name: "Iqaluit", province_id: 13, population: 7740, 
-            description: "", location_type: "city-small", view_type: ["coast", "mountain"], time_zone: "EDT")
+            description: "Iqaluit is the capital and largest community in Canada’s newest territory, Nunavut. It is also the territory's only city. Iqaluit is situated at the northeast head of Frobisher Bay, on southern Baffin Island. In an area long used by the Inuit and their ancestors, it is surrounded by hills close to the Sylvia Grinnell River and looks across the bay to the mountains of the Meta Incognita Peninsula.", 
+            location_type: "city-small", view_type: ["coast", "mountain"], time_zone: "EDT")
 
 City.create(id: 18, name: "Meadow Lake", province_id: 8, population: 5344, 
             description: "", location_type: "town", view_type: , time_zone: "CST")
 
-City.create(id: 19, name: "Massif de Charlevoix", province_id: 5, population: 11688, 
-            description: "", location_type: "city-small", view_type: ["coast", "mountain", "forest"], time_zone: "EDT")
+City.create(id: 19, name: "Massif de Charlevoix", province_id: 5, population: 29562, 
+            description: "Mentioning Charlevoix to Quebeckers evokes a heartfelt sigh. No wonder: this region is renowned for its salty breezes (coming straight from “la mer”, as the tidal Saint Lawrence river is known), stunning vistas, artsy Baie-Saint-Paul and gourmet food trails. Getting here from Québec City is easy on Le Train de Massif from Montmorency Falls. In winter, Le Massif mountain’s 770 metres offers the greatest vertical drop for downhill skiing east of the Rocky Mountains.", 
+            location_type: "city-small", view_type: ["coast", "mountain", "forest"], time_zone: "EDT")
             
-City.create(id: 20, name: "Quebec City", province_id: 5, population: 11688, 
-            description: "", location_type: "city-small", view_type: "urban", time_zone: "EDT")
+City.create(id: 20, name: "Quebec City", province_id: 5, population: 542298, 
+            description: "Dubbed the “Paris of North America”, 400-year-old Québec City is the province’s capital, and a must-visit in order to capture the spirit of New France (particularly in August’s New France Festival). Stay at the “castle” – Fairmont Chateau Frontenac – an architectural symbol of the city, recognisable for its steeply pitched copper roof and imposing turrets. Stroll along Dufferin Terrace overlooking the Saint Lawrence river – Canada’s first “highway”, it led explorers, traders, missionaries and settlers into the hinterland. Being North America’s only walled city, Old Québec is a Unesco world heritage site. Investigate the Citadel, wander the Plains of Abraham where British General Wolfe defeated French General Montcalm in 1759, then choose from many restaurants featuring le terroir (regional foods).", 
+            location_type: "city-small", view_type: "urban", time_zone: "EDT")
 
-City.create(id: 21, name: "Montreal", province_id: 5, population: 11688, 
-            description: "", location_type: "city-large", view_type: "urban", time_zone: "EDT")
+City.create(id: 21, name: "Montreal", province_id: 5, population: 1780000, 
+            description: "Witness a French-infused city that's in love with festivals, the arts, good food, living well and enjoying life to the hilt. Montréal is the country’s cultural juggernaut. The city, standard bearer of an entire linguistic-cultural identity – francophone Canada – simply lives for public celebration of the arts. There are some 250 theater and dance companies, more than 90 festivals and a fascinating medley of neighborhoods where artists, writers and musicians have helped cement the city’s reputation as a great arts center.", 
+            location_type: "city-large", view_type: "urban", time_zone: "EDT")
             
-City.create(id: 22, name: "Toronto", province_id: 6, population: 11688, 
-            description: "", location_type: "city-large", view_type: "urban", time_zone: "EDT")
+City.create(id: 22, name: "Toronto", province_id: 6, population: 2930000, 
+            description: "Toronto is one of Canada's largest cities and one of its best destinations to travel to in the country, full of sights and attractions such as its countless museums and parks. With its highly iconic landmark of the CN Tower gracing its skyline, Toronto is also famous for its beautiful lake scenery with much of the city straddling and rising up against the gorgeous Lake Ontario.", 
+            location_type: "city-large", view_type: "urban", time_zone: "EDT")
 
-City.create(id: 23, name: "Ottawa", province_id: 6, population: 11688, 
-            description: "", location_type: "city-small", view_type: "urban", time_zone: "EDT")
+City.create(id: 23, name: "Ottawa", province_id: 6, population: 994837, 
+            description: "Ottawa is Canada’s beautiful capital city, a destination filled with national sites and historic landmarks. Home to about 1.25 million people, Ottawa is located within easy driving distance of Montreal (1h 45min), Toronto (4hrs) and the US border (45min). There are countless sites to see in the capital, and many ways to see them. Boat tours on the Rideau Canada and the Ottawa River, bus tours on land, and amphibus tours on water, biplane and helicopter tours, cycling tours and a variety of themed walking tours. In fact, many of Ottawa’s most popular attractions and experiences can be found in its surprisingly compact and walkable downtown core.", 
+            location_type: "city-small", view_type: "urban", time_zone: "EDT")
 
-City.create(id: 24, name: "Victoria", province_id: 10, population: 11688, 
-            description: "", location_type: "city-small", view_type: ["coast", "urban"], time_zone: "PDT")
+City.create(id: 24, name: "Victoria", province_id: 10, population: 92141, 
+            description: "Victoria is a year-round tourism destination that offers a friendly, safe haven for all visitors. With a clean environment and charming ambience, it is no surprise that Victoria, BC is one of the world's favourite destinations. It’s a great place to spend a few days before or after your kayak tour of Vancouver Island, without fear of getting lost in the sprawl of a major city.", 
+            location_type: "city-small", view_type: ["coast", "urban"], time_zone: "PDT")
             
-City.create(id: 25, name: "Tofino", province_id: 10, population: 11688, 
-            description: "", location_type: "town", view_type: ["coast", "forest"], time_zone: "PDT")
+City.create(id: 25, name: "Tofino", province_id: 10, population: 1932, 
+            description: "The surf swept community of Tofino rests in the centre of Clayoquot Sound, an expanse of islets and inlets arranged like a collection of emeralds along the west coast of Vancouver Island. The meaning of Clayoquot comes from Tla-o- quia-aht “people who are different from who they used to be”. A fitting description any traveler should expect for themselves when journeying to this wild west coast town on the edge of the world.", 
+            location_type: "town", view_type: ["coast", "forest"], time_zone: "PDT")
 
-City.create(id: 26, name: "Canmore", province_id: 9, population: 11688, 
-            description: "", location_type: , view_type: , time_zone: 15)
+City.create(id: 26, name: "Canmore", province_id: 9, population: 13992, 
+            description: "If you’re about the outdoors lifestyle and enjoy picturesque scenary, Canmore is the place you and your family want to be living. The town of Canmore is located just west of the big city of Calgary, but is also on the boundary of Banff National Park. Canada’s oldest national park offers a beautiful view of the Rocky Mountains, and some of the most gorgeous lakes in the world.", 
+            location_type: "town", view_type: ["mountain", "urban", "forest"], time_zone: "MDT")
 
-City.create(id: 27, name: "Calgary", province_id: 9, population: 11688, 
-            description: "", location_type: , view_type: , time_zone: 15)
+City.create(id: 27, name: "Calgary", province_id: 9, population: 1336000, 
+            description: "If you like the big city with all the amenities that can be offered, Calgary is a great choice for you and your family. The city of Calgary has over 1.4 million people residing within it and is the largest city the province of Alberta has to offer. As a resident in Calgary, you’ll have no problem finding activities to do with your free time. Annual events like the Calgary Stampede bring people from all over the world to the city to enjoy the rodeo, exhibition, and festival.", 
+            location_type: "city-large", view_type: ["mountain", "urban"], time_zone: "MDT")
             
-City.create(id: 28, name: "The Thousand Islands", province_id: 6, population: 11688, 
-            description: "", location_type: , view_type: , time_zone: 15)
+City.create(id: 28, name: "The Thousand Islands", province_id: 6, population: 9465, 
+            description: "Perhaps it starts with an inspiring sunrise on the Canadian side of the St. Lawrence Seaway or ends with a breathtaking sunset from the U.S. Maybe it includes views of storybook castles, a good fish story, a taste of craft beverages or a trip back in time. On the pristine waters or in quiet villages, there are thousands of things to see and do.", 
+            location_type: "town", view_type: "lake", time_zone: "EDT")
             
-City.create(id: 29, name: "Niagara", province_id: 6, population: 11688, 
-            description: "", location_type: , view_type: , time_zone: 15)
+City.create(id: 29, name: "Niagara", province_id: 6, population: 447888, 
+            description: "From wining, dining and riding the vines in Niagara-on-the-Lake and off the beaten path in Twenty Valley, to the urban cool of St. Catharines or outdoor adventures on the beach and amongst the battlefields of Niagara’s South Coast, without forgetting the iconic Niagara Falls, you will indulge in moments that are sure to inspire your senses.", 
+            location_type: "city-small", view_type: ["urban", "country"] time_zone: "EDT")
             
-            
+ 
