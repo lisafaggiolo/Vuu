@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 2020_10_24_183619) do
   create_table "cities", force: :cascade do |t|
     t.integer "id"
     t.string "name"
-    t.string "province_id" - FK
+    t.string "province_id"
     t.integer "population"
     t.text "description"
     t.string "location_type"
