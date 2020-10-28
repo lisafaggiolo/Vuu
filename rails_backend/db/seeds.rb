@@ -25,71 +25,88 @@ Province.create(id: 11, name: "Yukon", average_rent: 1038, shelter_cost_to_incom
 Province.create(id: 12, name: "Northwest Territories", average_rent: 1190, shelter_cost_to_income_ratio: 86, description: "Northwest Territories is the most populous of the three and borders the other two territories in—as you would expect—the northwest part of the country.")
 Province.create(id: 13, name: "Nunavut", average_rent: 736, shelter_cost_to_income_ratio: 94, description: "Nunavut is the largest and most northern territory of Canada. It is the newest territory as well, having been separated from Northwest Territories in 1999.")
  
-City.create(id: , name: "Okanagan Valley", province_id: 10, population: 362258, 
+City.create(id: 1, name: "Okanagan Valley", province_id: 10, population: 362258, 
             description: "", location_type: , view_type: , time_zone: 25)
 
-City.create(id: , name: "Vancouver", province_id: 10, population: 85935, 
+City.create(id: 2, name: "Vancouver", province_id: 10, population: 85935, 
             description: "", location_type: , view_type: , time_zone: 30)
 
-City.create(id: , name: "Kelowna", province_id: 10, population: 194882, 
+City.create(id: 3, name: "Kelowna", province_id: 10, population: 194882, 
             description: "", location_type: , view_type: , time_zone: 20)
 
-City.create(id: , name: "Gaspe Peninsula", province_id: 5, population: 15163, 
+City.create(id: 4, name: "Gaspe Peninsula", province_id: 5, population: 15163, 
             description: "", location_type: , view_type: , time_zone: 15)
 
-City.create(id: , name: "Magdalen Islands", province_id: 5, population: 12010, 
+City.create(id: 5, name: "Magdalen Islands", province_id: 5, population: 12010, 
             description: "", location_type: , view_type: , time_zone: 20)
 
-City.create(id: , name: "Wasaga Beach", province_id: "Ontario", population: 20675, 
+City.create(id: 6, name: "Wasaga Beach", province_id: "Ontario", population: 20675, 
             description: "", location_type: , view_type: , time_zone: 15)
 
-
-City.create(id: , name: "Strathcona County", province_id: 5, population: 3103, 
+City.create(id: 7, name: "Strathcona County", province_id: 5, population: 3103, 
             description: "", location_type: , view_type: , time_zone: 20)
 
-City.create(id: , name: "Collingwood", province_id: "Ontario", population: 21793, 
+City.create(id: 8, name: "Collingwood", province_id: "Ontario", population: 21793, 
             description: "", location_type: , view_type: , time_zone: 10)
 
-City.create(id: , name: "Jasper", province_id: "Alberta", population: 4590,  : 12)
+City.create(id: 9, name: "Jasper", province_id: "Alberta", population: 4590,  : 12)
 
-City.create(id: , name: "Banff", province_id: "Alberta", population: 7847, 
+City.create(id: 10, name: "Banff", province_id: "Alberta", population: 7847, 
             description: "", location_type: , view_type: , time_zone: 16)
 
-City.create(id: , name: "Halifax", province_id: "Nova Scotia", population: 431479, 
+City.create(id: 11, name: "Halifax", province_id: "Nova Scotia", population: 431479, 
             description: "", location_type: , view_type: , time_zone: 13)
 
-City.create(id: , name: "Charlottetown", province_id: "Prince Edward Island", population: 36094, 
+City.create(id: 12, name: "Charlottetown", province_id: "Prince Edward Island", population: 36094, 
             description: "", location_type: , view_type: , time_zone: 19)
 
-City.create(id: , name: "St-Johns", province_id: "Newfoundland and Labrador", population: 113948,  : 20)
+City.create(id: 13, name: "St-Johns", province_id: "Newfoundland and Labrador", population: 113948,  : 20)
 
-City.create(id: , name: "Moncton", province_id: "New Brunswick", population: 85198, 
+City.create(id: 14, name: "Moncton", province_id: "New Brunswick", population: 85198, 
             description: "", location_type: , view_type: , time_zone: 10)
 
-City.create(id: , name: "White Horse", province_id: "Yukon", population: 25085,  : 11)
+City.create(id: 15, name: "White Horse", province_id: "Yukon", population: 25085,  : 11)
 
-City.create(id: , name: "Winnepeg", province_id: "Manitoba", population: 749534, 
+City.create(id: 16, name: "Winnepeg", province_id: "Manitoba", population: 749534, 
             description: "", location_type: , view_type: , time_zone: 12)
 
-City.create(id: , name: "Iqaluit", province_id: "Nunavut", population: 7740, 
+City.create(id: 17, name: "Iqaluit", province_id: "Nunavut", population: 7740, 
             description: "", location_type: , view_type: , time_zone: 13)
 
-City.create(id: , name: "Meadow Lake", province_id: "Saskatchewan", population: 5344, 
+City.create(id: 18, name: "Meadow Lake", province_id: "Saskatchewan", population: 5344, 
             description: "", location_type: , view_type: , time_zone: 14)
 
-City.create(id: , name: "Massif de Charlevoix", province_id: "Newfoundland and Labrador", population: 11688, 
+City.create(id: 19, name: "Massif de Charlevoix", province_id: "Newfoundland and Labrador", population: 11688, 
             description: "", location_type: , view_type: , time_zone: 15)
             
-City.create(id: , name: "Massif de Charlevoix", province_id: "Newfoundland and Labrador", population: 11688, 
+City.create(id: 20, name: "Quebec City", province_id: "Newfoundland and Labrador", population: 11688, 
             description: "", location_type: , view_type: , time_zone: 15)
 
-City.create(id: , name: "Massif de Charlevoix", province_id: "Newfoundland and Labrador", population: 11688, 
+City.create(id: 21, name: "Montreal", province_id: "Newfoundland and Labrador", population: 11688, 
             description: "", location_type: , view_type: , time_zone: 15)
             
-City.create(id: , name: "Ottawa")
-
-City.create(id: , name: "Massif de Charlevoix", province_id: "Newfoundland and Labrador", population: 11688, 
+City.create(id: 22, name: "Toronto", province_id: "Newfoundland and Labrador", population: 11688, 
             description: "", location_type: , view_type: , time_zone: 15)
 
-City.create(id: , name: "Massif de Charlevoix", province_id: "Newfoundland and Labrador", population: 11688, 
+City.create(id: 23, name: "Ottawa", province_id: "Newfoundland and Labrador", population: 11688, 
             description: "", location_type: , view_type: , time_zone: 15)
+
+City.create(id: 24, name: "Victoria", province_id: "Newfoundland and Labrador", population: 11688, 
+            description: "", location_type: , view_type: , time_zone: 15)
+            
+City.create(id: 25, name: "Tofino", province_id: "Newfoundland and Labrador", population: 11688, 
+            description: "", location_type: , view_type: , time_zone: 15)
+
+City.create(id: 26, name: "Canmore", province_id: 9, population: 11688, 
+            description: "", location_type: , view_type: , time_zone: 15)
+
+City.create(id: 27, name: "Calgary", province_id: 9, population: 11688, 
+            description: "", location_type: , view_type: , time_zone: 15)
+            
+City.create(id: 28, name: "The Thousand Islands", province_id: 6, population: 11688, 
+            description: "", location_type: , view_type: , time_zone: 15)
+            
+City.create(id: 29, name: "Niagara", province_id: 6, population: 11688, 
+            description: "", location_type: , view_type: , time_zone: 15)
+            
+            
