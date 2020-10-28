@@ -127,31 +127,31 @@ City.create(name: "The Thousand Islands", province_id: 6, population: 9465,
             
 City.create(name: "Niagara", province_id: 6, population: 447888, 
             description: "From wining, dining and riding the vines in Niagara-on-the-Lake and off the beaten path in Twenty Valley, to the urban cool of St. Catharines or outdoor adventures on the beach and amongst the battlefields of Niagara’s South Coast, without forgetting the iconic Niagara Falls, you will indulge in moments that are sure to inspire your senses.", 
-            location_type: "city-small", view_type: ["urban", "country"], time_zone: "EDT")
+            location_type: "city-medium", view_type: ["urban", "country"], time_zone: "EDT")
             
-City.create(name: "Regina", province_id: 8, population: , 
+City.create(name: "Regina", province_id: 8, population: 228928, 
             description: "Although situated on a flat plain with few indigenous trees, Regina boasts some of western Canada's most innovative urban landscaping, with plentiful green spaces, hiking and biking paths, playgrounds, oak-lined streets and parks throughout the city. The popular Wascana Lake plays host to summer boaters and winter skating. Regina is also home to numerous cultural and educational institutions, including museums, galleries, theaters and Canada's RCMP Training Academy Grounds.", 
-            location_type: "city-small", view_type: "urban", time_zone: "CST")
+            location_type: "city-medium", view_type: "urban", time_zone: "CST")
  
-City.create(name: "Saskatoon", province_id: 8, population: , 
+City.create(name: "Saskatoon", province_id: 8, population: 273010, 
             description: "Named for the sweet berry that grows wild in the region, Saskatoon boasts various cultural festivals, concerts and sporting events throughout the year. Explore the trails and beaches of Beaver Creek and Cranberry Flats, cross-country ski the Meewasin Valley Trail, check out the city's many galleries and museums, and shop for bargains at Midtown Plaza.", 
-            location_type: "city-small", view_type: ["urban", "lake"], time_zone: "CST")
+            location_type: "city-medium", view_type: ["urban", "lake"], time_zone: "CST")
  
-City.create(name: "Moose Jaw", province_id: 8, population: , 
+City.create(name: "Moose Jaw", province_id: 8, population: 33890, 
             description: "Moose Jaw is the fourth largest city in Saskatchewan, Canada. Lying on the Moose Jaw River in the south-central part of the province, it is situated on the Trans-Canada Highway, 77 km (48 mi) west of Regina. Residents of Moose Jaw are known as Moose Javians. The city is surrounded by the Rural Municipality of Moose Jaw No. 161.", 
             location_type: "city-small", view_type: "urban", time_zone: "CST")
  
 City.create(name: "Swift Current", province_id: 8, population: 16604, 
             description: "Swift Current, also known as Speedy Creek, is the fifth largest city in the Canadian province of Saskatchewan. It is situated along the Trans Canada Highway 170 kilometres (110 mi) west from Moose Jaw, and 218 kilometres (135 mi) east from Medicine Hat, Alberta. Swift Current grew 6.8% between 2011 and 2016, ending up at 16,604 residents.[2] The city is surrounded by the Rural Municipality of Swift Current No. 137.", 
-            location_type: "", view_type: "urban", time_zone: "CST")
+            location_type: "city-small", view_type: "urban", time_zone: "CST")
  
 City.create(name: "Prince Albert", province_id: 8, population: 35926, 
             description: "Prince Albert is the third-largest city in Saskatchewan, Canada, after Saskatoon and Regina. It is situated near the centre of the province on the banks of the North Saskatchewan River. The city is known as the 'Gateway to the North' because it is the last major centre along the route to the resources of northern Saskatchewan.", 
-            location_type: "town", view_type: "river", time_zone: "CST")
+            location_type: "city-medium", view_type: "river", time_zone: "CST")
             
 City.create(name: "Brandon", province_id: 7, population: 48859, 
             description: "The City of Brandon was incorporated in 1882,[5] having a history rooted in the Assiniboine River fur trade as well as its role as a major junction on the Canadian Pacific Railway.[6] Known as The Wheat City, Brandon's economy is predominantly associated with agriculture;[7] however, it also has strengths in health care, manufacturing, food processing, business services, and transportation.", 
-            location_type: "town", view_type: "river", time_zone: "CST")
+            location_type: "city-medium", view_type: "river", time_zone: "CST")
  
 City.create(name: "Portage la Prairie", province_id: 7, population: 13304, 
             description: "Portage la Prairie is approximately 75 kilometres (47 mi) west of Winnipeg, along the Trans-Canada Highway (exactly between the provincial boundaries of Saskatchewan and Ontario). The community sits on the Assiniboine River, which flooded the town persistently until a diversion channel north to Lake Manitoba (the Portage Diversion) was built to divert the flood waters. The city is surrounded by the Rural Municipality of Portage la Prairie.", 
@@ -167,11 +167,11 @@ City.create(name: "Gimli", province_id: 7, population: 2246,
  
 City.create(name: "Fredericton", province_id: 4, population: 58220, 
             description: "Spread along both sides of the majestic St. John River, Fredericton combines the coziness of a small town with the world-class institutions of a city much larger than this humble capital. Tree-lined streets and suburban neighborhoods of Victorian-era homes live harmoniously alongside three universities, countless historic sites, museums, riverfront trails and restaurants featuring local and international cuisines. Fredericton also boasts a number of world-renowned festivals.", 
-            location_type: "town", view_type: "river", time_zone: "AST")
+            location_type: "city-medium", view_type: "river", time_zone: "AST")
             
 City.create(name: "Saint John", province_id: 4, population: 67575, 
             description: "Saint John, New Brunswick, is the only city on the shore of the Bay of Fundy, home to the world’s highest tides. Canada’s oldest incorporated city, Saint John is a popular tourist destination known for its historic uptown streetscapes, cultural attractions and natural wonders. Popular sights include the Reversing Rapids, where the Bay collides with the St. John River, the City Market with local vendors and artisans, the New Brunswick Museum and the trails and beauty of Rockwood Park.", 
-            location_type: "town", view_type: "river", time_zone: "AST")
+            location_type: "city-small", view_type: "river", time_zone: "AST")
             
 City.create(name: "Saint Andrews", province_id: 4, population: 1786, 
             description: "Saint Andrews (2016 population: 1,786)[1] is a town in Charlotte County, New Brunswick, Canada. The historic town is a national historic site of Canada, bearing many characteristics of a typical 18th century British colonial settlement, including the original grid layout with its market square, and the classical architecture.", 
@@ -187,15 +187,15 @@ City.create(name: "Lunenburg", province_id: 3, population: 2263,
    
 City.create(name: "Baddeck", province_id: 3, population: 769, 
             description: "Baddeck, on Cape Breton Island, is a great base for the Cabot Trail, Cape Breton Highlands National Park and Louisbourg’s fortress. Easily explored on foot, Baddeck’s sole street offers an appealing array of accommodation, restaurants and stores and lovely views of Bras d’Or Lake. Take a kayak tour on the North River, visit Kidston Lighthouse or hike the national park’s trails, cliffs and coves. Back in the town, don’t miss the museum devoted to famed inventor Alexander Graham Bell.", 
-            location_type: "town", view_type: "coast", time_zone: "AST")
+            location_type: "village", view_type: "coast", time_zone: "AST")
             
 City.create(name: "Sydney", province_id: 3, population: 29904, 
             description: "Sydney is a former city and current community located in the Cape Breton Regional Municipality of Cape Breton Island, Nova Scotia, Canada. Situated on Cape Breton Island's east coast, it belongs administratively to the Cape Breton Regional Municipality. Sydney was founded in 1785 by the British, was incorporated as a city in 1904, and dissolved on 1 August 1995, when it was amalgamated into the regional municipality.", 
-            location_type: "town", view_type: "coast", time_zone: "AST")
+            location_type: "city-small", view_type: "coast", time_zone: "AST")
             
 City.create(name: "Dartmouth", province_id: 3, population: 65741, 
             description: "Dartmouth is a former city and current community located in the Halifax Regional Municipality of Nova Scotia, Canada. Dartmouth is located on the eastern shore of Halifax Harbour. Dartmouth has been nicknamed the City of Lakes, after the large number of lakes located within its boundaries.", 
-            location_type: "town", view_type: "coast", time_zone: "AST")
+            location_type: "city-small", view_type: "coast", time_zone: "AST")
             
 City.create(name: "Cavendish", province_id: 2, population: 7500, 
             description: "'Anne of Green Gables' enthusiasts flock to the appealing beach town on PEI’s north coast where Lucy Maud Montgomery lived and set her books. Visit Green Gables House, the author’s childhood home, and the Anne theme park of Avonlea Village. Those who want their vacation to turn a different page can hop on the trolley and explore 25 miles of sand dunes on Cavendish Beach in Prince Edward Island National Park, play champion golf courses, bike, sail and visit various family-friendly theme parks.", 
@@ -203,7 +203,7 @@ City.create(name: "Cavendish", province_id: 2, population: 7500,
             
 City.create(name: "Corner Brook", province_id: 1, population: 19806, 
             description: "Located on the Bay of Islands at the mouth of the Humber River, the city is the second-largest population centre in the province behind St. John's,[2] and smallest of three cities behind St. John's and Mount Pearl.[3] As such, Corner Brook functions as a service centre for western and northern Newfoundland. It is located on the same latitude as Gaspé, Quebec, a city of similar size and landscape on the other side of the Gulf of St. Lawrence. Corner Brook is the most northern city in Atlantic Canada.", 
-            location_type: "town", view_type: "coast", time_zone: "NDT")
+            location_type: "city-small", view_type: "coast", time_zone: "NDT")
 
 City.create(name: "Deer Lake", province_id: 1, population: 5249, 
             description: "Deer Lake is a town in the western part of the island of Newfoundland in the province of Newfoundland and Labrador, Canada.The town derives its name from Deer Lake and is situated at the outlet of the upper Humber River at the northeastern end of the lake.", 
@@ -214,9 +214,9 @@ City.create(name: "Gander", province_id: 1, population: 11688,
             location_type: "town", view_type: "", time_zone: "NDT")
 
 City.create(name: "Twillingate", province_id: 1, population: 2196, 
-            description: "Twillingate is a town of 2,196 people located on the Twillingate Islands ("Toulinquet") in Notre Dame Bay, off the north eastern shore of the island of Newfoundland in the province of Newfoundland and Labrador, Canada. The town is about 100 kilometres (62 mi) north of Lewisporte and Gander.", 
+            description: "Twillingate is a town of 2,196 people located on the Twillingate Islands ('Toulinquet') in Notre Dame Bay, off the north eastern shore of the island of Newfoundland in the province of Newfoundland and Labrador, Canada. The town is about 100 kilometres (62 mi) north of Lewisporte and Gander.", 
             location_type: "town", view_type: "coast", time_zone: "NDT")
 
 City.create(name: "Yellowknife", province_id: 12, population: 19569, 
-            description: "Yellowknife, population of almost 20,000, is the capital of the Northwest Territories. The most common Dene name for Yellowknife is Somba K'e which translates to "Where the money is," which makes sense for a town with a gold-mining history. Here you'll find excellent restaurants, comfy accommodations and a whole host of colourful locals that make up this vibrant and cosmopolitan place. Regardless of what time of year you visit, there's always something happening in Yellowknife from a weekend music festival in the sand, to month-long activities at a snow castle on the frozen bay.", 
+            description: "Yellowknife, population of almost 20,000, is the capital of the Northwest Territories. The most common Dene name for Yellowknife is Somba K'e which translates to 'Where the money is,' which makes sense for a town with a gold-mining history. Here you'll find excellent restaurants, comfy accommodations and a whole host of colourful locals that make up this vibrant and cosmopolitan place. Regardless of what time of year you visit, there's always something happening in Yellowknife from a weekend music festival in the sand, to month-long activities at a snow castle on the frozen bay.", 
             location_type: "city-small", view_type: ["urban", "river"], time_zone: "MDT")
