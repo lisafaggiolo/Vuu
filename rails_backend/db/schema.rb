@@ -16,7 +16,6 @@ ActiveRecord::Schema.define(version: 2020_10_24_183619) do
   enable_extension "plpgsql"
 
   create_table "cities", force: :cascade do |t|
-    t.integer "id"
     t.string "name"
     t.string "province_id"
     t.integer "population"
@@ -29,7 +28,6 @@ ActiveRecord::Schema.define(version: 2020_10_24_183619) do
   end
 
   create_table "provinces", force: :cascade do |t|
-    t.integer "id"
     t.string "name"
     t.integer "average_rent"
     t.integer "shelter_cost_to_income_ratio"
