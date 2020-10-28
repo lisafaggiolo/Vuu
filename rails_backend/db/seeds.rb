@@ -26,79 +26,92 @@ Province.create(id: 12, name: "Northwest Territories", average_rent: 1190, shelt
 Province.create(id: 13, name: "Nunavut", average_rent: 736, shelter_cost_to_income_ratio: 94, age_group_vis_min: 4, description: "Nunavut is the largest and most northern territory of Canada. It is the newest territory as well, having been separated from Northwest Territories in 1999.")
  
 City.create(id: 1, name: "Okanagan Valley", province_id: 10, population: 362258, 
-            description: "", location_type: "town", view_type: "country", time_zone: "PDT")
+            description: "Aside from wine tasting, festivals, and farmers-market hopping, popular pursuits include cycling the Kettle Valley Rail Trail and boating on Okanagan Lake. Sunny and hot with fragrant sage, lavender fields, and vineyards spanning the hillsides, the long valley is filled with an expansive lake.  the Okanagan Valley has something for everyone: hoodoos, orchards, vineyards, mountains, valleys, lakes, highlands, ski slopes, and trails. This is truly one of the most desirable locales in British Columbia for year-round outdoor fun.", 
+            location_type: "town", view_type: "country", time_zone: "PDT")
 
 City.create(id: 2, name: "Vancouver", province_id: 10, population: 85935, 
-            description: "", location_type: "city-large", view_type: ["ocean", "mountain", "urban"], time_zone: "PDT")
+            description: "As British Columbia’s largest city, Vancouver is a haven for outdoor enthusiasts and cosmopolitan adventurers alike. Framed by the Pacific Ocean and Coast Mountains, Vancouver’s meandering oceanside pathways are the perfect way to explore the city. Close to 30 kilometres of uninterrupted waterfront path surround Vancouver’s favourite neighbourhoods, including the seawall around Stanley Park.", 
+            location_type: "city-large", view_type: ["ocean", "mountain", "urban"], time_zone: "PDT")
 
 City.create(id: 3, name: "Kelowna", province_id: 10, population: 194882, 
             description: "", location_type: , view_type: , time_zone: "PDT")
 
 City.create(id: 4, name: "Gaspe Peninsula", province_id: 5, population: 15163, 
-            description: "", location_type: ["town", "village"], view_type: "coast", time_zone: "EDT")
+            description: "“Stunning coastal scenery.” “Breathtaking.” “A trip of a lifetime.” That’s how visitors describe Quebec’s Gaspé Peninsula, a spot home to an unlikely amount of varied, untamed landscapes packed onto one 155-mile-long peninsula jutting into the Gulf of St. Lawrence. A National Geographic top travel destination a few years back, it's a place of stirring natural beauty and serenity, rugged seascapes, gorgeous beaches, and small-town charm. Lucky for us, it’s still largely undiscovered.", 
+            location_type: ["town", "village"], view_type: "coast", time_zone: "EDT")
 
 City.create(id: 5, name: "Magdalen Islands", province_id: 5, population: 12010, 
-            description: "", location_type: ["town", "village"], view_type: "coast", time_zone: "ADT")
+            description: "Located in the middle of the Gulf of St. Lawrence, this green archipelago surrounded by white-sand beaches and red cliffs exerts a magnetic attraction on visitors. Renowned for their warm hospitality, the Islanders are also talented chefs, artists and artisans. During your stay, enjoy exquisite seafood, wind sports, sea excursions, visits to local art galleries and studios, hikes and more.", 
+            location_type: ["town", "village"], view_type: "coast", time_zone: "ADT")
 
 City.create(id: 6, name: "Wasaga Beach", province_id: 6, population: 20675, 
-            description: "", location_type: "town", view_type: "lake", time_zone: "EDT")
+            description: "Wasaga Beach is not only the longest freshwater beach in the world with 14 km of safe, sandy shore, but the sunsets there are breathtaking. Wasaga Beach is the first provincial park in Canada to be awarded the “Blue Flag” designation for its banks management efforts under the international environmental standards. For more information, visit www.BlueFlag.ca", 
+            location_type: "town", view_type: "lake", time_zone: "EDT")
 
 City.create(id: 7, name: "Strathcona County", province_id: 9, population: 3103, 
-            description: "", location_type: "town", view_type: , time_zone: "MDT")
+            description: "Strathcona County is perfect for those who enjoy the fine balance of a rural and an urban territory. For this reason, the area of Strathcona County is a specialized municipality as it does a fine job of supporting the needs of those living in the rural area of the city as well as those who live in the urban portion of the city. In a city where the crime rate and the unemployment rate is low, there is no doubt that it is one of the best places to live in Alberta, and Canada as well.", 
+            location_type: "town", view_type: , time_zone: "MDT")
 
 City.create(id: 8, name: "Collingwood", province_id: 6, population: 21793, 
             description: "", location_type: , view_type: , time_zone: "EDT")
 
 City.create(id: 9, name: "Jasper", province_id: 9, population: 4590,  
-            description: "", location_type: "city-small", view_type: ["mountain", "lake"], time_zone: "MDT")
+            description: "Jasper is an intimate community that originated as a railway town that just happens to be in the middle of some of the most gorgeous protected wilderness in the world.", 
+            location_type: "city-small", view_type: ["mountain", "lake"], time_zone: "MDT")
 
 City.create(id: 10, name: "Banff", province_id: 9, population: 7847, 
-            description: "", location_type: "town", view_type: ["mountain", "lake"], time_zone: "MDT")
+            description: "Banff is a resort town and one of Canada's most popular tourist destinations. Known for its mountainous surroundings and hot springs, it is a destination for outdoor sports and features extensive hiking, biking, scrambling and skiing destinations within the area.", 
+            location_type: "town", view_type: ["mountain", "lake"], time_zone: "MDT")
 
 City.create(id: 11, name: "Halifax", province_id: 3, population: 431479, 
-            description: "", location_type: "city-small" , view_type: "coast", time_zone: "ADT")
+            description: "Compared to conurbations such as Vancouver and Toronto, Halifax barely qualifies as a city, but this seaside town punches well above its size: it's dotted with red-brick heritage buildings, public parks and a landmark citadel, blessed with some first-rate museums, and home to a truly epic 4km seafront boardwalk.", 
+            location_type: "city-small" , view_type: "coast", time_zone: "ADT")
 
 City.create(id: 12, name: "Charlottetown", province_id: 2, population: 36094, 
-            description: "", location_type: "city-small" , view_type: "coast", time_zone: "ADT")
+            description: "Charlottetown might be a small city, but it’s bursting with big energy and infectious island vibes. It’s got all the charm and hospitality PEI is famous for, plus culinary experiences and an arts and culture scene that take visitors by surprise—in the best way possible. Soak in the romance and nostalgia of the postcard-perfect streetscapes. Wander along a boardwalk where lobster boats and sailboats cozy up. Stay in a B&B that will give you serious Anne energy. Sound good? It’s time to discover Charlottetown.", 
+            location_type: "city-small" , view_type: "coast", time_zone: "ADT")
 
 City.create(id: 13, name: "St-Johns", province_id: 1, population: 113948,
-            description: "", location_type: "town" , view_type: "coast", time_zone: "NDT")
+            description: "St. John's, Newfoundland Labrador's capital, is the perfect combination of big-city luxury and traditional small-town charm. It is one of the oldest and most easterly cities in North America, and has become a rare destination full of character and charisma, with a contemporary, sophisticated edge.", 
+            location_type: "town" , view_type: "coast", time_zone: "NDT")
 
 City.create(id: 14, name: "Moncton", province_id: 4, population: 85198, 
-            description: "", location_type: "city-small", view_type: "urban", time_zone: "ADT")
+            description: "New Brunswick's transportation hub is vibrant Moncton, one of the country's fastest growing cities and a community steeped in history. Its storied past is brought to life in its many cultural institutions and museums, from the Acadian Museum to Le Centre Culturel Aberdeen. The city's largest green space, Centennial Park, includes many attractions and activities, from hiking and skiing trails to an artificial beach to an aerial treetop obstacle course and zip line.", 
+            location_type: "city-small", view_type: "urban", time_zone: "ADT")
 
 City.create(id: 15, name: "Whitehorse", province_id: 11, population: 25085,
-            description: "", location_type: "city-small", view_type: ["forest", "mountain"], time_zone: "PDT")
+            description: "Few cities in the world offer such rich access to pristine wilderness, yet still provide all the amenities of a modern metropolis. Hugged by the banks of the Yukon River and surrounded by the peaks of Grey Mountain, Haeckel Hill, and Golden Horn Mountain, Whitehorse is the Yukon’s most cosmopolitan community, but its easy access to trails, rivers, lakes and mountains are what make this city memorable.", 
+            location_type: "city-small", view_type: ["forest", "mountain"], time_zone: "PDT")
 
 City.create(id: 16, name: "Winnepeg", province_id: 7, population: 749534, 
-            description: "", location_type: "city-small", view_type: , time_zone: "CDT")
+            description: "", location_type: "city-small", view_type: "urban", time_zone: "CDT")
 
 City.create(id: 17, name: "Iqaluit", province_id: 13, population: 7740, 
-            description: "", location_type: "city-small", view_type: , time_zone: "EDT")
+            description: "", location_type: "city-small", view_type: ["coast", "mountain"], time_zone: "EDT")
 
 City.create(id: 18, name: "Meadow Lake", province_id: 8, population: 5344, 
-            description: "", location_type: , view_type: , time_zone: "CST")
+            description: "", location_type: "town", view_type: , time_zone: "CST")
 
 City.create(id: 19, name: "Massif de Charlevoix", province_id: 5, population: 11688, 
-            description: "", location_type: , view_type: , time_zone: "EDT")
+            description: "", location_type: "city-small", view_type: ["coast", "mountain", "forest"], time_zone: "EDT")
             
 City.create(id: 20, name: "Quebec City", province_id: 5, population: 11688, 
-            description: "", location_type: , view_type: , time_zone: "EDT")
+            description: "", location_type: "city-small", view_type: "urban", time_zone: "EDT")
 
 City.create(id: 21, name: "Montreal", province_id: 5, population: 11688, 
-            description: "", location_type: , view_type: , time_zone: "EDT")
+            description: "", location_type: "city-large", view_type: "urban", time_zone: "EDT")
             
 City.create(id: 22, name: "Toronto", province_id: 6, population: 11688, 
-            description: "", location_type: , view_type: , time_zone: "EDT")
+            description: "", location_type: "city-large", view_type: "urban", time_zone: "EDT")
 
 City.create(id: 23, name: "Ottawa", province_id: 6, population: 11688, 
-            description: "", location_type: , view_type: , time_zone: "EDT")
+            description: "", location_type: "city-small", view_type: "urban", time_zone: "EDT")
 
 City.create(id: 24, name: "Victoria", province_id: 10, population: 11688, 
-            description: "", location_type: , view_type: , time_zone: "PDT")
+            description: "", location_type: "city-small", view_type: ["coast", "urban"], time_zone: "PDT")
             
 City.create(id: 25, name: "Tofino", province_id: 10, population: 11688, 
-            description: "", location_type: , view_type: , time_zone: "PDT")
+            description: "", location_type: "town", view_type: ["coast", "forest"], time_zone: "PDT")
 
 City.create(id: 26, name: "Canmore", province_id: 9, population: 11688, 
             description: "", location_type: , view_type: , time_zone: 15)
