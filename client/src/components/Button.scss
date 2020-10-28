@@ -1,0 +1,40 @@
+@import "styles/variables.scss";
+
+.button {
+
+  border: 0;  
+  font-size: 1.5rem;
+  color: black;
+  height: 2rem;
+  width: 8rem;
+  background-color: transparent;  
+
+}
+
+.button--danger {
+    color: orangered;
+
+}
+
+.button--confirm {
+    color: green;
+}
+
+.button--danger:hover {
+    color: orangered;
+    background-color: lightsalmon;
+
+}
+
+.button--confirm:hover {
+    color: green;
+    background-color: lightgreen;
+}
+
+.button:disabled {
+    border-style: solid;
+    border-color: lightgray;
+    color: lightgray;
+    background-color: transparent;
+    opacity: 0.7;
+  }
