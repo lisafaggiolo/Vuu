@@ -1,12 +1,16 @@
+
 import React from "react";
 import Form from "./Form";
-import useApplicationData from "../hooks/useApplicationData";
+import './styles.scss';
 
-const Questionnaire = () => {
+
+const Questionnaire = (props) => {
+  
+
   return (
     <div>
-      <h1>Hello I am Questionnaire View</h1>
-      <Form />
+      <h3>Questionnaire</h3>
+      <Form question={props.questions}/>
     </div>
   );
 };
