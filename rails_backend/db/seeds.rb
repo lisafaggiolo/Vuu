@@ -88,57 +88,57 @@ City.create(name: "Moncton", province_id: 4, population: 85198,
 City.create(name: "Whitehorse", province_id: 11, population: 25085,
             description: "Few cities in the world offer such rich access to pristine wilderness, yet still provide all the amenities of a modern metropolis. Hugged by the banks of the Yukon River and surrounded by the peaks of Grey Mountain, Haeckel Hill, and Golden Horn Mountain, Whitehorse is the Yukon’s most cosmopolitan community, but its easy access to trails, rivers, lakes and mountains are what make this city memorable.", 
             location_type: "city-small", view_type: ["forest", "mountain"], time_zone: "PDT", 
-            healthcare_index: , crime_index: , pollution_index:  )
+            healthcare_index: 79.17, crime_index: 45.20, pollution_index: 12.96)
 
-City.create(name: "Winnepeg", province_id: 7, population: 749534, 
+City.create(name: "Winnipeg", province_id: 7, population: 749534, 
             description: "A cosmopolitan city known as the 'cultural cradle of Canada', Winnipeg is family friendly with plenty of charm. It boasts a dazzling arts, theatre and indie music scene, as well as lip-smacking dining options to tantalize every taste bud. Experience nine acres of shopping and interactive fun at the Forks Market or explore Winnipeg’s diverse neighborhoods like the historic French Quarter and Exchange District or the boho chic Osborne Village.", 
             location_type: "city-small", view_type: "urban", time_zone: "CDT",
-            healthcare_index: , crime_index: , pollution_index:  )
+            healthcare_index: 68.82, crime_index: 57.02, pollution_index: 36.68)
 
 City.create(name: "Iqaluit", province_id: 13, population: 7740, 
             description: "Iqaluit is the capital and largest community in Canada’s newest territory, Nunavut. It is also the territory's only city. Iqaluit is situated at the northeast head of Frobisher Bay, on southern Baffin Island. In an area long used by the Inuit and their ancestors, it is surrounded by hills close to the Sylvia Grinnell River and looks across the bay to the mountains of the Meta Incognita Peninsula.", 
             location_type: "city-small", view_type: ["coast", "mountain"], time_zone: "EDT",
-            healthcare_index: , crime_index: , pollution_index:  )
+            healthcare_index: 63.89, crime_index:	48.82, pollution_index: 60.78)
 
 City.create(name: "Massif de Charlevoix", province_id: 5, population: 29562, 
             description: "Mentioning Charlevoix to Quebeckers evokes a heartfelt sigh. No wonder: this region is renowned for its salty breezes (coming straight from “la mer”, as the tidal Saint Lawrence river is known), stunning vistas, artsy Baie-Saint-Paul and gourmet food trails. Getting here from Québec City is easy on Le Train de Massif from Montmorency Falls. In winter, Le Massif mountain’s 770 metres offers the greatest vertical drop for downhill skiing east of the Rocky Mountains.", 
             location_type: "city-small", view_type: ["coast", "mountain", "forest"], time_zone: "EDT",
-            healthcare_index: , crime_index: , pollution_index:  )
+            healthcare_index: null, crime_index: null, pollution_index: null)
             
 City.create(name: "Quebec City", province_id: 5, population: 542298, 
             description: "Dubbed the “Paris of North America”, 400-year-old Québec City is the province’s capital, and a must-visit in order to capture the spirit of New France (particularly in August’s New France Festival). Stay at the “castle” – Fairmont Chateau Frontenac – an architectural symbol of the city, recognisable for its steeply pitched copper roof and imposing turrets. Stroll along Dufferin Terrace overlooking the Saint Lawrence river – Canada’s first “highway”, it led explorers, traders, missionaries and settlers into the hinterland. Being North America’s only walled city, Old Québec is a Unesco world heritage site. Investigate the Citadel, wander the Plains of Abraham where British General Wolfe defeated French General Montcalm in 1759, then choose from many restaurants featuring le terroir (regional foods).", 
             location_type: "city-small", view_type: "urban", time_zone: "EDT",
-            healthcare_index: , crime_index: , pollution_index:  )
+            healthcare_index: 71.45, crime_index: 14.74, pollution_index: 31.94)
 
 City.create(name: "Montreal", province_id: 5, population: 1780000, 
             description: "Witness a French-infused city that's in love with festivals, the arts, good food, living well and enjoying life to the hilt. Montréal is the country’s cultural juggernaut. The city, standard bearer of an entire linguistic-cultural identity – francophone Canada – simply lives for public celebration of the arts. There are some 250 theater and dance companies, more than 90 festivals and a fascinating medley of neighborhoods where artists, writers and musicians have helped cement the city’s reputation as a great arts center.", 
             location_type: "city-large", view_type: "urban", time_zone: "EDT",
-            healthcare_index: , crime_index: , pollution_index:  )
+            healthcare_index: 64.43, crime_index: 29.18, pollution_index: 33.29)
             
 City.create(name: "Toronto", province_id: 6, population: 2930000, 
             description: "Toronto is one of Canada's largest cities and one of its best destinations to travel to in the country, full of sights and attractions such as its countless museums and parks. With its highly iconic landmark of the CN Tower gracing its skyline, Toronto is also famous for its beautiful lake scenery with much of the city straddling and rising up against the gorgeous Lake Ontario.", 
             location_type: "city-large", view_type: "urban", time_zone: "EDT",
-            healthcare_index: , crime_index: , pollution_index:  )
+            healthcare_index: 75.87, crime_index: 39.41, pollution_index: 37.88)
 
 City.create(name: "Ottawa", province_id: 6, population: 994837, 
             description: "Ottawa is Canada’s beautiful capital city, a destination filled with national sites and historic landmarks. Home to about 1.25 million people, Ottawa is located within easy driving distance of Montreal (1h 45min), Toronto (4hrs) and the US border (45min). There are countless sites to see in the capital, and many ways to see them. Boat tours on the Rideau Canada and the Ottawa River, bus tours on land, and amphibus tours on water, biplane and helicopter tours, cycling tours and a variety of themed walking tours. In fact, many of Ottawa’s most popular attractions and experiences can be found in its surprisingly compact and walkable downtown core.", 
             location_type: "city-small", view_type: "urban", time_zone: "EDT",
-            healthcare_index: , crime_index: , pollution_index:  )
+            healthcare_index: 75.34, crime_index: 26.07, pollution_index: 20.36)
 
 City.create(name: "Victoria", province_id: 10, population: 92141, 
             description: "Victoria is a year-round tourism destination that offers a friendly, safe haven for all visitors. With a clean environment and charming ambience, it is no surprise that Victoria, BC is one of the world's favourite destinations. It’s a great place to spend a few days before or after your kayak tour of Vancouver Island, without fear of getting lost in the sprawl of a major city.", 
             location_type: "city-small", view_type: ["coast", "urban"], time_zone: "PDT",
-            healthcare_index: , crime_index: , pollution_index:  )
+            healthcare_index: 70.09, crime_index: 34.51, pollution_index: 15.46)
             
 City.create(name: "Tofino", province_id: 10, population: 1932, 
             description: "The surf swept community of Tofino rests in the centre of Clayoquot Sound, an expanse of islets and inlets arranged like a collection of emeralds along the west coast of Vancouver Island. The meaning of Clayoquot comes from Tla-o- quia-aht “people who are different from who they used to be”. A fitting description any traveler should expect for themselves when journeying to this wild west coast town on the edge of the world.", 
             location_type: "town", view_type: ["coast", "forest"], time_zone: "PDT",
-            healthcare_index: , crime_index: , pollution_index:  )
+            healthcare_index: null, crime_index: null, pollution_index: null)
 
 City.create(name: "Canmore", province_id: 9, population: 13992, 
             description: "If you’re about the outdoors lifestyle and enjoy picturesque scenary, Canmore is the place you and your family want to be living. The town of Canmore is located just west of the big city of Calgary, but is also on the boundary of Banff National Park. Canada’s oldest national park offers a beautiful view of the Rocky Mountains, and some of the most gorgeous lakes in the world.", 
             location_type: "town", view_type: ["mountain", "urban", "forest"], time_zone: "MDT",
-            healthcare_index: , crime_index: , pollution_index:  )
+            healthcare_index: null, crime_index: null, pollution_index: null)
 
 City.create(name: "Calgary", province_id: 9, population: 1336000, 
             description: "If you like the big city with all the amenities that can be offered, Calgary is a great choice for you and your family. The city of Calgary has over 1.4 million people residing within it and is the largest city the province of Alberta has to offer. As a resident in Calgary, you’ll have no problem finding activities to do with your free time. Annual events like the Calgary Stampede bring people from all over the world to the city to enjoy the rodeo, exhibition, and festival.", 
@@ -148,92 +148,92 @@ City.create(name: "Calgary", province_id: 9, population: 1336000,
 City.create(name: "The Thousand Islands", province_id: 6, population: 9465, 
             description: "Perhaps it starts with an inspiring sunrise on the Canadian side of the St. Lawrence Seaway or ends with a breathtaking sunset from the U.S. Maybe it includes views of storybook castles, a good fish story, a taste of craft beverages or a trip back in time. On the pristine waters or in quiet villages, there are thousands of things to see and do.", 
             location_type: "town", view_type: "lake", time_zone: "EDT",
-            healthcare_index: , crime_index: , pollution_index:  )
+            healthcare_index: null, crime_index: null, pollution_index: null)
             
 City.create(name: "Niagara", province_id: 6, population: 447888, 
             description: "From wining, dining and riding the vines in Niagara-on-the-Lake and off the beaten path in Twenty Valley, to the urban cool of St. Catharines or outdoor adventures on the beach and amongst the battlefields of Niagara’s South Coast, without forgetting the iconic Niagara Falls, you will indulge in moments that are sure to inspire your senses.", 
             location_type: "city-medium", view_type: ["urban", "country"], time_zone: "EDT",
-            healthcare_index: , crime_index: , pollution_index:  )
+            healthcare_index: 73.33, crime_index: 32.98, pollution_index: 27.68)
             
 City.create(name: "Regina", province_id: 8, population: 228928, 
             description: "Although situated on a flat plain with few indigenous trees, Regina boasts some of western Canada's most innovative urban landscaping, with plentiful green spaces, hiking and biking paths, playgrounds, oak-lined streets and parks throughout the city. The popular Wascana Lake plays host to summer boaters and winter skating. Regina is also home to numerous cultural and educational institutions, including museums, galleries, theaters and Canada's RCMP Training Academy Grounds.", 
             location_type: "city-medium", view_type: "urban", time_zone: "CST",
-            healthcare_index: , crime_index: , pollution_index:  )
+            healthcare_index: 68.75, crime_index: 54.60, pollution_index: 39.13)
  
 City.create(name: "Saskatoon", province_id: 8, population: 273010, 
             description: "Named for the sweet berry that grows wild in the region, Saskatoon boasts various cultural festivals, concerts and sporting events throughout the year. Explore the trails and beaches of Beaver Creek and Cranberry Flats, cross-country ski the Meewasin Valley Trail, check out the city's many galleries and museums, and shop for bargains at Midtown Plaza.", 
             location_type: "city-medium", view_type: ["urban", "lake"], time_zone: "CST",
-            healthcare_index: , crime_index: , pollution_index:  )
+            healthcare_index: 63.97, crime_index: 49.47, pollution_index: 27.9)
  
 City.create(name: "Moose Jaw", province_id: 8, population: 33890, 
             description: "Moose Jaw is the fourth largest city in Saskatchewan, Canada. Lying on the Moose Jaw River in the south-central part of the province, it is situated on the Trans-Canada Highway, 77 km (48 mi) west of Regina. Residents of Moose Jaw are known as Moose Javians. The city is surrounded by the Rural Municipality of Moose Jaw No. 161.", 
             location_type: "city-small", view_type: "urban", time_zone: "CST",
-            healthcare_index: , crime_index: , pollution_index:  )
+            healthcare_index: 68.98, crime_index: 48.53, pollution_index: 22.13)
  
 City.create(name: "Swift Current", province_id: 8, population: 16604, 
             description: "Swift Current, also known as Speedy Creek, is the fifth largest city in the Canadian province of Saskatchewan. It is situated along the Trans Canada Highway 170 kilometres (110 mi) west from Moose Jaw, and 218 kilometres (135 mi) east from Medicine Hat, Alberta. Swift Current grew 6.8% between 2011 and 2016, ending up at 16,604 residents.[2] The city is surrounded by the Rural Municipality of Swift Current No. 137.", 
             location_type: "city-small", view_type: "urban", time_zone: "CST",
-            healthcare_index: , crime_index: , pollution_index:  )
+            healthcare_index: null, crime_index: null, pollution_index: null)
  
 City.create(name: "Prince Albert", province_id: 8, population: 35926, 
             description: "Prince Albert is the third-largest city in Saskatchewan, Canada, after Saskatoon and Regina. It is situated near the centre of the province on the banks of the North Saskatchewan River. The city is known as the 'Gateway to the North' because it is the last major centre along the route to the resources of northern Saskatchewan.", 
             location_type: "city-medium", view_type: "river", time_zone: "CST",
-            healthcare_index: , crime_index: , pollution_index:  )
+            healthcare_index: null, crime_index: null, pollution_index: null)
             
 City.create(name: "Brandon", province_id: 7, population: 48859, 
             description: "The City of Brandon was incorporated in 1882,[5] having a history rooted in the Assiniboine River fur trade as well as its role as a major junction on the Canadian Pacific Railway.[6] Known as The Wheat City, Brandon's economy is predominantly associated with agriculture;[7] however, it also has strengths in health care, manufacturing, food processing, business services, and transportation.", 
             location_type: "city-medium", view_type: "river", time_zone: "CST",
-            healthcare_index: , crime_index: , pollution_index:  )
+            healthcare_index: 71.94, crime_index: 43.46, pollution_index: 35.63)
  
 City.create(name: "Portage la Prairie", province_id: 7, population: 13304, 
             description: "Portage la Prairie is approximately 75 kilometres (47 mi) west of Winnipeg, along the Trans-Canada Highway (exactly between the provincial boundaries of Saskatchewan and Ontario). The community sits on the Assiniboine River, which flooded the town persistently until a diversion channel north to Lake Manitoba (the Portage Diversion) was built to divert the flood waters. The city is surrounded by the Rural Municipality of Portage la Prairie.", 
             location_type: "town", view_type: "river", time_zone: "CST",
-            healthcare_index: , crime_index: , pollution_index:  )
+            healthcare_index: null, crime_index: null, pollution_index: null)
  
 City.create(name: "Dauphin", province_id: 7, population: 8457, 
             description: "Dauphin is a city in Manitoba, Canada, with a population of 8,457 as of the 2016 Canadian Census, with an additional 2,388 living in the surrounding Rural Municipality of Dauphin, for a total of 10,845 in the RM and City combined.[2] Dauphin is Manitoba's 9th largest community and serves as a hub to the province's Parkland Region.", 
             location_type: "town", view_type: "", time_zone: "CST",
-            healthcare_index: , crime_index: , pollution_index:  )
+            healthcare_index: null, crime_index: null, pollution_index: null)
  
 City.create(name: "Gimli", province_id: 7, population: 2246, 
             description: "Gimli is an unincorporated community in the Rural Municipality of Gimli on the west side of Lake Winnipeg in Manitoba. The community's first European settlers were Icelanders who were part of the New Iceland settlement in Manitoba. The community maintains a strong connection to Iceland and Icelandic culture today, including the annual Icelandic Festival.", 
             location_type: "town", view_type: "", time_zone: "CST",
-            healthcare_index: , crime_index: , pollution_index:  )
+            healthcare_index: null, crime_index: null, pollution_index: null)
  
 City.create(name: "Fredericton", province_id: 4, population: 58220, 
             description: "Spread along both sides of the majestic St. John River, Fredericton combines the coziness of a small town with the world-class institutions of a city much larger than this humble capital. Tree-lined streets and suburban neighborhoods of Victorian-era homes live harmoniously alongside three universities, countless historic sites, museums, riverfront trails and restaurants featuring local and international cuisines. Fredericton also boasts a number of world-renowned festivals.", 
             location_type: "city-medium", view_type: "river", time_zone: "AST",
-            healthcare_index: , crime_index: , pollution_index:  )
+            healthcare_index: 52.45, crime_index: 29.87, pollution_index: 18.47)
             
 City.create(name: "Saint John", province_id: 4, population: 67575, 
             description: "Saint John, New Brunswick, is the only city on the shore of the Bay of Fundy, home to the world’s highest tides. Canada’s oldest incorporated city, Saint John is a popular tourist destination known for its historic uptown streetscapes, cultural attractions and natural wonders. Popular sights include the Reversing Rapids, where the Bay collides with the St. John River, the City Market with local vendors and artisans, the New Brunswick Museum and the trails and beauty of Rockwood Park.", 
             location_type: "city-small", view_type: "river", time_zone: "AST",
-            healthcare_index: , crime_index: , pollution_index:  )
+            healthcare_index: 76.65, crime_index: 35.10, pollution_index: 66.59)
             
 City.create(name: "Saint Andrews", province_id: 4, population: 1786, 
             description: "Saint Andrews (2016 population: 1,786)[1] is a town in Charlotte County, New Brunswick, Canada. The historic town is a national historic site of Canada, bearing many characteristics of a typical 18th century British colonial settlement, including the original grid layout with its market square, and the classical architecture.", 
             location_type: "town", view_type: "coast", time_zone: "AST",
-            healthcare_index: , crime_index: , pollution_index:  )
+            healthcare_index: null, crime_index: null, pollution_index: null)
             
 City.create(name: "Grand Falls", province_id: 4, population: 5326, 
             description: "Grand Falls (French: Grand-Sault) is a town located in Victoria County, New Brunswick, Canada. Grand Falls is situated on the Saint John River. The town derives its name from a waterfall created by a series of rock ledges over which the river drops 23 metres (75 ft). Its population was 5,326 at the 2016 census.", 
             location_type: "town", view_type: "", time_zone: "AST",
-            healthcare_index: , crime_index: , pollution_index:  )
+            healthcare_index: null, crime_index: null, pollution_index: null)
             
 City.create(name: "Lunenburg", province_id: 3, population: 2263, 
             description: "Established in 1753, this historic Nova Scotia coastal community is now a UNESCO World Heritage Site. Wander among its colourful galleries and shops, arranged on a tidy grid of walkable streets. Visit the Fisheries Museum of the Atlantic to understand the town's maritime history.", 
             location_type: "town", view_type: "coast", time_zone: "AST",
-            healthcare_index: , crime_index: , pollution_index:  )
+            healthcare_index: null, crime_index: null, pollution_index: null)
    
 City.create(name: "Baddeck", province_id: 3, population: 769, 
             description: "Baddeck, on Cape Breton Island, is a great base for the Cabot Trail, Cape Breton Highlands National Park and Louisbourg’s fortress. Easily explored on foot, Baddeck’s sole street offers an appealing array of accommodation, restaurants and stores and lovely views of Bras d’Or Lake. Take a kayak tour on the North River, visit Kidston Lighthouse or hike the national park’s trails, cliffs and coves. Back in the town, don’t miss the museum devoted to famed inventor Alexander Graham Bell.", 
             location_type: "village", view_type: "coast", time_zone: "AST",
-            healthcare_index: , crime_index: , pollution_index:  )
+            healthcare_index: null, crime_index: null, pollution_index: null)
             
 City.create(name: "Sydney", province_id: 3, population: 29904, 
             description: "Sydney is a former city and current community located in the Cape Breton Regional Municipality of Cape Breton Island, Nova Scotia, Canada. Situated on Cape Breton Island's east coast, it belongs administratively to the Cape Breton Regional Municipality. Sydney was founded in 1785 by the British, was incorporated as a city in 1904, and dissolved on 1 August 1995, when it was amalgamated into the regional municipality.", 
             location_type: "city-small", view_type: "coast", time_zone: "AST",
-            healthcare_index: , crime_index: , pollution_index:  )
+            healthcare_index: 61.11, crime_index: 37.22, pollution_index: 10.34)
             
 City.create(name: "Dartmouth", province_id: 3, population: 65741, 
             description: "Dartmouth is a former city and current community located in the Halifax Regional Municipality of Nova Scotia, Canada. Dartmouth is located on the eastern shore of Halifax Harbour. Dartmouth has been nicknamed the City of Lakes, after the large number of lakes located within its boundaries.", 
@@ -248,17 +248,17 @@ City.create(name: "Cavendish", province_id: 2, population: 7500,
 City.create(name: "Corner Brook", province_id: 1, population: 19806, 
             description: "Located on the Bay of Islands at the mouth of the Humber River, the city is the second-largest population centre in the province behind St. John's,[2] and smallest of three cities behind St. John's and Mount Pearl.[3] As such, Corner Brook functions as a service centre for western and northern Newfoundland. It is located on the same latitude as Gaspé, Quebec, a city of similar size and landscape on the other side of the Gulf of St. Lawrence. Corner Brook is the most northern city in Atlantic Canada.", 
             location_type: "city-small", view_type: "coast", time_zone: "NDT",
-            healthcare_index: , crime_index: , pollution_index:  )
+            healthcare_index: null, crime_index: 28.68, pollution_index: 5.60)
 
 City.create(name: "Deer Lake", province_id: 1, population: 5249, 
             description: "Deer Lake is a town in the western part of the island of Newfoundland in the province of Newfoundland and Labrador, Canada.The town derives its name from Deer Lake and is situated at the outlet of the upper Humber River at the northeastern end of the lake.", 
             location_type: "town", view_type: "lake", time_zone: "NDT",
-            healthcare_index: , crime_index: , pollution_index:  )
+            healthcare_index: null, crime_index: null, pollution_index: null)
 
 City.create(name: "Gander", province_id: 1, population: 11688, 
             description: "Gander is a town located in the northeastern part of the island of Newfoundland in the province of Newfoundland and Labrador, approximately 40 km (25 mi) south of Gander Bay, 100 km (62 mi) south of Twillingate and 90 km (56 mi) east of Grand Falls-Windsor. Located on the northeastern shore of Gander Lake, it is the site of Gander International Airport, once an important refuelling stop for transatlantic aircraft and the largest airport in the world. The airport is still a preferred emergency landing point for aircraft facing on-board medical or security issues.", 
             location_type: "town", view_type: "", time_zone: "NDT",
-            healthcare_index: , crime_index: , pollution_index:  )
+            healthcare_index: null, crime_index: null, pollution_index: null)
 
 City.create(name: "Twillingate", province_id: 1, population: 2196, 
             description: "Twillingate is a town of 2,196 people located on the Twillingate Islands ('Toulinquet') in Notre Dame Bay, off the north eastern shore of the island of Newfoundland in the province of Newfoundland and Labrador, Canada. The town is about 100 kilometres (62 mi) north of Lewisporte and Gander.", 
@@ -268,4 +268,4 @@ City.create(name: "Twillingate", province_id: 1, population: 2196,
 City.create(name: "Yellowknife", province_id: 12, population: 19569, 
             description: "Yellowknife, population of almost 20,000, is the capital of the Northwest Territories. The most common Dene name for Yellowknife is Somba K'e which translates to 'Where the money is,' which makes sense for a town with a gold-mining history. Here you'll find excellent restaurants, comfy accommodations and a whole host of colourful locals that make up this vibrant and cosmopolitan place. Regardless of what time of year you visit, there's always something happening in Yellowknife from a weekend music festival in the sand, to month-long activities at a snow castle on the frozen bay.", 
             location_type: "city-small", view_type: ["urban", "river"], time_zone: "MDT",
-            healthcare_index: , crime_index: , pollution_index:  )
+            healthcare_index: 88.74, crime_index: 56.06, pollution_index: 28.45)
