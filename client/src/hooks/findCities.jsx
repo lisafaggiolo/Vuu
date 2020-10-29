@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-const useApplicationData = () => {
+export default function findCities(criteria) {
+  
   // const  setProvince = province => setState({...state, province})
   // const  setCity = city => setState({...state, city})
 
@@ -10,4 +11,3 @@ const useApplicationData = () => {
   // cities.where
 };
 
-export default useApplicationData;
