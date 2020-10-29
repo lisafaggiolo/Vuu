@@ -17,18 +17,25 @@ ActiveRecord::Schema.define(version: 2020_10_24_183619) do
 
   create_table "cities", force: :cascade do |t|
     t.string "name"
-    t.string "province"
-    t.string "population"
-    t.string "main_mode_of_transport"
-    t.string "average_cost_of_living" 
+    t.string "province_id"
+    t.integer "population"
+    t.text "description"
+    t.string "location_type"
+    t.string "view_type"
+    t.string "time_zone"
+    t.float "healthcare_index"
+    t.float "crime_index"
+    t.float "pollution_index" 
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "provinces", force: :cascade do |t|
     t.string "name"
+    t.integer "average_rent"
+    t.integer "shelter_cost_to_income_ratio"
+    t.integer "age_group_vis_min"
     t.text "description"
-    t.text "avg_rent_per_month" 
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -38,6 +45,14 @@ ActiveRecord::Schema.define(version: 2020_10_24_183619) do
     t.string "last_name"
     t.string "email"
     t.string "password"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "questions", force: :cascade do |t|
+    t.string "question"
+    t.string "potential_answers"
+    t.string "user_answer"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
