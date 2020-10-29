@@ -23,7 +23,7 @@ const questions = [
   {
     id: 1,
     question: "Do you see yourself changing your office location for more than 6 months?",
-    potential_answers: [true, false],
+    potential_answers: ["Yes", "No"],
     user_answer: [] 
   },
   {
@@ -35,7 +35,7 @@ const questions = [
   {
     id: 3,
     question: "Is staying in your time Zone a requirement for work?",
-    potential_answers: [true, false],
+    potential_answers: ["Yes", "No"],
     user_answer: [] 
   }
 ]
@@ -150,7 +150,7 @@ storiesOf("Questionnaire", module)
   })
   .add("Questionnaire", () => 
     <Questionnaire
-      questions={questions}
+      questions={ questions }
     />);
   
 storiesOf("Form", module)
@@ -159,12 +159,11 @@ storiesOf("Form", module)
   })
   .add("Form", () => 
     <Form
-    id={questions[0].id}
+    key={questions[0].id}
     question={questions[0].question}
     potential_answers={questions[0].potential_answers}
     user_answer={questions[0].user_answer}
-    onClick={action("onConfirm")}
-    onCancel={action("onCancel")} 
+    updateAnswers={""}
     />);
 
 
@@ -174,12 +173,8 @@ storiesOf("AnswerOptions", module)
   })
   .add("AnswerOptions", () => 
     <AnswerOptions
-      key={questions[0].id}
-      questionId={questions[0].id}
-      potential_answers={questions[0].potential_answers}
-      user_answer={questions[0].user_answer}
-      onClick={action("onConfirm")}
-      onCancel={action("onCancel")} 
+      potential_answer={ questions[0].potential_answers[0] }
+      updateAnswers={ action("chosen-answers") }
     />)
 
 
