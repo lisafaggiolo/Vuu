@@ -22,7 +22,10 @@ ActiveRecord::Schema.define(version: 2020_10_24_183619) do
     t.text "description"
     t.string "location_type"
     t.string "view_type"
-    t.string "time_zone" 
+    t.string "time_zone"
+    t.float "healthcare_index"
+    t.float "crime_index"
+    t.float "pollution_index"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -37,19 +40,19 @@ ActiveRecord::Schema.define(version: 2020_10_24_183619) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "questions", force: :cascade do |t|
+    t.string "question"
+    t.string "potential_answers"
+    t.string "user_answer"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "first_name"
     t.string "last_name"
     t.string "email"
     t.string "password"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "questions", force: :cascade do |t|
-    t.string "question"
-    t.string "potential_answers"
-    t.string "user_answer"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

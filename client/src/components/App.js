@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import './App.css';
+import './App.scss';
 import Header from './Header';
 import Footer from './Footer';
 import axios from "axios";
@@ -12,6 +12,11 @@ import {
   useRouteMatch,
   useParams
 } from "react-router-dom";
+import Navbar from './Navbar';
+import Home from './Home';
+import About from './About';
+import Cities from './Cities';
+
 
 export default function App(props) {
   const [cities, setCities] = useState([]);
@@ -22,9 +27,8 @@ export default function App(props) {
   function getCOVIDinfo() {
     return axios.get('https://api.covid19tracker.ca/provinces')
   }
-
 //not working even with API key 
-  function getWeatherAndTimeZone(city) {
+  function getWeather(city) {
     return axios({
       "method":"GET",
       "url":"https://community-open-weather-map.p.rapidapi.com/weather",
@@ -66,17 +70,17 @@ export default function App(props) {
     return axios.get("http://www.numbeo.com/api/country_indices?api_key=exkod1xx5sorso&country=Canada");
   }
   
-  useEffect(() => {
+  useEffect((city) => {
     Promise.all([
       axios.get("/api/cities"),
       axios.get("/api/provinces"),
       axios.get("/api/users"),
       getCOVIDinfo(),
-      getAveragePriceOfItems("Montreal"),
-      getWeatherAndTimeZone("Montreal"),
-      getHealthSystemQuality("Montreal"),
-      getCrimeIndex("Montreal"),
-      getAirPollution("Montreal"),
+      getAveragePriceOfItems(`${city}`),
+      getWeather(`${city}`),
+      getHealthSystemQuality(`${city}`),
+      getCrimeIndex(`${city}`),
+      getAirPollution(`${city}`),
       getCanadaIndices()
     ]).then((all) => {
       
@@ -85,6 +89,7 @@ export default function App(props) {
       const users = all[2].data;
       console.log(all);
       console.log("cities", cities.length, "provinces", provinces.length, "users", users.length);
+      
       setCities(cities)
       setProvinces(provinces)
       setUsers(users)
@@ -106,15 +111,7 @@ export default function App(props) {
       <div>
         <ul>
           <h1>Better add all that view Shenanigans here</h1>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/about">About</Link>
-          </li>
-          <li>
-            <Link to="/cities">Cities</Link>
-          </li>
+          <Navbar />
         </ul>
 
         <Switch>
@@ -124,7 +121,7 @@ export default function App(props) {
           <Route path="/cities">
             <Cities />
           </Route>
-          <Route path="/">
+          <Route path="/home">
             <Home />
           </Route>
         </Switch>
@@ -132,56 +129,4 @@ export default function App(props) {
     </Router>
 
   );
-}
-function Home() {
-  return <h2>Home</h2>;
-}
-
-function About() {
-  return <h2>About</h2>;
-}
-
-function Cities() {
-  let match = useRouteMatch();
-
-  return (
-    <div>
-      <h2>Cities</h2>
-
-      <ul>
-        <li>
-          <Link to={`${match.url}/components`}>Components</Link>
-        </li>
-        <li>
-          <Link to={`${match.url}/props-v-state`}>
-            Props v. State
-          </Link>
-        </li>
-      </ul>
-
-      {/* The cities page has its own <Switch> with more routes
-          that build on the /cities URL path. You can think of the
-          2nd <Route> here as an "index" page for all cities, or
-          the page that is shown when no city is selected */}
-      <Switch>
-        <Route path={`${match.path}/:cityId`}>
-          <City />
-        </Route>
-        <Route path={match.path}>
-          <h3>Please select a city.</h3>
-        </Route>
-      </Switch>
-    </div>
-  );
-}
-
-function City() {
-  let { cityId } = useParams();
-  return <h3>Requested city ID: {cityId}</h3>;
-}
-
-// set up a view/react Route for the quizz
-// pass submitFilter via prop, Questions
-function submitFilters(userAnswers) {
-  
 }
