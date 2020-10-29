@@ -1,9 +1,15 @@
 import React from 'react';
+import AnswerOptions from './AnswerOptions';
 
-const Form = () =>{
+const Form = (props) =>{
     return (
       <div>
-        <h1>Hello I am Form component</h1>
+        <form>
+          <label>
+            { props.question }
+          </label>
+          <AnswerOptions potential_answers={props.potential_answers[0]}/>
+        </form>
       </div>
      
     );

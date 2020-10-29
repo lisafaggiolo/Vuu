@@ -15,8 +15,6 @@ class Api::ProvincesController < ApplicationController
     end
     
   end
-    
-  end
   
   def create
     province = Province.new(province_params)
