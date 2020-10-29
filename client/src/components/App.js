@@ -179,3 +179,9 @@ function City() {
   let { cityId } = useParams();
   return <h3>Requested city ID: {cityId}</h3>;
 }
+
+// set up a view/react Route for the quizz
+// pass submitFilter via prop, Questions
+function submitFilters(userAnswers) {
+  
+}
