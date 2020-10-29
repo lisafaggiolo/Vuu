@@ -6,7 +6,7 @@ export default function Statistics(props) {
       <h1>Hello I am Statistics View</h1>
 
     </div>
-  );
+  )
 };
 
 export default function Stats(props) {

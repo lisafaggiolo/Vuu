@@ -22,7 +22,10 @@ ActiveRecord::Schema.define(version: 2020_10_24_183619) do
     t.text "description"
     t.string "location_type"
     t.string "view_type"
-    t.string "time_zone" 
+    t.string "time_zone"
+    t.float "healthcare_index"
+    t.float "crime_index"
+    t.float "pollution_index" 
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

@@ -36,7 +36,7 @@ Province.create(name: "Nunavut", average_rent: 736, shelter_cost_to_income_ratio
 City.create(name: "Okanagan Valley", province_id: 10, population: 362258, 
             description: "Aside from wine tasting, festivals, and farmers-market hopping, popular pursuits include cycling the Kettle Valley Rail Trail and boating on Okanagan Lake. Sunny and hot with fragrant sage, lavender fields, and vineyards spanning the hillsides, the long valley is filled with an expansive lake.  the Okanagan Valley has something for everyone: hoodoos, orchards, vineyards, mountains, valleys, lakes, highlands, ski slopes, and trails. This is truly one of the most desirable locales in British Columbia for year-round outdoor fun.", 
             location_type: "town", view_type: "country", time_zone: "PDT", 
-            healthcare_index: null, crime_index: null, pollution_index: null)
+            healthcare_index: 0, crime_index: 0, pollution_index: 0)
 
 City.create(name: "Vancouver", province_id: 10, population: 85935, 
             description: "As British Columbia’s largest city, Vancouver is a haven for outdoor enthusiasts and cosmopolitan adventurers alike. Framed by the Pacific Ocean and Coast Mountains, Vancouver’s meandering oceanside pathways are the perfect way to explore the city. Close to 30 kilometres of uninterrupted waterfront path surround Vancouver’s favourite neighbourhoods, including the seawall around Stanley Park.", 
@@ -46,32 +46,32 @@ City.create(name: "Vancouver", province_id: 10, population: 85935,
 City.create(name: "Gaspe Peninsula", province_id: 5, population: 15163, 
             description: "“Stunning coastal scenery.” “Breathtaking.” “A trip of a lifetime.” That’s how visitors describe Quebec’s Gaspé Peninsula, a spot home to an unlikely amount of varied, untamed landscapes packed onto one 155-mile-long peninsula jutting into the Gulf of St. Lawrence. A National Geographic top travel destination a few years back, it's a place of stirring natural beauty and serenity, rugged seascapes, gorgeous beaches, and small-town charm. Lucky for us, it’s still largely undiscovered.", 
             location_type: ["town", "village"], view_type: "coast", time_zone: "EDT", 
-            healthcare_index: null, crime_index: null, pollution_index: null)
+            healthcare_index: 0, crime_index: 0, pollution_index: 0)
 
 City.create(name: "Magdalen Islands", province_id: 5, population: 12010, 
             description: "Located in the middle of the Gulf of St. Lawrence, this green archipelago surrounded by white-sand beaches and red cliffs exerts a magnetic attraction on visitors. Renowned for their warm hospitality, the Islanders are also talented chefs, artists and artisans. During your stay, enjoy exquisite seafood, wind sports, sea excursions, visits to local art galleries and studios, hikes and more.", 
             location_type: ["town", "village"], view_type: "coast", time_zone: "ADT", 
-            healthcare_index: null, crime_index: null, pollution_index: null)
+            healthcare_index: 0, crime_index: 0, pollution_index: 0)
 
 City.create(name: "Wasaga Beach", province_id: 6, population: 20675, 
             description: "Wasaga Beach is not only the longest freshwater beach in the world with 14 km of safe, sandy shore, but the sunsets there are breathtaking. Wasaga Beach is the first provincial park in Canada to be awarded the “Blue Flag” designation for its banks management efforts under the international environmental standards. For more information, visit www.BlueFlag.ca", 
             location_type: "town", view_type: "lake", time_zone: "EDT", 
-            healthcare_index: null, crime_index: null, pollution_index: null)
+            healthcare_index: 0, crime_index: 0, pollution_index: 0)
 
 City.create(name: "Strathcona County", province_id: 9, population: 98044, 
             description: "Strathcona County is perfect for those who enjoy the fine balance of a rural and an urban territory. For this reason, the area of Strathcona County is a specialized municipality as it does a fine job of supporting the needs of those living in the rural area of the city as well as those who live in the urban portion of the city. In a city where the crime rate and the unemployment rate is low, there is no doubt that it is one of the best places to live in Alberta, and Canada as well.", 
             location_type: "town", view_type: "rural", time_zone: "MDT", 
-            healthcare_index: null, crime_index: null, pollution_index: null)
+            healthcare_index: 0, crime_index: 0, pollution_index: 0)
 
 City.create(name: "Jasper", province_id: 9, population: 4590,  
             description: "Jasper is an intimate community that originated as a railway town that just happens to be in the middle of some of the most gorgeous protected wilderness in the world.", 
             location_type: "city-small", view_type: ["mountain", "lake"], time_zone: "MDT", 
-            healthcare_index: null, crime_index: null, pollution_index: null)
+            healthcare_index: 0, crime_index: 0, pollution_index: 0)
 
 City.create(name: "Banff", province_id: 9, population: 7847, 
             description: "Banff is a resort town and one of Canada's most popular tourist destinations. Known for its mountainous surroundings and hot springs, it is a destination for outdoor sports and features extensive hiking, biking, scrambling and skiing destinations within the area.", 
             location_type: "town", view_type: ["mountain", "lake"], time_zone: "MDT", 
-            healthcare_index: null, crime_index: null, pollution_index: null)
+            healthcare_index: 0, crime_index: 0, pollution_index: 0)
 
 City.create(name: "Halifax", province_id: 3, population: 431479, 
             description: "Compared to conurbations such as Vancouver and Toronto, Halifax barely qualifies as a city, but this seaside town punches well above its size: it's dotted with red-brick heritage buildings, public parks and a landmark citadel, blessed with some first-rate museums, and home to a truly epic 4km seafront boardwalk.", 
@@ -111,7 +111,7 @@ City.create(name: "Iqaluit", province_id: 13, population: 7740,
 City.create(name: "Massif de Charlevoix", province_id: 5, population: 29562, 
             description: "Mentioning Charlevoix to Quebeckers evokes a heartfelt sigh. No wonder: this region is renowned for its salty breezes (coming straight from “la mer”, as the tidal Saint Lawrence river is known), stunning vistas, artsy Baie-Saint-Paul and gourmet food trails. Getting here from Québec City is easy on Le Train de Massif from Montmorency Falls. In winter, Le Massif mountain’s 770 metres offers the greatest vertical drop for downhill skiing east of the Rocky Mountains.", 
             location_type: "city-small", view_type: ["coast", "mountain", "forest"], time_zone: "EDT",
-            healthcare_index: null, crime_index: null, pollution_index: null)
+            healthcare_index: 0, crime_index: 0, pollution_index: 0)
             
 City.create(name: "Quebec City", province_id: 5, population: 542298, 
             description: "Dubbed the “Paris of North America”, 400-year-old Québec City is the province’s capital, and a must-visit in order to capture the spirit of New France (particularly in August’s New France Festival). Stay at the “castle” – Fairmont Chateau Frontenac – an architectural symbol of the city, recognisable for its steeply pitched copper roof and imposing turrets. Stroll along Dufferin Terrace overlooking the Saint Lawrence river – Canada’s first “highway”, it led explorers, traders, missionaries and settlers into the hinterland. Being North America’s only walled city, Old Québec is a Unesco world heritage site. Investigate the Citadel, wander the Plains of Abraham where British General Wolfe defeated French General Montcalm in 1759, then choose from many restaurants featuring le terroir (regional foods).", 
@@ -141,12 +141,12 @@ City.create(name: "Victoria", province_id: 10, population: 92141,
 City.create(name: "Tofino", province_id: 10, population: 1932, 
             description: "The surf swept community of Tofino rests in the centre of Clayoquot Sound, an expanse of islets and inlets arranged like a collection of emeralds along the west coast of Vancouver Island. The meaning of Clayoquot comes from Tla-o- quia-aht “people who are different from who they used to be”. A fitting description any traveler should expect for themselves when journeying to this wild west coast town on the edge of the world.", 
             location_type: "town", view_type: ["coast", "forest"], time_zone: "PDT",
-            healthcare_index: null, crime_index: null, pollution_index: null)
+            healthcare_index: 0, crime_index: 0, pollution_index: 0)
 
 City.create(name: "Canmore", province_id: 9, population: 13992, 
             description: "If you’re about the outdoors lifestyle and enjoy picturesque scenary, Canmore is the place you and your family want to be living. The town of Canmore is located just west of the big city of Calgary, but is also on the boundary of Banff National Park. Canada’s oldest national park offers a beautiful view of the Rocky Mountains, and some of the most gorgeous lakes in the world.", 
             location_type: "town", view_type: ["mountain", "urban", "forest"], time_zone: "MDT",
-            healthcare_index: null, crime_index: null, pollution_index: null)
+            healthcare_index: 0, crime_index: 0, pollution_index: 0)
 
 City.create(name: "Calgary", province_id: 9, population: 1336000, 
             description: "If you like the big city with all the amenities that can be offered, Calgary is a great choice for you and your family. The city of Calgary has over 1.4 million people residing within it and is the largest city the province of Alberta has to offer. As a resident in Calgary, you’ll have no problem finding activities to do with your free time. Annual events like the Calgary Stampede bring people from all over the world to the city to enjoy the rodeo, exhibition, and festival.", 
@@ -156,7 +156,7 @@ City.create(name: "Calgary", province_id: 9, population: 1336000,
 City.create(name: "The Thousand Islands", province_id: 6, population: 9465, 
             description: "Perhaps it starts with an inspiring sunrise on the Canadian side of the St. Lawrence Seaway or ends with a breathtaking sunset from the U.S. Maybe it includes views of storybook castles, a good fish story, a taste of craft beverages or a trip back in time. On the pristine waters or in quiet villages, there are thousands of things to see and do.", 
             location_type: "town", view_type: "lake", time_zone: "EDT",
-            healthcare_index: null, crime_index: null, pollution_index: null)
+            healthcare_index: 0, crime_index: 0, pollution_index: 0)
             
 City.create(name: "Niagara", province_id: 6, population: 447888, 
             description: "From wining, dining and riding the vines in Niagara-on-the-Lake and off the beaten path in Twenty Valley, to the urban cool of St. Catharines or outdoor adventures on the beach and amongst the battlefields of Niagara’s South Coast, without forgetting the iconic Niagara Falls, you will indulge in moments that are sure to inspire your senses.", 
@@ -181,12 +181,12 @@ City.create(name: "Moose Jaw", province_id: 8, population: 33890,
 City.create(name: "Swift Current", province_id: 8, population: 16604, 
             description: "Swift Current, also known as Speedy Creek, is the fifth largest city in the Canadian province of Saskatchewan. It is situated along the Trans Canada Highway 170 kilometres (110 mi) west from Moose Jaw, and 218 kilometres (135 mi) east from Medicine Hat, Alberta. Swift Current grew 6.8% between 2011 and 2016, ending up at 16,604 residents.[2] The city is surrounded by the Rural Municipality of Swift Current No. 137.", 
             location_type: "city-small", view_type: "urban", time_zone: "CST",
-            healthcare_index: null, crime_index: null, pollution_index: null)
+            healthcare_index: 0, crime_index: 0, pollution_index: 0)
  
 City.create(name: "Prince Albert", province_id: 8, population: 35926, 
             description: "Prince Albert is the third-largest city in Saskatchewan, Canada, after Saskatoon and Regina. It is situated near the centre of the province on the banks of the North Saskatchewan River. The city is known as the 'Gateway to the North' because it is the last major centre along the route to the resources of northern Saskatchewan.", 
             location_type: "city-medium", view_type: "river", time_zone: "CST",
-            healthcare_index: null, crime_index: null, pollution_index: null)
+            healthcare_index: 0, crime_index: 0, pollution_index: 0)
             
 City.create(name: "Brandon", province_id: 7, population: 48859, 
             description: "The City of Brandon was incorporated in 1882,[5] having a history rooted in the Assiniboine River fur trade as well as its role as a major junction on the Canadian Pacific Railway.[6] Known as The Wheat City, Brandon's economy is predominantly associated with agriculture;[7] however, it also has strengths in health care, manufacturing, food processing, business services, and transportation.", 
@@ -196,17 +196,17 @@ City.create(name: "Brandon", province_id: 7, population: 48859,
 City.create(name: "Portage la Prairie", province_id: 7, population: 13304, 
             description: "Portage la Prairie is approximately 75 kilometres (47 mi) west of Winnipeg, along the Trans-Canada Highway (exactly between the provincial boundaries of Saskatchewan and Ontario). The community sits on the Assiniboine River, which flooded the town persistently until a diversion channel north to Lake Manitoba (the Portage Diversion) was built to divert the flood waters. The city is surrounded by the Rural Municipality of Portage la Prairie.", 
             location_type: "town", view_type: "river", time_zone: "CST",
-            healthcare_index: null, crime_index: null, pollution_index: null)
+            healthcare_index: 0, crime_index: 0, pollution_index: 0)
  
 City.create(name: "Dauphin", province_id: 7, population: 8457, 
             description: "Dauphin is a city in Manitoba, Canada, with a population of 8,457 as of the 2016 Canadian Census, with an additional 2,388 living in the surrounding Rural Municipality of Dauphin, for a total of 10,845 in the RM and City combined.[2] Dauphin is Manitoba's 9th largest community and serves as a hub to the province's Parkland Region.", 
             location_type: "town", view_type: "", time_zone: "CST",
-            healthcare_index: null, crime_index: null, pollution_index: null)
+            healthcare_index: 0, crime_index: 0, pollution_index: 0)
  
 City.create(name: "Gimli", province_id: 7, population: 2246, 
             description: "Gimli is an unincorporated community in the Rural Municipality of Gimli on the west side of Lake Winnipeg in Manitoba. The community's first European settlers were Icelanders who were part of the New Iceland settlement in Manitoba. The community maintains a strong connection to Iceland and Icelandic culture today, including the annual Icelandic Festival.", 
             location_type: "town", view_type: "", time_zone: "CST",
-            healthcare_index: null, crime_index: null, pollution_index: null)
+            healthcare_index: 0, crime_index: 0, pollution_index: 0)
  
 City.create(name: "Fredericton", province_id: 4, population: 58220, 
             description: "Spread along both sides of the majestic St. John River, Fredericton combines the coziness of a small town with the world-class institutions of a city much larger than this humble capital. Tree-lined streets and suburban neighborhoods of Victorian-era homes live harmoniously alongside three universities, countless historic sites, museums, riverfront trails and restaurants featuring local and international cuisines. Fredericton also boasts a number of world-renowned festivals.", 
@@ -221,22 +221,22 @@ City.create(name: "Saint John", province_id: 4, population: 67575,
 City.create(name: "Saint Andrews", province_id: 4, population: 1786, 
             description: "Saint Andrews (2016 population: 1,786)[1] is a town in Charlotte County, New Brunswick, Canada. The historic town is a national historic site of Canada, bearing many characteristics of a typical 18th century British colonial settlement, including the original grid layout with its market square, and the classical architecture.", 
             location_type: "town", view_type: "coast", time_zone: "AST",
-            healthcare_index: null, crime_index: null, pollution_index: null)
+            healthcare_index: 0, crime_index: 0, pollution_index: 0)
             
 City.create(name: "Grand Falls", province_id: 4, population: 5326, 
             description: "Grand Falls (French: Grand-Sault) is a town located in Victoria County, New Brunswick, Canada. Grand Falls is situated on the Saint John River. The town derives its name from a waterfall created by a series of rock ledges over which the river drops 23 metres (75 ft). Its population was 5,326 at the 2016 census.", 
             location_type: "town", view_type: "", time_zone: "AST",
-            healthcare_index: null, crime_index: null, pollution_index: null)
+            healthcare_index: 0, crime_index: 0, pollution_index: 0)
             
 City.create(name: "Lunenburg", province_id: 3, population: 2263, 
             description: "Established in 1753, this historic Nova Scotia coastal community is now a UNESCO World Heritage Site. Wander among its colourful galleries and shops, arranged on a tidy grid of walkable streets. Visit the Fisheries Museum of the Atlantic to understand the town's maritime history.", 
             location_type: "town", view_type: "coast", time_zone: "AST",
-            healthcare_index: null, crime_index: null, pollution_index: null)
+            healthcare_index: 0, crime_index: 0, pollution_index: 0)
    
 City.create(name: "Baddeck", province_id: 3, population: 769, 
             description: "Baddeck, on Cape Breton Island, is a great base for the Cabot Trail, Cape Breton Highlands National Park and Louisbourg’s fortress. Easily explored on foot, Baddeck’s sole street offers an appealing array of accommodation, restaurants and stores and lovely views of Bras d’Or Lake. Take a kayak tour on the North River, visit Kidston Lighthouse or hike the national park’s trails, cliffs and coves. Back in the town, don’t miss the museum devoted to famed inventor Alexander Graham Bell.", 
             location_type: "village", view_type: "coast", time_zone: "AST",
-            healthcare_index: null, crime_index: null, pollution_index: null)
+            healthcare_index: 0, crime_index: 0, pollution_index: 0)
             
 City.create(name: "Sydney", province_id: 3, population: 29904, 
             description: "Sydney is a former city and current community located in the Cape Breton Regional Municipality of Cape Breton Island, Nova Scotia, Canada. Situated on Cape Breton Island's east coast, it belongs administratively to the Cape Breton Regional Municipality. Sydney was founded in 1785 by the British, was incorporated as a city in 1904, and dissolved on 1 August 1995, when it was amalgamated into the regional municipality.", 
@@ -246,32 +246,32 @@ City.create(name: "Sydney", province_id: 3, population: 29904,
 City.create(name: "Dartmouth", province_id: 3, population: 65741, 
             description: "Dartmouth is a former city and current community located in the Halifax Regional Municipality of Nova Scotia, Canada. Dartmouth is located on the eastern shore of Halifax Harbour. Dartmouth has been nicknamed the City of Lakes, after the large number of lakes located within its boundaries.", 
             location_type: "city-small", view_type: "coast", time_zone: "AST",
-            healthcare_index: , crime_index: , pollution_index:  )
+            healthcare_index: 0, crime_index: 0, pollution_index: 0)
             
 City.create(name: "Cavendish", province_id: 2, population: 7500, 
             description: "'Anne of Green Gables' enthusiasts flock to the appealing beach town on PEI’s north coast where Lucy Maud Montgomery lived and set her books. Visit Green Gables House, the author’s childhood home, and the Anne theme park of Avonlea Village. Those who want their vacation to turn a different page can hop on the trolley and explore 25 miles of sand dunes on Cavendish Beach in Prince Edward Island National Park, play champion golf courses, bike, sail and visit various family-friendly theme parks.", 
             location_type: "town", view_type: "coast", time_zone: "AST",
-            healthcare_index: , crime_index: , pollution_index:  )
+            healthcare_index: 0, crime_index: 0, pollution_index: 0)
             
 City.create(name: "Corner Brook", province_id: 1, population: 19806, 
             description: "Located on the Bay of Islands at the mouth of the Humber River, the city is the second-largest population centre in the province behind St. John's,[2] and smallest of three cities behind St. John's and Mount Pearl.[3] As such, Corner Brook functions as a service centre for western and northern Newfoundland. It is located on the same latitude as Gaspé, Quebec, a city of similar size and landscape on the other side of the Gulf of St. Lawrence. Corner Brook is the most northern city in Atlantic Canada.", 
             location_type: "city-small", view_type: "coast", time_zone: "NDT",
-            healthcare_index: null, crime_index: 28.68, pollution_index: 5.60)
+            healthcare_index: 0, crime_index: 28.68, pollution_index: 5.60)
 
 City.create(name: "Deer Lake", province_id: 1, population: 5249, 
             description: "Deer Lake is a town in the western part of the island of Newfoundland in the province of Newfoundland and Labrador, Canada.The town derives its name from Deer Lake and is situated at the outlet of the upper Humber River at the northeastern end of the lake.", 
             location_type: "town", view_type: "lake", time_zone: "NDT",
-            healthcare_index: null, crime_index: null, pollution_index: null)
+            healthcare_index: 0, crime_index: 0, pollution_index: 0)
 
 City.create(name: "Gander", province_id: 1, population: 11688, 
             description: "Gander is a town located in the northeastern part of the island of Newfoundland in the province of Newfoundland and Labrador, approximately 40 km (25 mi) south of Gander Bay, 100 km (62 mi) south of Twillingate and 90 km (56 mi) east of Grand Falls-Windsor. Located on the northeastern shore of Gander Lake, it is the site of Gander International Airport, once an important refuelling stop for transatlantic aircraft and the largest airport in the world. The airport is still a preferred emergency landing point for aircraft facing on-board medical or security issues.", 
             location_type: "town", view_type: "", time_zone: "NDT",
-            healthcare_index: null, crime_index: null, pollution_index: null)
+            healthcare_index: 0, crime_index: 0, pollution_index: 0)
 
 City.create(name: "Twillingate", province_id: 1, population: 2196, 
             description: "Twillingate is a town of 2,196 people located on the Twillingate Islands ('Toulinquet') in Notre Dame Bay, off the north eastern shore of the island of Newfoundland in the province of Newfoundland and Labrador, Canada. The town is about 100 kilometres (62 mi) north of Lewisporte and Gander.", 
             location_type: "town", view_type: "coast", time_zone: "NDT",
-            healthcare_index: , crime_index: , pollution_index:  )
+            healthcare_index: 0, crime_index: 0, pollution_index: 0)
 
 City.create(name: "Yellowknife", province_id: 12, population: 19569, 
             description: "Yellowknife, population of almost 20,000, is the capital of the Northwest Territories. The most common Dene name for Yellowknife is Somba K'e which translates to 'Where the money is,' which makes sense for a town with a gold-mining history. Here you'll find excellent restaurants, comfy accommodations and a whole host of colourful locals that make up this vibrant and cosmopolitan place. Regardless of what time of year you visit, there's always something happening in Yellowknife from a weekend music festival in the sand, to month-long activities at a snow castle on the frozen bay.", 
