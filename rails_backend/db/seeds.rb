@@ -11,6 +11,14 @@ require('faker')
   User.create(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, email: Faker::Internet.email, password: Faker::Internet.password)
 end
 
+
+Question.create(question: "Do you see yourself changing your office location for more than 6 months?" , potential_answers:[true, false], user_answer:[])
+Question.create(question: "In which timeZone is your home office located?", potential_answers:["NDT","EDT", "MDT", "PDT", "CST","AST"], user_answer:[])
+Question.create(question: "Is staying in your time Zone a requirement for work?", potential_answers:[true, false], user_answer:[])
+Question.create(question: "What kind of pace are you looking to experience in the next place you will live?", potential_answers:["village", "town", "city-small", "city-big"], user_answer:[])
+Question.create(question: "What kind of activities do you see yourself doing on weekends?", potential_answers:["mountain", "lake", "country", "urban", "river", "forest", "coast"], user_answer:[])
+
+
 Province.create(name: "Newfoundland and Labrador", average_rent: 1002, shelter_cost_to_income_ratio: 82, age_group_vis_min: 3, description: "The most easterly province in Canada, Newfoundland, and Labrador sits on the Atlantic and is made up of the island of Newfoundland and the mainland Labrador (hence the name).")
 Province.create(name: "Prince Edward Island", average_rent: 818, shelter_cost_to_income_ratio: 79, age_group_vis_min: 6, description: "The last of the three Maritime provinces, Prince Edward Island is actually made up of several islands (232 to be exact, including the main island), the largest having the same name.")
 Province.create(name: "Nova Scotia", average_rent: 909, shelter_cost_to_income_ratio: 77, age_group_vis_min: 7, description: "Although the second smallest province, Nova Scotia is the second most densely populated in the country. It is one of the three Maritime provinces and part of what forms Atlantic Canada.")
@@ -32,7 +40,7 @@ City.create(name: "Okanagan Valley", province_id: 10, population: 362258,
 
 City.create(name: "Vancouver", province_id: 10, population: 85935, 
             description: "As British Columbia’s largest city, Vancouver is a haven for outdoor enthusiasts and cosmopolitan adventurers alike. Framed by the Pacific Ocean and Coast Mountains, Vancouver’s meandering oceanside pathways are the perfect way to explore the city. Close to 30 kilometres of uninterrupted waterfront path surround Vancouver’s favourite neighbourhoods, including the seawall around Stanley Park.", 
-            location_type: "city-large", view_type: ["ocean", "mountain", "urban"], time_zone: "PDT", 
+            location_type: "city-large", view_type: ["coast", "mountain", "urban"], time_zone: "PDT", 
             healthcare_index: 75.37, crime_index: 36.73, pollution_index: 23.85)
 
 City.create(name: "Gaspe Peninsula", province_id: 5, population: 15163, 

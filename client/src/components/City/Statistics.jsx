@@ -1,20 +1,15 @@
-import React from "react";
+import React from 'react';
 
-const Statistics = () => {
+export default function Statistics(props) {
   return (
     <div>
       <h1>Hello I am Statistics View</h1>
+
     </div>
   );
 };
 
-export default Statistics;
-
-const [cities, setCities] = useState([]);
-const [provinces, setProvinces] = useState([]);
-const [users, setUsers] = useState([]);
-
-export default function App(props) {
+export default function Stats(props) {
   const [cities, setCities] = useState([]);
   const [provinces, setProvinces] = useState([]);
   const [users, setUsers] = useState([]);
@@ -66,14 +61,14 @@ export default function App(props) {
       console.log(all);
       console.log("cities", cities.length, "provinces", provinces.length, "users", users.length);
       
-      setCities(cities)
-      setProvinces(provinces)
-      setUsers(users)
+      setCities(cities);
+      setProvinces(provinces);
+      setUsers(users);
 
       const COVID = all[3].data;
       const weather = all[5].data;
       const stats = all[9].data;
-      setData({COVID, weather, stats}) 
+      setData({COVID, weather, stats}); 
     }).catch((error) => console.log(error));
   }, []
 );

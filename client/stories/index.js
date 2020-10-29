@@ -11,13 +11,34 @@ import CityListItem from "../src/components/Province/CityListItem";
 
 import Questionnaire from "../src/components/Questionnaire";
 import Form from "../src/components/Questionnaire/Form";
-import DropDownMenu from "../src/components/Questionnaire/DropDownMenu";
-import DropDownMenuItem from "../src/components/Questionnaire/DropDownMenuItem";
+import AnswerOptions from "../src/components/Questionnaire/AnswerOptions";
 
 import Button from "../src/components/Button";
 import Footer from "../src/components/Footer";
 import Header from "../src/components/Header";
 import Icon from "../src/components/Icon";
+
+
+const questions = [
+  {
+    id: 1,
+    question: "Do you see yourself changing your office location for more than 6 months?",
+    potential_answers: [true, false],
+    user_answer: [] 
+  },
+  {
+    id: 2,
+    question: "In which timeZone is your home office located?",
+    potential_answers: ["NDT","EDT", "MDT", "PDT", "CST","AST"],
+    user_answer: [] 
+  },
+  {
+    id: 3,
+    question: "Is staying in your time Zone a requirement for work?",
+    potential_answers: [true, false],
+    user_answer: [] 
+  }
+]
 
 const province = {
   id: 1,
@@ -62,29 +83,6 @@ const city = {
   image: "ImageURL",
 };
 
-const questions = [
-  {
-    id: 1,
-    question: "Which Province would you like to visit?",
-    answer: "Province string", // dropdown menue with the provinces?
-  },
-  {
-    id: 2,
-    question:
-      "Are you planning on changing your office location for a duration longer than 6 months?",
-    answer: false,
-  },
-  {
-    id: 3,
-    question: "In which timeZone is your home office located?",
-    answer: "", //drop down menu of canadian timeZones?
-  },
-  {
-    id: 4,
-    question: "Is staying in the same time Zone a requirement for work?",
-    answer: true,
-  },
-];
 
 ////////////////////////////////////////////////////////////////////////////////////
 
@@ -150,16 +148,42 @@ storiesOf("Questionnaire", module)
   .addParameters({
     backgrounds: [{ name: "light", value: "#FEF5EB", default: true }],
   })
-  .add("Questionnaire", () => <Questionnaire />)
-  .add("Questionnaire with question", () => (
+  .add("Questionnaire", () => 
+    <Questionnaire
+      questions={questions}
+    />);
+  
+storiesOf("Form", module)
+  .addParameters({
+    backgrounds: [{ name: "light", value: "#FEF5EB", default: true }],
+  })
+  .add("Form", () => 
     <Form
+    id={questions[0].id}
+    question={questions[0].question}
+    potential_answers={questions[0].potential_answers}
+    user_answer={questions[0].user_answer}
+    onClick={action("onConfirm")}
+    onCancel={action("onCancel")} 
+    />);
+
+
+storiesOf("AnswerOptions", module)
+  .addParameters({
+    backgrounds: [{ name: "light", value: "#FEF5EB", default: true }],
+  })
+  .add("AnswerOptions", () => 
+    <AnswerOptions
+      key={questions[0].id}
       questionId={questions[0].id}
-      question={questions[0].question}
-      answer={questions[0].answer}
+      potential_answers={questions[0].potential_answers}
+      user_answer={questions[0].user_answer}
       onClick={action("onConfirm")}
-      onCancel={action("onCancel")}
-    />
-  ));
+      onCancel={action("onCancel")} 
+    />)
+
+
+
 
 storiesOf("Button", module)
   .addParameters({
@@ -192,28 +216,28 @@ storiesOf("Header", module)
 /////////////////////////// Wish List <3 ////////////////////////////
 
 //Goes in Questionnaire component
-storiesOf("DropDownMenu", module)
-  .addParameters({
-    backgrounds: [{ name: "light", value: "#FEF5EB", default: true }],
-  })
-  .add("DropDownMenu", () => (
-    <DropDownMenu
-      questionId={questions[0]}
-      // Options={}
-    />
-  ));
+// storiesOf("DropDownMenu", module)
+//   .addParameters({
+//     backgrounds: [{ name: "light", value: "#FEF5EB", default: true }],
+//   })
+//   .add("DropDownMenu", () => (
+//     <DropDownMenu
+//       questionId={questions[0]}
+//       // Options={}
+//     />
+//   ));
 
-storiesOf("DropDownMenuItem", module)
-  .addParameters({
-    backgrounds: [{ name: "light", value: "#FEF5EB", default: true }],
-  })
-  .add("Montreal", () => (
-    <DropDownMenuItem
-      id={province.id}
-      name={province.name}
-      description={province.description}
-    />
-  ));
+// storiesOf("DropDownMenuItem", module)
+//   .addParameters({
+//     backgrounds: [{ name: "light", value: "#FEF5EB", default: true }],
+//   })
+//   .add("Montreal", () => (
+//     <DropDownMenuItem
+//       id={province.id}
+//       name={province.name}
+//       description={province.description}
+//     />
+//   ));
 
 storiesOf("Icon", module)
   .addParameters({
