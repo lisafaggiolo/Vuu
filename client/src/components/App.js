@@ -22,9 +22,8 @@ export default function App(props) {
   function getCOVIDinfo() {
     return axios.get('https://api.covid19tracker.ca/provinces')
   }
-
 //not working even with API key 
-  function getWeatherAndTimeZone(city) {
+  function getWeather(city) {
     return axios({
       "method":"GET",
       "url":"https://community-open-weather-map.p.rapidapi.com/weather",
@@ -66,17 +65,17 @@ export default function App(props) {
     return axios.get("http://www.numbeo.com/api/country_indices?api_key=exkod1xx5sorso&country=Canada");
   }
   
-  useEffect(() => {
+  useEffect((city) => {
     Promise.all([
       axios.get("/api/cities"),
       axios.get("/api/provinces"),
       axios.get("/api/users"),
       getCOVIDinfo(),
-      getAveragePriceOfItems("Montreal"),
-      getWeatherAndTimeZone("Montreal"),
-      getHealthSystemQuality("Montreal"),
-      getCrimeIndex("Montreal"),
-      getAirPollution("Montreal"),
+      getAveragePriceOfItems(`${city}`),
+      getWeather(`${city}`),
+      getHealthSystemQuality(`${city}`),
+      getCrimeIndex(`${city}`),
+      getAirPollution(`${city}`),
       getCanadaIndices()
     ]).then((all) => {
       
@@ -85,6 +84,7 @@ export default function App(props) {
       const users = all[2].data;
       console.log(all);
       console.log("cities", cities.length, "provinces", provinces.length, "users", users.length);
+      
       setCities(cities)
       setProvinces(provinces)
       setUsers(users)
