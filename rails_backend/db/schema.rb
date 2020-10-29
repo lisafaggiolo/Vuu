@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 2020_10_24_183619) do
     t.string "province"
     t.string "population"
     t.string "main_mode_of_transport"
-    t.string "average_cost_of_living" 
+    t.string "average_cost_of_living"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(version: 2020_10_24_183619) do
   create_table "provinces", force: :cascade do |t|
     t.string "name"
     t.text "description"
-    t.text "avg_rent_per_month" 
+    t.text "avg_rent_per_month"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
