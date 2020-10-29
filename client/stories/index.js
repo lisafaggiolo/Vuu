@@ -159,7 +159,6 @@ storiesOf("Form", module)
   })
   .add("Form", () => 
     <Form
-    id={questions[0].id}
     question={questions[0].question}
     potential_answers={questions[0].potential_answers}
     user_answer={questions[0].user_answer}
@@ -179,7 +178,6 @@ storiesOf("AnswerOptions", module)
       potential_answers={questions[0].potential_answers}
       user_answer={questions[0].user_answer}
       onClick={action("onConfirm")}
-      onCancel={action("onCancel")} 
     />)
 
 
