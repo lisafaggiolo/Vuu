@@ -12,12 +12,6 @@ const Form = (props) =>{
       />
     )
   })
-  
-  
-  // const updateAnswers = (question) => {
-        
-   
-  // }
 
     return (
       <div>

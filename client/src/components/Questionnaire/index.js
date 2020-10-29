@@ -9,29 +9,28 @@ import './styles.scss';
 
 const Questionnaire = (props) => {
 
-  const [questions, setQuestions] = useState({});
+  const [questions, setQuestions] = useState([]);
   
   useEffect(() => { 
 
     axios.get("api/questions")
     .then( result => {
-        
-      const questions = result[0].data.data
+      console.log(result.data);
+      const questions = result.data
       setQuestions(questions)
     })
     .catch( error => console.log(error))
     }, []
   )
-  // axios call goes here
-  // const 
+ 
   const questionsList = questions.map( questionObj => {
     return (
       <Form
         key={questionObj.id}
         question={questionObj.question}
-        potential_answers={questionObj.potential_answers}
+        potential_answers={JSON.parse(questionObj.potential_answers)}
         user_answer={questionObj.user_answer}
-        updateAnswers={props.submitFilters()}
+        updateAnswers={props.submitFilters}
       />
     )
   });

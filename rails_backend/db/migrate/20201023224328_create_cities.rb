@@ -8,7 +8,10 @@ class CreateCities < ActiveRecord::Migration[6.0]
       t.string :location_type
       t.string :view_type
       t.string :time_zone
-
+      t.float :healthcare_index
+      t.float :crime_index
+      t.float :pollution_index
+      
       t.timestamps
     end
   end
