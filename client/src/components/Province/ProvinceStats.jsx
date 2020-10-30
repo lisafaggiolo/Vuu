@@ -5,7 +5,7 @@ import axios from 'axios';
 export default function ProvinceStats(props) {
   const [provinces, setProvinces] = useState([]);
   const [data, setData] = useState({});
-  const provinceList = [{name: "ON"}, {name: "BC"}];
+  const provinceList = [];
   function getCOVIDinfo(province) {
       return axios.get(`https://api.covid19tracker.ca/reports/province/${province}`)
   }
