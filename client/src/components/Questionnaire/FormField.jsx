@@ -1,29 +1,33 @@
 import React, {useState} from 'react';
 import AnswerOptions from './AnswerOptions';
 import { Form, FormGroup, Label, Input, FormText } from 'reactstrap';
+import { useParams } from 'react-router-dom';
 
 
 
 const FormField = (props) =>{
-
   const [questionAnswers, setQuestionAnswers] = useState([]);
+
+  const {id} = useParams();
+  const question_id = parseInt(id);  
+
+  const question = props.questions.find(question => question.id === question_id);
+
+  const submitCheck = (event) => {
+    event.preventDefault()
+    props.submitAnswers(question_id, questionAnswers)
+  }
+
   
   const addCheck = (answer) => {
-    setQuestionAnswers([...questionAnswers, answer])
+    setQuestionAnswers(prev =>([...prev, answer]))
   };
 
   const removeCheck = (answer) => {
-    setQuestionAnswers(questionAnswers.filter(currentAnswer => (currentAnswer !== answer)))
+    setQuestionAnswers(prev => prev.filter(currentAnswer => currentAnswer !== answer))
   };
 
-  const updateAnswers = () => {
-    //probably needs conditionnal to only have one box checked for some questions
-    props.addAnswers(props.id, questionAnswers)
-  };
-
-  const question = props.question;
-
-  const answerOptionsList = props.potential_answers.map( potential_answer => {
+  const answerOptionsList = question && question.potential_answers.map( potential_answer => {
     return (
       <AnswerOptions
          potential_answer={ potential_answer }
@@ -34,15 +38,17 @@ const FormField = (props) =>{
   })
 
     return (
+      <Form>
         <FormGroup check>
           <Label>
-            { question }
+            { question && question.question }
           </Label>
           <ul>
             { answerOptionsList }
-          </ul>
-          <button onClick={ updateAnswers }>Submit</button>
+          </ul> 
         </FormGroup>
+        <button onClick={ submitCheck }>Submit</button>
+      </Form>
     );
 };
   

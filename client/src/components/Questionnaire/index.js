@@ -1,6 +1,8 @@
 
 import axios from "axios";
 import React, { useReducer, useState, useEffect } from "react";
+import { Form, FormGroup, Label, Input, FormText } from 'reactstrap';
+
 import FormField from "./FormField";
 import './styles.scss';
 
@@ -11,15 +13,13 @@ const Questionnaire = (props) => {
   const [questions, setQuestions] = useState([]);
   const [answers, setAnswers] = useState([]);
     
-  useEffect(() => { 
+  const addCheck = (answer) => {
+    setQuestionAnswers([...questionAnswers, answer])
+  };
 
-    axios.get("api/questions")
-    .then( result => {
-      setQuestions(result.data)
-    })
-    .catch( error => console.log(error))
-    }, []
-  )
+  const removeCheck = (answer) => {
+    setQuestionAnswers(questionAnswers.filter(currentAnswer => (currentAnswer !== answer)))
+  };
 
   const addAnswers = (questionId, questionAnswers) => {
     console.log("INDEX.JS", questionId, questionAnswers )
@@ -34,6 +34,8 @@ const Questionnaire = (props) => {
         question={questionObj.question}
         potential_answers={JSON.parse(questionObj.potential_answers)}
         updateAnswers={ addAnswers }
+        addCheck={ addCheck }
+        removeCheck={ removeCheck }
       />
     )
   });
@@ -47,11 +49,12 @@ const Questionnaire = (props) => {
     
     <div>
       <h3>Questionnaire</h3>
-      <FormField>
+      <Form>
         <ul>
           { questionsList }
       </ul>
-      </FormField>
+        <button >Submit</button>
+      </Form>
     </div>
   );
 };
