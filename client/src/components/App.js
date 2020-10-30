@@ -21,8 +21,6 @@ import {
 } from "react-router-dom";
 
 
-
-
 export default function App(props) {
   const [cities, setCities] = useState([]);
   const [provinces, setProvinces] = useState([]);
