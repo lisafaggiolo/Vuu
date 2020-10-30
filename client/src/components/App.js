@@ -32,26 +32,33 @@ export default function App(props) {
 
   return (
     <Router>
-      <div>
-        <ul>
-          <Header />
-        </ul>
-
-        <Switch>
-          <Route path="/about">
-            <About />
-          </Route>
-          <Route path="/city/:id">
-            <City />
-          </Route>
-          <Route path="/home">
-            <Home />
-          </Route>
-          <Route path="/quizz">
-            <Questionnaire submitFilters={ submitFilters } />
-          </Route>
-        </Switch>
-      </div>
+      <body>
+        <Header />
+        <section className="stats">
+          <div>
+            
+          </div>
+        </section>
+        <section className="cities">
+          <div>
+            
+          </div>
+        </section>
+      </body>
+      <Switch>
+        <Route path="/about">
+          <About />
+        </Route>
+        <Route path="/city/:id">
+          <City />
+        </Route>
+        <Route path="/home">
+          <Home />
+        </Route>
+        <Route path="/quizz">
+          <Questionnaire submitFilters={ submitFilters } />
+        </Route>
+      </Switch>
     </Router>
 
   );
@@ -59,9 +66,9 @@ export default function App(props) {
   // set up a view/react Route for the quizz
   // pass submitFilter via prop, Questions
   function submitFilters(userAnswers) {
-    axios.post()
+    // axios.post()
     
-    Router.redirect
+    // Router.redirect
   }
 
 }

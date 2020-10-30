@@ -1,11 +1,11 @@
-import React from 'react'
+import React from "react"
 import { Link } from "react-router-dom";
-
+import "styles/styles.scss";
 
 // will be Horizontal not vertical
 const Navbar = () => {
   return (
-    <nav> 
+    <nav id="main-nav"> 
       <div className="container">
         <ul className="right">
           <li><Link to="/home">Home</Link></li>
