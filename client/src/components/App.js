@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from "react";
 import './App.scss';
 import Header from './Header';
-import Footer from './Footer';
+//import Footer from './Footer';
 import axios from "axios";
-import Province from './Province'
+//import Province from './Province'
 import City from './City';
-
+import Results from './Results';
+import Home from './Home';
+import About from './About';
+import Questionnaire from './Questionnaire'
 
 
 import {
@@ -17,19 +20,15 @@ import {
   useParams
 } from "react-router-dom";
 
-import Home from './Home';
-import About from './About';
-import Questionnaire from './Questionnaire'
+
 
 
 export default function App(props) {
-  const [cities, setCities] = useState([]);
-  const [provinces, setProvinces] = useState([]);
-  const [users, setUsers] = useState([]);
-  const [data, setData] = useState({});
+  // const [cities, setCities] = useState([]);
+  // const [provinces, setProvinces] = useState([]);
+  // const [users, setUsers] = useState([]);
+  // const [data, setData] = useState({});
    
-
-
   return (
     <Router>
       <div>
@@ -50,6 +49,9 @@ export default function App(props) {
           <Route path="/quizz">
             <Questionnaire submitFilters={ submitFilters } />
           </Route>
+          <Route path="/results">
+            <Results />
+          </Route>
         </Switch>
       </div>
     </Router>
@@ -59,9 +61,10 @@ export default function App(props) {
   // set up a view/react Route for the quizz
   // pass submitFilter via prop, Questions
   function submitFilters(userAnswers) {
-    axios.post()
+    console.log(userAnswers);
+    axios.get('')
     
-    Router.redirect
+    Router.redirect("/results")
   }
 
 }

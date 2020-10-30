@@ -10,7 +10,7 @@ import Citylist from "../src/components/Province/CityList";
 import CityListItem from "../src/components/Province/CityListItem";
 
 import Questionnaire from "../src/components/Questionnaire";
-import Form from "../src/components/Questionnaire/Form";
+import Form from "../src/components/Questionnaire/FormField";
 import AnswerOptions from "../src/components/Questionnaire/AnswerOptions";
 
 import Button from "../src/components/Button";
@@ -118,9 +118,7 @@ storiesOf("Province", module)
   })
   .add("Quebec", () => (
     <Province
-      id={province.id}
-      name={province.name}
-      description={province.description}
+     provinces={provinces[0]}
     />
   ));
 
@@ -128,7 +126,11 @@ storiesOf("CityList", module)
   .addParameters({
     backgrounds: [{ name: "light", value: "#FEF5EB", default: true }],
   })
-  .add("Quebec", () => <Citylist cities={cities} provinceId={province.id} />);
+  .add("Quebec", () => 
+    <Citylist  
+      id={cities[0].id}
+      name={cities[0].name}
+      description={cities[0].description} />);
 
 storiesOf("CityListItem", module)
   .addParameters({
