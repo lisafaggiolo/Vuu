@@ -7,7 +7,7 @@ const Navbar = () => {
   return (
     <header>
       <nav id="main-nav"> 
-        <div class="wrapper">
+        <div className="wrapper">
           <ul >
             <li><Link to="/home">Home</Link></li>
             <li><Link to="/about">About</Link></li>

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import CityStatistics from "./CityStatistics";
-import {useParams} from 'react-router-dom';
+// import {useParams} from 'react-router-dom';
 import './styles.scss'
 import Axios from "axios";
 
@@ -17,7 +17,7 @@ const City = props => {;
     
   return (
     <>
-      <div><img src=""/></div>
+      {/* <div><img src=""/></div> */}
       <div>
         <h1>{city.name}</h1> 
       </div>

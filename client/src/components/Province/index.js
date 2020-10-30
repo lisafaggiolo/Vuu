@@ -1,7 +1,4 @@
 import React, { useEffect, useState } from "react";
-import Header from "../Header";
-import Footer from "../Footer";
-import CityList from "./CityList";
 import CityListItem from "./CityListItem";
 import './styles.scss'
 import Axios from "axios";
