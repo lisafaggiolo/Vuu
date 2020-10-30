@@ -3,7 +3,6 @@ import Axios from 'axios';
 import './StatisticsItems';
 
 export default function CityStatistics(props) {
-  const [city, setCity] = useState([]);
   const [data, setData] = useState({});
   
   useEffect(() => {
@@ -11,7 +10,7 @@ export default function CityStatistics(props) {
       { params: { id: 1 }} )
     .then(result => {
       console.log(result)
-      setCity(result.data.data)
+      setData(result.data.data)
     })
     .catch(error => console.log(error))
   }, [])
@@ -21,11 +20,11 @@ export default function CityStatistics(props) {
   return (
     <div>
       <h2>City Statistics</h2>
-      <p>Population: {city.population}</p>
-      <p>Time Zone: {city.time_zone}</p>
-      <p>Healthcare Index: {city.healthcare_index}</p>
-      <p>Crime Index: {city.crime_index}</p>
-      <p>Pollution Index: {city.pollution_index}</p>
+      <p>Population: {data.population}</p>
+      <p>Time Zone: {data.time_zone}</p>
+      <p>Healthcare Index: {data.healthcare_index}</p>
+      <p>Crime Index: {data.crime_index}</p>
+      <p>Pollution Index: {data.pollution_index}</p>
     </div>
   );
 };
