@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import './App.scss';
 import Header from './Header';
-//import Footer from './Footer';
+import Footer from './Footer';
 import axios from "axios";
-//import Province from './Province'
+import Province from './Province'
 import City from './City';
 import Results from './Results';
 import Home from './Home';
@@ -24,10 +24,10 @@ import {
 
 
 export default function App(props) {
-  // const [cities, setCities] = useState([]);
-  // const [provinces, setProvinces] = useState([]);
-  // const [users, setUsers] = useState([]);
-  // const [data, setData] = useState({});
+  const [cities, setCities] = useState([]);
+  const [provinces, setProvinces] = useState([]);
+  const [users, setUsers] = useState([]);
+  const [data, setData] = useState({});
    
   return (
     <Router>
@@ -40,8 +40,11 @@ export default function App(props) {
           <Route path="/about">
             <About />
           </Route>
-          <Route path="/city/:id">
+          <Route path="/cities/:id">
             <City />
+          </Route>
+          <Route path="/provinces/:id">
+            <Province />
           </Route>
           <Route path="/home">
             <Home />
@@ -53,6 +56,9 @@ export default function App(props) {
             <Results />
           </Route>
         </Switch>
+        <ul>
+          <Footer />
+        </ul>
       </div>
     </Router>
 

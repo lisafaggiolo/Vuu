@@ -1,51 +1,60 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Header from "../Header";
 import Footer from "../Footer";
 import CityList from "./CityList";
+import CityListItem from "./CityListItem";
 import './styles.scss'
+import Axios from "axios";
+import { getCityForProvince } from "helper/selector";
 
-class Province extends React.Component {
-  constructor(props) {
-    super(props);
+const Province = props => {
+  const [province, setProvince] = useState([]);
+  const [cities, setCities] = useState([]);
+  
+  useEffect(() => {
+    Axios.get("/api/provinces/1",
+      { 
+       params: {
+        id: 1
+      }}
+    )
+    .then(result => {
+      setProvince(result.data.data)
+    })
+    .catch(error => console.log(error))
     
-    this.state = {
-      province_name: [],
-      province_description: [],
-      province_stats: [],
-      province_image: [],
-      cities: [],
-    }
-    
-    const params = useParams();
-    console.log(params);
-  };
-    const cities = {
-    //function returning an interation over the cities for the province
-    //helper function getCityForProvince(state, state.province)
-    };
-    
-    let provinceList = props.provinces.map(
-      province => <CityListItem name={province.name} /> 
-      render() { 
-        return (
-          <div>
-          {provinceList}
-        </div 
-        ) 
-      }) 
-    
-  render() {  
+    Axios.get("/api/provinces/1/cities",
+    { 
+     params: {
+      province_id: 1
+    }}
+  )
+  .then(result => {
+    setCities(result.data.data)
+  })
+  .catch(error => console.log(error))
+  }, [])
+  
+  const cityList = cities.map(city => {
     return (
-      <main>
-        <Header />
-        <h1>{this.state.province_name}</h1>
-        <CityList
-          name={this.state.city_name}
-           />
-        <Footer />
-      </main>
-    );
-  }
+      <CityListItem 
+        key={city.id}
+        name={city.name}
+        province={city.province_id}
+        description={city.description}
+      />
+    )
+  })
+  
+  return (
+    <div>
+      <h1>{province.name}</h1>
+      <h2>{province.description}</h2>
+      <ul>
+        {cityList}
+      </ul>
+    </div> 
+  ) 
 };
 
 export default Province;
