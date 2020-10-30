@@ -1,6 +1,7 @@
 
 import axios from "axios";
 import React, { useReducer, useState, useEffect } from "react";
+import { Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 import FormField from "./FormField";
 import './styles.scss';
 
@@ -11,7 +12,6 @@ const Questionnaire = (props) => {
 
   const [questions, setQuestions] = useState([]);
   const [answers, setAnswers] = useState([]);
-    
   useEffect(() => { 
 
     axios.get("api/questions")
@@ -48,6 +48,7 @@ const Questionnaire = (props) => {
     
     <div>
       <h3>Questionnaire</h3>
+
       <FormField>
         <ul>
           { questionsList }

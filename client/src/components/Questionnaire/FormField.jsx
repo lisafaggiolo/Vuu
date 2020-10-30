@@ -9,6 +9,7 @@ const FormField = (props) =>{
   const [questionAnswers, setQuestionAnswers] = useState([]);
   
   const addCheck = (answer) => {
+
     setQuestionAnswers([...questionAnswers, answer])
   };
 
@@ -20,6 +21,7 @@ const FormField = (props) =>{
     //probably needs conditionnal to only have one box checked for some questions
     props.addAnswers(props.id, questionAnswers)
   };
+
 
   const question = props.question;
 
@@ -46,4 +48,6 @@ const FormField = (props) =>{
     );
 };
   
+
 export default FormField;
+
