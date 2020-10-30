@@ -34,12 +34,12 @@ export default function App(props) {
     <Router>
       <body>
         <Header />
-        <section className="stats">
+        <section id="stats">
           <div>
             
           </div>
         </section>
-        <section className="cities">
+        <section id="cities">
           <div>
             
           </div>
