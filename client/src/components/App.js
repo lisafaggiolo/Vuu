@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
-import './App.css';
+import './App.scss';
 import Header from './Header';
 import Footer from './Footer';
 import axios from "axios";
-import Province from './Province'
+import Province from './Province';
+import City from './City';
+
 import {
   BrowserRouter as Router,
   Switch,
@@ -13,82 +15,49 @@ import {
   useParams
 } from "react-router-dom";
 
+import Home from './Home';
+import About from './About';
+import Questionnaire from './Questionnaire'
+
+
 export default function App(props) {
+  const [cities, setCities] = useState([]);
+  const [provinces, setProvinces] = useState([]);
+  const [users, setUsers] = useState([]);
+  const [data, setData] = useState({});
+
   return (
     <Router>
       <div>
         <ul>
-          <h1>Better add all that view Shenanigans here</h1>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/about">About</Link>
-          </li>
-          <li>
-            <Link to="/cities">Cities</Link>
-          </li>
+          <Header />
         </ul>
 
         <Switch>
           <Route path="/about">
             <About />
           </Route>
-          <Route path="/cities">
-            <Cities />
+          <Route path="/city/:id">
+            <City />
           </Route>
-          <Route path="/">
+          <Route path="/home">
             <Home />
+          </Route>
+          <Route path="/quizz">
+            <Questionnaire submitFilters={ submitFilters } />
           </Route>
         </Switch>
       </div>
     </Router>
 
   );
-}
-function Home() {
-  return <h2>Home</h2>;
-}
 
-function About() {
-  return <h2>About</h2>;
-}
+  // set up a view/react Route for the quizz
+  // pass submitFilter via prop, Questions
+  function submitFilters(userAnswers) {
+    axios.post()
+    
+    Router.redirect
+  }
 
-function Cities() {
-  let match = useRouteMatch();
-
-  return (
-    <div>
-      <h2>Cities</h2>
-
-      <ul>
-        <li>
-          <Link to={`${match.url}/components`}>Components</Link>
-        </li>
-        <li>
-          <Link to={`${match.url}/props-v-state`}>
-            Props v. State
-          </Link>
-        </li>
-      </ul>
-
-      {/* The cities page has its own <Switch> with more routes
-          that build on the /cities URL path. You can think of the
-          2nd <Route> here as an "index" page for all cities, or
-          the page that is shown when no city is selected */}
-      <Switch>
-        <Route path={`${match.path}/:cityId`}>
-          <City />
-        </Route>
-        <Route path={match.path}>
-          <h3>Please select a city.</h3>
-        </Route>
-      </Switch>
-    </div>
-  );
-}
-
-function City() {
-  let { cityId } = useParams();
-  return <h3>Requested city ID: {cityId}</h3>;
 }
