@@ -1,14 +1,13 @@
 import React, { useState, useEffect } from "react";
 import axios from 'axios';
+import './StatisticsItems'
 
 export default function CityStatistics(props) {
   const [cities, setCities] = useState([]);
   const [data, setData] = useState({});
-  const cityList =// [list of cities]
-  
-  
+   
   useEffect(() => {
-    function getWeather() {
+    function getWeather(city) {
       return axios({
         "method":"GET",
         "url":"https://community-open-weather-map.p.rapidapi.com/weather",
@@ -25,7 +24,7 @@ export default function CityStatistics(props) {
         "lang":"null",
         "units":"%22metric%22 or %22imperial%22",
         "mode":"xml%2C html",
-        "q":`${props.city}`
+        "q":`${city}`
         }
       })
     }
@@ -52,7 +51,6 @@ export default function CityStatistics(props) {
   return (
     <div>
       <h1>This is some stats about a city!</h1>
-      
     </div>
   );
 };

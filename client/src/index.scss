@@ -3,6 +3,25 @@
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900");
 
 @import "styles/variables.scss";
-// @import "styles/reset.scss";
 
-// @import "styles/typography.scss";
+
+.layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+@media only screen and (max-width: 960px) {
+  html {
+    font-size: 12px;
+  }
+
+  .layout {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  html {
+    font-size: 10px;
+  }
+}

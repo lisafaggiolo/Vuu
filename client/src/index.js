@@ -2,13 +2,11 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.scss";
 import App from "./components/App";
-import CityStatistics from "./components/City/CityStatistics"
 //import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
     <App />
-    <CityStatistics />
   </React.StrictMode>,
   document.getElementById("root")
 );

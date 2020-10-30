@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   get '/api/provinces(/:id)', to: 'provinces#show'
   get '/api/cities(/:id)', to: 'cities#show'
   
+  
   # #routes for later lol
   # get '/about' => 'about#show'
   # get '/login' => 'sessions#new'

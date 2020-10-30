@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import './App.scss';
 import Header from './Header';
-import Footer from './Footer';
+// import Footer from './Footer';
 import axios from "axios";
-import Province from './Province';
+// import Province from './Province';
 import City from './City';
 
 import {
@@ -21,10 +21,10 @@ import Questionnaire from './Questionnaire'
 
 
 export default function App(props) {
-  const [cities, setCities] = useState([]);
-  const [provinces, setProvinces] = useState([]);
-  const [users, setUsers] = useState([]);
-  const [data, setData] = useState({});
+  // const [cities, setCities] = useState([]);
+  // const [provinces, setProvinces] = useState([]);
+  // const [users, setUsers] = useState([]);
+  // const [data, setData] = useState({});
 
   return (
     <Router>
@@ -57,7 +57,7 @@ export default function App(props) {
   function submitFilters(userAnswers) {
     axios.post()
     
-    Router.redirect
+    // Router.redirect
   }
 
 }
