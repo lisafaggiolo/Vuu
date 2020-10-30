@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import CityListItem from "./CityListItem";
-import './styles.scss'
+import ProvinceStats from "./ProvinceStats";
+import './styles.scss';
 import Axios from "axios";
 import { getCityForProvince } from "helper/selector";
 
@@ -51,6 +52,7 @@ const Province = props => {
       <ul>
         {cityList}
       </ul>
+      <ProvinceStats />
     </div> 
   ) 
 };

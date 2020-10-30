@@ -1,41 +1,27 @@
 import React, { useState, useEffect } from "react";
-import CityList from "../Province/CityList";
-import axios from 'axios';
+import Axios from 'axios';
 
 export default function ProvinceStats(props) {
-  const [provinces, setProvinces] = useState([]);
   const [data, setData] = useState({});
-  const provinceList = [];
-  function getCOVIDinfo(province) {
-      return axios.get(`https://api.covid19tracker.ca/reports/province/${province}`)
-  }
+  
   useEffect(() => {
-    Promise.all([
-      axios.get("/api/provinces/:provinceID"),
-      getCOVIDinfo(),
-    ])
-      .then((all) => {;
-        const provinces = all[0].data.data;
-        const covid = all[1].data.data
-        console.log(all);
-        console.log(
-          "provinces",
-          provinces.length,
-        );
-        setProvinces(provinces);
-        setData(covid)
-      })
-      .catch((error) => {
-        console.log(error);
-      }); 
-  }, []);
+    Axios.get("/api/provinces/1", 
+      { params: { id: 1 }} )
+    .then(result => {
+      console.log(result)
+      setData(result.data.data)
+    })
+    .catch(error => console.log(error))
+  }, [])
+    
+  //add api COVID  call in here 
+
   return (
     <div>
-      <h1>This is some stats about a province!</h1>
-      <CityList 
-        provinces={provinceList}
-      />
-      
+      <h2>Province Statistics</h2>
+      <p>Average Rent: ${data.average_rent}</p>
+      <p>Shelter Cost to Income Ratio: {data.shelter_cost_to_income_ratio} people report spending less than 30% of their income on housing.</p>
+      <p>25-54 year olds in the visible minority: {data.age_group_vis_min}</p>
     </div>
-  );
-};
+  );  
+}
