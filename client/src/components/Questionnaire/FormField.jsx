@@ -9,12 +9,17 @@ const FormField = (props) =>{
   const [questionAnswers, setQuestionAnswers] = useState([]);
   
   const addCheck = (answer) => {
-    console.log('THIS IS ANSWER',answer)
     setQuestionAnswers([...questionAnswers, answer])
-  }
+  };
+
   const removeCheck = (answer) => {
     setQuestionAnswers(questionAnswers.filter(currentAnswer => (currentAnswer !== answer)))
-  }
+  };
+
+  const updateAnswers = () => {
+    //probably needs conditionnal to only have one box checked for some questions
+    props.addAnswers(props.id, questionAnswers)
+  };
 
   const question = props.question;
 
@@ -22,7 +27,6 @@ const FormField = (props) =>{
     return (
       <AnswerOptions
          potential_answer={ potential_answer }
-         updateAnswers={ props.updateAnswers }
          addCheck={ addCheck }
          removeCheck={ removeCheck }
       />
@@ -37,6 +41,7 @@ const FormField = (props) =>{
           <ul>
             { answerOptionsList }
           </ul>
+          <button onClick={ updateAnswers }>Submit</button>
         </FormGroup>
     );
 };

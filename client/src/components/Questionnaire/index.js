@@ -1,7 +1,7 @@
 
 import axios from "axios";
 import React, { useReducer, useState, useEffect } from "react";
-import Form from "./Form";
+import FormField from "./FormField";
 import './styles.scss';
 
 
@@ -10,27 +10,31 @@ import './styles.scss';
 const Questionnaire = (props) => {
 
   const [questions, setQuestions] = useState([]);
-  
+  const [answers, setAnswers] = useState([]);
+    
   useEffect(() => { 
 
     axios.get("api/questions")
     .then( result => {
-      console.log(result.data);
-      const questions = result.data
-      setQuestions(questions)
+      setQuestions(result.data)
     })
     .catch( error => console.log(error))
     }, []
   )
- 
+
+  const addAnswers = (questionId, questionAnswers) => {
+    console.log("INDEX.JS", questionId, questionAnswers )
+    setAnswers([...answers, { question_id: questionId, question_answers: questionAnswers }])
+  }
+
   const questionsList = questions.map( questionObj => {
     return (
-      <Form
+      <FormField
         key={questionObj.id}
+        id={questionObj.id}
         question={questionObj.question}
         potential_answers={JSON.parse(questionObj.potential_answers)}
-        user_answer={questionObj.user_answer}
-        updateAnswers={props.submitFilters}
+        updateAnswers={ addAnswers }
       />
     )
   });
@@ -41,11 +45,14 @@ const Questionnaire = (props) => {
   // setting of state goes here
 
   return (
+    
     <div>
       <h3>Questionnaire</h3>
-      <ul>
-        { questionsList }
+      <FormField>
+        <ul>
+          { questionsList }
       </ul>
+      </FormField>
     </div>
   );
 };
