@@ -1,14 +1,15 @@
 
 import React from 'react';
+import CityListItem from "./CityListItem"
 
-const CityList = () =>{
-    return (
-      <div>
-        <h1>
-          Hello I am CityList 
-        </h1>
-      </div>
-      
-    );
-}
+const CityList = props => {
+  return (
+    <div>
+      <CityListItem />
+      <CityListItem />
+      <CityListItem />
+    </div>
+  ) 
+} 
+  
 export default CityList;

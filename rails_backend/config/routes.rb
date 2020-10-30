@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   # get '/api/cities(/:id)', to: 'cities#show'
   # get '/api/questions(/:id)', to: 'questions#show'
   
+  
   # #routes for later lol
   # get '/about' => 'about#show'
   # get '/login' => 'sessions#new'
