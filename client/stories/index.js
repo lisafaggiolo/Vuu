@@ -10,7 +10,7 @@ import Citylist from "../src/components/Province/CityList";
 import CityListItem from "../src/components/Province/CityListItem";
 
 import Questionnaire from "../src/components/Questionnaire";
-import Form from "../src/components/Questionnaire/FormField";
+import FormField from "../src/components/Questionnaire/FormField";
 import AnswerOptions from "../src/components/Questionnaire/AnswerOptions";
 
 import Button from "../src/components/Button";
@@ -155,12 +155,12 @@ storiesOf("Questionnaire", module)
       questions={ questions }
     />);
   
-storiesOf("Form", module)
+storiesOf("FormField", module)
   .addParameters({
     backgrounds: [{ name: "light", value: "#FEF5EB", default: true }],
   })
-  .add("Form", () => 
-    <Form
+  .add("FormField", () => 
+    <FormField
     key={questions[0].id}
     question={questions[0].question}
     potential_answers={questions[0].potential_answers}
