@@ -4,6 +4,9 @@ class Api::CitiesController < ApplicationController
     @cities = City.order(created_at: :desc);
     render json: { status: 'SUCCESS', message: 'Loaded cities', data: @cities }, status: :ok
   end
+
+  def quizzFilter
+  end
   
   def show
     city = City.find(params[:id])

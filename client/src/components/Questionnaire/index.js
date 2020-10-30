@@ -6,7 +6,6 @@ import './styles.scss';
 
 
 
-
 const Questionnaire = (props) => {
 
   const [questions, setQuestions] = useState([]);
