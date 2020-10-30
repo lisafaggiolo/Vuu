@@ -25,26 +25,41 @@ import {
 
 
 export default function App(props) {
-  // const [cities, setCities] = useState([]);
-  // const [provinces, setProvinces] = useState([]);
-  // const [users, setUsers] = useState([]);
-  // const [data, setData] = useState({});
   const [state, setState] = useState({questions:[], answers:[]})
   useEffect(() => { 
 
     axios.get("/api/questions")
     .then( result => {
-      const answersList = result.data.map(question => {
+      const answersList = result.data.map((question, index) => {
         return {
           question_id: question.id,
-          user_answers: []
+          user_answers: [],
+          
         }
       })
 
-      const questionList = result.data.map(question => {
+      const next = () => {
+        const questionIds = result.data.map(question => question.id);
+        let i = 0;
+        console.log("QUESTION ID", questionIds)
+        return function () {
+          
+          i += 1;
+          if (i === questionIds.length ) {
+            return null;
+          }
+          return questionIds[i];
+        }
+      
+      };
+      const nextQuestion = next();
+
+      const questionList = result.data.map((question, index )=> {
         question.potential_answers = JSON.parse(question.potential_answers);
         question.id = parseInt(question.id);
-        return question
+        question.last_question = index === result.data.length - 1;
+        question.next_question = nextQuestion(); 
+        return question;
       })
       setState({ ...state, questions: questionList, answers: answersList })
     })
@@ -63,6 +78,12 @@ export default function App(props) {
     })
     setState({ ...state, answers: updatedAnswers })
 
+  }
+
+  const submitResults = () => {
+    // axios request post - /api/city/...
+    // data sent is state.answers
+    // ** submit check! redirect("/api/results")
   }
    
   return (
@@ -103,7 +124,7 @@ export default function App(props) {
     console.log(userAnswers);
     axios.get('')
     
-    Router.redirect("/results")
+    
   }
 
 }
