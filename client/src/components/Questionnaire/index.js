@@ -2,26 +2,30 @@
 import axios from "axios";
 import React, { useReducer, useState, useEffect } from "react";
 import { Form, FormGroup, Label, Input, FormText } from 'reactstrap';
+
 import FormField from "./FormField";
 import './styles.scss';
-
 
 
 
 const Questionnaire = (props) => {
 
   const [questions, setQuestions] = useState([]);
-  const [answers, setAnswers] = useState([]);  
-  useEffect(() => { 
+  const [answers, setAnswers] = useState([]);
+    
+  const addCheck = (answer) => {
+    setQuestionAnswers([...questionAnswers, answer])
+  };
 
-    axios.get("api/questions")
-    .then( result => {
-      setQuestions(result.data)
-    })
-    .catch( error => console.log(error))
-    }, []
-  )
- 
+  const removeCheck = (answer) => {
+    setQuestionAnswers(questionAnswers.filter(currentAnswer => (currentAnswer !== answer)))
+  };
+
+  const addAnswers = (questionId, questionAnswers) => {
+    console.log("INDEX.JS", questionId, questionAnswers )
+    setAnswers([...answers, { question_id: questionId, question_answers: questionAnswers }])
+  }
+
   const questionsList = questions.map( questionObj => {
     return (
       <FormField
@@ -29,7 +33,9 @@ const Questionnaire = (props) => {
         id={questionObj.id}
         question={questionObj.question}
         potential_answers={JSON.parse(questionObj.potential_answers)}
-        updateAnswers={props.submitFilters}
+        updateAnswers={ addAnswers }
+        addCheck={ addCheck }
+        removeCheck={ removeCheck }
       />
     )
   });
@@ -46,7 +52,8 @@ const Questionnaire = (props) => {
       <Form>
         <ul>
           { questionsList }
-        </ul>
+      </ul>
+        <button >Submit</button>
       </Form>
     </div>
   );

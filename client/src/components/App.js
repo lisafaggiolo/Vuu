@@ -8,7 +8,8 @@ import City from './City';
 import Results from './Results';
 import Home from './Home';
 import About from './About';
-import Questionnaire from './Questionnaire'
+// import Questionnaire from './Questionnaire'
+import FormField from './Questionnaire/FormField';
 
 
 import {
@@ -22,10 +23,66 @@ import {
 
 
 export default function App(props) {
-  const [cities, setCities] = useState([]);
-  const [provinces, setProvinces] = useState([]);
-  const [users, setUsers] = useState([]);
-  const [data, setData] = useState({});
+  const [state, setState] = useState({questions:[], answers:[]})
+  useEffect(() => { 
+
+    axios.get("/api/questions")
+    .then( result => {
+      const answersList = result.data.map((question, index) => {
+        return {
+          question_id: question.id,
+          user_answers: [],
+          
+        }
+      })
+
+      const next = () => {
+        const questionIds = result.data.map(question => question.id);
+        let i = 0;
+        console.log("QUESTION ID", questionIds)
+        return function () {
+          
+          i += 1;
+          if (i === questionIds.length ) {
+            return null;
+          }
+          return questionIds[i];
+        }
+      
+      };
+      const nextQuestion = next();
+
+      const questionList = result.data.map((question, index )=> {
+        question.potential_answers = JSON.parse(question.potential_answers);
+        question.id = parseInt(question.id);
+        question.last_question = index === result.data.length - 1;
+        question.next_question = nextQuestion(); 
+        return question;
+      })
+      setState({ ...state, questions: questionList, answers: answersList })
+    })
+    .catch( error => console.log(error))
+    }, []
+  )
+  
+
+  const submitAnswers = (id, answers) => {
+    const updatedAnswers = state.answers.map(answer => {
+      if (answer.question_id  === id) {
+        answer.user_answers = answers
+      }
+
+      return answer
+    })
+    setState({ ...state, answers: updatedAnswers })
+
+  }
+
+  const submitResults = () => {
+    // axios request post - /api/city/...
+    // data sent is state.answers
+    // ** submit check! redirect("/api/results")
+  }
    
   return (
     <Router>
@@ -47,8 +104,11 @@ export default function App(props) {
           <Route path="/home">
             <Home />
           </Route>
-          <Route path="/quizz">
-            <Questionnaire submitFilters={ submitFilters } />
+          <Route path="/questions/:id">
+          <FormField
+            questions={ state.questions }
+            submitAnswers={ submitAnswers }
+          />
           </Route>
           <Route path="/results">
             <Results />
@@ -68,7 +128,7 @@ export default function App(props) {
     console.log(userAnswers);
     axios.get('')
     
-    Router.redirect("/results")
+    
   }
 
 }
