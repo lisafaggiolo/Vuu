@@ -3,9 +3,12 @@ import './App.scss';
 
 const Home = () => {
   return (
-    <div className="container">
-      <h4 className="center">Home</h4>
-      <p>Viewfinder, bob loblaw lobs law bomb on law blog!</p>
+    <div className="home">
+      <h2 className="center">Search By</h2>
+      <section className="selectors">
+        <div>Personalized Selection</div>
+        <div>Provinces</div>
+      </section>
     </div>
   )
 }
