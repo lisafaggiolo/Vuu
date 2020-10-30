@@ -23,7 +23,6 @@ import {
 
 
 export default function App(props) {
-<<<<<<< HEAD
   const [state, setState] = useState({questions:[], answers:[]})
   useEffect(() => { 
 
@@ -84,12 +83,6 @@ export default function App(props) {
     // data sent is state.answers
     // ** submit check! redirect("/api/results")
   }
-=======
-  const [cities, setCities] = useState([]);
-  const [provinces, setProvinces] = useState([]);
-  const [users, setUsers] = useState([]);
-  const [data, setData] = useState({});
->>>>>>> 2cbdeccd3403ddd40574c95282d4aa651a50762f
    
   return (
     <Router>
