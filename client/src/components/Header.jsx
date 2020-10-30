@@ -13,7 +13,7 @@ const Navbar = () => {
             <li><Link to="/about">About</Link></li>
             <li className="brand-logo">Viewfinder</li>
             <li><Link to="/cities">Cities</Link></li>
-            <li><Link to="/quizz">Quizz</Link></li>
+            <li><Link to="/questions/1">Quizz</Link></li>
           </ul>
         </div>
       </nav>
