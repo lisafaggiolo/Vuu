@@ -1,12 +1,13 @@
 
 import React from 'react';
+import CityListItem from "./CityListItem"
 
-const CityList = () =>{
+const CityList = (props) =>{
+  let provinceList = props.provinces.map(
+    province => <CityListItem name={province.name} />)
     return (
       <div>
-        <h1>
-          Hello I am CityList 
-        </h1>
+        {provinceList}
       </div>
       
     );
