@@ -1,11 +1,14 @@
-import React from 'react';
+import React from 'react'
 import './App.scss';
 
 const Home = () => {
   return (
-    <div className="container">
-      <h4 className="center">Home</h4>
-      <p>Find your new office view.</p>
+    <div className="home">
+      <h2 className="center">Search By</h2>
+      <section className="selectors">
+        <div>Personalized Selection</div>
+        <div>Provinces</div>
+      </section>
     </div>
   )
 }
