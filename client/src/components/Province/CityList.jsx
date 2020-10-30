@@ -13,15 +13,7 @@ class CityList extends React.Component {
       city_image: []
     }
   }
-  let provinceList = props.provinces.map(
-    province => <CityListItem name={province.name} /> 
-    render() { 
-      return (
-        <div>
-        {provinceList}
-      </div 
-      ) 
-    }) 
+  
 } 
   
 export default CityList;

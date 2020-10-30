@@ -24,12 +24,24 @@ class Province extends React.Component {
     //helper function getCityForProvince(state, state.province)
     };
     
+    let provinceList = props.provinces.map(
+      province => <CityListItem name={province.name} /> 
+      render() { 
+        return (
+          <div>
+          {provinceList}
+        </div 
+        ) 
+      }) 
+    
   render() {  
     return (
       <main>
         <Header />
-        <h1>Hello I am Province View</h1>
-        <CityList />
+        <h1>{this.state.province_name}</h1>
+        <CityList
+          name={this.state.city_name}
+           />
         <Footer />
       </main>
     );
