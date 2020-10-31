@@ -3,12 +3,12 @@ import './App.scss';
 
 const Home = () => {
   return (
-    <div className="lead-banner">
+    <div >
       <img src="images/Pcove.jpg" />
-      <div className="banner-content">
-        <div className="wrapper">
-          <span class="title">Personalized Selection</span>
-          <span class="sub-title">Provinces</span>
+      <div >
+        <div class="wrapper">
+          <span >Personalized Selection</span>
+          <span >Provinces</span>
         </div>
       </div>
     </div>

@@ -33,7 +33,9 @@ export default function App(props) {
     <Router>
       <body>
         <Header />
-        
+        <div class="container">
+          welcome to nu
+        </div>
 
       </body>
       

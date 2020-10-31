@@ -2,11 +2,15 @@
 @import "styles/reset.scss";
 @import "styles/mixins.scss";
 
-$font-stack: Roboto;
+$font-stack: Roboto, sans-serif;
 // , regular, 24
 $primary-color: $dark;
 
-// body {
+body {
+  font-family: $font-stack;
+  color: $light;
+  background-color: $primary-color;
+  display: flex;
 //   background: url("images/Pcove.jpg") no-repeat center center fixed;
 //   // background: url("images/magD.jpg") no-repeat center center fixed;
 //   -webkit-background-size: cover;
@@ -14,35 +18,13 @@ $primary-color: $dark;
 //   -o-background-size: cover;
 //   background-size: cover;
 
-// }
-
-.home {
-  color: white;
-  display: flex;
-  flex-direction: column;
-  
-  .selectors {
-    flex-direction: row;  
-  }
-
 }
 
-
-#main-nav{
+#main-nav {
   background: $dark;
-  // display: flex;
-  // flex-direction: row;
-  ul{
-    width: 100%;
-  }
-  li{
-    float: left;
-    width: (100% / 6);
-    @include mQ(600px){
-      width: 100%;
-    }
-  }
-  a{
+  
+  flex-direction: row;
+  a {
     color: $light;
     text-decoration: none;
     padding: 16px;
@@ -52,61 +34,99 @@ $primary-color: $dark;
       background: lighten($dark, 6);
     }
   }
-
-  @include clearFix;
 }
 
-section h1{
-  margin: 40px 0;
-  text-align: center;
-  text-transform: uppercase;
-  color: $dark;
-  font-size: $sectionHeading;
-}
-
-#services{
-  li{
-    float: left;
-    width: 33.33%;
-    box-sizing: border-box;
-    text-align: center;
+.home {
+  color: $light;
+  display: flex;
+  flex-direction: column;
+  
+  .selectors {
+    flex-direction: row;  
   }
-  img{
-    width: 60%;
-    margin: 20px 20%;
-  }
-  a{
-    text-decoration: none;
-    color: $dark;
-    font-weight: bold;
-    &:hover{
-      color: complement($dark);
-    }
-  }
-  @include clearFix;
-  margin-bottom: 60px;
+
 }
 
-.lead-banner{
-  @include banner;
-  text-align: right;
-}
+//------prev template
+// #main-nav{
+//   background: $dark;
+//   // display: flex;
+//   // flex-direction: row;
+//   ul{
+//     width: 100%;
+//   }
+//   li{
+//     float: left;
+//     width: (100% / 6);
+//     @include mQ(600px){
+//       width: 100%;
+//     }
+//   }
+//   a{
+//     color: $light;
+//     text-decoration: none;
+//     padding: 16px;
+//     display: block;
+//     text-align: center;
+//     &:hover{
+//       background: lighten($dark, 6);
+//     }
+//   }
 
-.lessons-banner{
-  @include banner;
-  text-align: left;
+//   @include clearFix;
+// }
 
-  li{
-    text-transform: uppercase;
-    font-size: 20px;
-    max-width: 500px;
-    margin: 60px 0;
-  }
-}
+// section h1{
+//   margin: 40px 0;
+//   text-align: center;
+//   text-transform: uppercase;
+//   color: $dark;
+//   font-size: $sectionHeading;
+// }
 
-#projects li{
-  @include grid(6, 2%);
-  img{
-    width: 100%;
-  }
-}
+// #services{
+//   li{
+//     float: left;
+//     width: 33.33%;
+//     box-sizing: border-box;
+//     text-align: center;
+//   }
+//   img{
+//     width: 60%;
+//     margin: 20px 20%;
+//   }
+//   a{
+//     text-decoration: none;
+//     color: $dark;
+//     font-weight: bold;
+//     &:hover{
+//       color: complement($dark);
+//     }
+//   }
+//   @include clearFix;
+//   margin-bottom: 60px;
+// }
+
+// .lead-banner{
+//   @include banner;
+//   text-align: right;
+// }
+
+// .lessons-banner{
+//   @include banner;
+//   text-align: left;
+
+//   li{
+//     text-transform: uppercase;
+//     font-size: 20px;
+//     max-width: 500px;
+//     margin: 60px 0;
+//   }
+// }
+
+// #projects li{
+//   @include grid(6, 2%);
+//   img{
+//     width: 100%;
+//   }
+// }
