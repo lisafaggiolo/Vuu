@@ -1,43 +1,55 @@
 @import "styles/variables.scss";
 @import "styles/reset.scss";
 @import "styles/mixins.scss";
+@import "sass/materialize.scss";
 
 $font-stack: Roboto, sans-serif;
 // , regular, 24
-$primary-color: $dark;
+$primary-color: $light;
 
 body {
   font-family: $font-stack;
-  color: $light;
+  color: $dark;
   background-color: $primary-color;
   display: flex;
+  flex-direction: column;
 //   background: url("images/Pcove.jpg") no-repeat center center fixed;
 //   // background: url("images/magD.jpg") no-repeat center center fixed;
 //   -webkit-background-size: cover;
 //   -moz-background-size: cover;
 //   -o-background-size: cover;
 //   background-size: cover;
-
 }
 
-#main-nav {
-  background: $dark;
-  
-  flex-direction: row;
-  a {
-    color: $light;
-    text-decoration: none;
-    padding: 16px;
-    display: block;
-    text-align: center;
-    &:hover{
-      background: lighten($dark, 6);
-    }
-  }
-}
+// #main-nav {
+//   background: $dark;
+//   flex-direction: row;
+//   justify-content: space-around;
+//   padding: 0.5em;
+//   ul {
+//     display: flex;
+//     flex-direction: row;
+//     li {
+//       float: none;
+//     }
+//   }
+//   a {
+//     color: white;
+//     text-decoration: none;
+//     padding: 16px;
+//     display: block;
+//     text-align: center;
+//     &:hover{
+//       background: lighten($dark, 6);
+//     }
+//   }
+//   .logo {
+//     margin-left: auto;
+//   }
+// }
 
 .home {
-  color: $light;
+  color: $dark;
   display: flex;
   flex-direction: column;
   

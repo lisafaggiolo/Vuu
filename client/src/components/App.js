@@ -9,6 +9,7 @@ import Results from './Results';
 import Home from './Home';
 import About from './About';
 import Questionnaire from './Questionnaire'
+import "sass/materialize.scss";
 
 
 import {
@@ -34,7 +35,7 @@ export default function App(props) {
       <body>
         <Header />
         <div class="container">
-          welcome to nu
+          <h2>welcome to nuVuu!</h2>
         </div>
 
       </body>
