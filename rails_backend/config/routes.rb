@@ -4,6 +4,11 @@ Rails.application.routes.draw do
     resources :users, only: [:index, :create, :show]
     resources :cities, only: [:index, :show, :create]
     resources :questions, only: [:index, :show]
+    
+    resources :results do 
+      resources :cities, only: [:index, :show]
+    end 
+    
     resources :provinces do
       resources :cities, only: [:index, :show]
     end

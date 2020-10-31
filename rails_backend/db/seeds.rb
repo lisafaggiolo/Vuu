@@ -17,6 +17,7 @@ Question.create(question: "In which timeZone is your home office located?", pote
 Question.create(question: "Is staying in your time Zone a requirement for work?", potential_answers:['Yes', 'No'], user_answer:[])
 #Question.create(question: "What kind of pace are you looking to experience in the next place you will live?", potential_answers:["village", "town", "city-small", "city-big"], user_answer:[])
 # Question.create(question: "What kind of activities do you see yourself doing on weekends?", potential_answers:["mountain", "lake", "country", "urban", "river", "forest", "coast"], user_answer:[])
+Question.create(question: "Are you ready to see our selection?", potential_answers:[""], user_answer:[])
 
 
 Province.create(name: "Newfoundland and Labrador", average_rent: 1002, shelter_cost_to_income_ratio: 82, age_group_vis_min: 3, description: "The most easterly province in Canada, Newfoundland, and Labrador sits on the Atlantic and is made up of the island of Newfoundland and the mainland Labrador (hence the name).")
