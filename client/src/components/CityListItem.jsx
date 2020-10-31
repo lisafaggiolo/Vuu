@@ -1,7 +1,5 @@
 import React from 'react';
 
-//component of city description with picture
-
 const CityListItem = props => {
   const city = props;
     return (
