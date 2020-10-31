@@ -11,12 +11,7 @@ const FormField = (props) =>{
 
   const {id} = useParams();
   const question_id = parseInt(id);  
-
   const question = props.questions.find(question => question.id === question_id);
-  // console.log("QUESTION", question && question.last_question);
-  
-  
-  // const { path } = useRouteMatch();
   const history = useHistory();
 
 
@@ -28,10 +23,7 @@ const FormField = (props) =>{
 
       history.push(`/questions/${question.next_question}`)
     } else {
-
-      // console.log("Submit Results")
-      props.submitResults()
-      
+      props.submitResults()  
     }  
   };
 
@@ -52,20 +44,20 @@ const FormField = (props) =>{
          removeCheck={ removeCheck }
       />
     )
-  })
+  });
 
-    return (
-      <Form>
-        <FormGroup check>
-          <Label>
-            { question && question.question }
-          </Label>
-          <ul>
-            { answerOptionsList }
-          </ul> 
-        </FormGroup>
-    <button onClick={ submitCheck }> {question && question.last_question ? "Submit questionnaire" : "Yes let's do it!"}</button>
-      </Form>
+  return (
+    <Form>
+      <FormGroup check>
+        <Label>
+          { question && question.question }
+        </Label>
+        <ul>
+          { answerOptionsList }
+        </ul> 
+      </FormGroup>
+    <button onClick={ submitCheck }> {question && question.last_question ? "Yes let's do it!" : "Next"}</button>
+    </Form>
     );
 };
   
