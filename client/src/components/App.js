@@ -82,7 +82,7 @@ export default function App(props) {
 
   const submitResults = () => {
     console.log("STATE.ANSWERS", state.answers)
-    // axios request post - /api/city/...
+    // axios.post('/api/questionnai')
     // data sent is state.answers
     // ** submit check! redirect("/api/results")
   }

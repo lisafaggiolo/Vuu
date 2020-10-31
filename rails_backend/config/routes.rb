@@ -6,8 +6,9 @@ Rails.application.routes.draw do
     resources :questions, only: [:index, :show]
     
     resources :results do 
-      ressource :cities, only: [:index, :show]
-      
+      resources :cities, only: [:index, :show]
+    end 
+    
     resources :provinces do
       resources :cities, only: [:index, :show]
     end

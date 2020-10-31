@@ -5,6 +5,6 @@ class Api::QuestionsController < ApplicationController
     end
 
     def  filter 
-      
+      puts state.answers
     end
 end
