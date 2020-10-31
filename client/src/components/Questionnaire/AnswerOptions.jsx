@@ -16,14 +16,15 @@ const AnswerOptions = (props) =>{
   }
   
   return (
-    <div>
-      <li>{ props.potential_answer }</li>
+    <li>
+      <Label for={ props.potential_answer }>{ props.potential_answer }</Label>
       <Input 
+        name={ props.potential_answer }
         type="checkbox" 
         checked={ checked } 
         onChange={ updateCheck }>  
       </Input>
-    </div>  
+    </li>  
   );
 };
   

@@ -9,7 +9,7 @@ import Results from './Results';
 import Home from './Home';
 import About from './About';
 // import Questionnaire from './Questionnaire'
-import FormField from './Questionnaire/FormField';
+import FormField from './Questionnaire';
 
 
 import {
@@ -20,6 +20,8 @@ import {
   useRouteMatch,
   useParams
 } from "react-router-dom";
+import Axios from "axios";
+import Province from "./Province";
 
 
 
@@ -82,9 +84,7 @@ export default function App(props) {
 
   const submitResults = () => {
     console.log("STATE.ANSWERS", state.answers)
-    // axios.post('/api/questionnai')
-    // data sent is state.answers
-    // ** submit check! redirect("/api/results")
+    Axios.get()
   }
    
   return (
@@ -110,6 +110,9 @@ export default function App(props) {
             submitAnswers={ submitAnswers }
             submitResults={ submitResults }
           />
+          </Route>
+          <Route path="/provinces/:id">
+            <Province />
           </Route>
           <Route path="/results">
             <Results />
