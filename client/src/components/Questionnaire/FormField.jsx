@@ -13,26 +13,27 @@ const FormField = (props) =>{
   const question_id = parseInt(id);  
 
   const question = props.questions.find(question => question.id === question_id);
-  console.log("QUESTION", question && question.last_question);
+  // console.log("QUESTION", question && question.last_question);
   
   
-  const { path } = useRouteMatch();
+  // const { path } = useRouteMatch();
   const history = useHistory();
 
 
   const submitCheck = (event) => {
     event.preventDefault()
     if (!question.last_question) {
-      console.log("Submit Answers", question.next_question)
+      // console.log("Submit Answers", question.next_question)
       props.submitAnswers(question_id, questionAnswers)
+
       history.push(`/questions/${question.next_question}`)
     } else {
 
-      console.log("Submit Results")
+      // console.log("Submit Results")
       props.submitResults()
-    }
-    
-  }
+      
+    }  
+  };
 
   
   const addCheck = (answer) => {
@@ -63,7 +64,7 @@ const FormField = (props) =>{
             { answerOptionsList }
           </ul> 
         </FormGroup>
-    <button onClick={ submitCheck }> {question && question.last_question ? "Submit questionnaire" : "Submit Answer"}</button>
+    <button onClick={ submitCheck }> {question && question.last_question ? "Submit questionnaire" : "Yes let's do it!"}</button>
       </Form>
     );
 };

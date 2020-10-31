@@ -20,7 +20,7 @@ const AnswerOptions = (props) =>{
       <li>{ props.potential_answer }</li>
       <Input 
         type="checkbox" 
-        checked={checked} 
+        checked={ checked } 
         onChange={ updateCheck }>  
       </Input>
     </div>  
