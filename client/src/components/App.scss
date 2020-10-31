@@ -6,18 +6,18 @@ $font-stack: Roboto;
 // , regular, 24
 $primary-color: $dark;
 
-body {
-  background: url("images/Pcove.jpg") no-repeat center center fixed;
-  // background: url("images/magD.jpg") no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+// body {
+//   background: url("images/Pcove.jpg") no-repeat center center fixed;
+//   // background: url("images/magD.jpg") no-repeat center center fixed;
+//   -webkit-background-size: cover;
+//   -moz-background-size: cover;
+//   -o-background-size: cover;
+//   background-size: cover;
 
-}
+// }
 
 .home {
-  color: $home-color;
+  color: white;
   display: flex;
   flex-direction: column;
   
@@ -30,8 +30,8 @@ body {
 
 #main-nav{
   background: $dark;
-  display: flex;
-  flex-direction: row;
+  // display: flex;
+  // flex-direction: row;
   ul{
     width: 100%;
   }

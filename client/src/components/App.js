@@ -31,29 +31,29 @@ export default function App(props) {
    
   return (
     <Router>
-      <div>
-        <ul>
-          <Header />
-        </ul>
+      <body>
+        <Header />
+        
 
-        <Switch>
-          <Route path="/about">
-            <About />
-          </Route>
-          <Route path="/city/:id">
-            <City />
-          </Route>
-          <Route path="/home">
-            <Home />
-          </Route>
-          <Route path="/quizz">
-            <Questionnaire submitFilters={ submitFilters } />
-          </Route>
-          <Route path="/results">
-            <Results />
-          </Route>
-        </Switch>
-      </div>
+      </body>
+      
+      <Switch>
+        <Route path="/about">
+          <About />
+        </Route>
+        <Route path="/city/:id">
+          <City />
+        </Route>
+        <Route path="/home">
+          <Home />
+        </Route>
+        <Route path="/quizz">
+          <Questionnaire submitFilters={ submitFilters } />
+        </Route>
+        <Route path="/results">
+          <Results />
+        </Route>
+      </Switch>
     </Router>
 
   );

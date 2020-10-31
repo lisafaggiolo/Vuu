@@ -3,14 +3,21 @@ import './App.scss';
 
 const Home = () => {
   return (
-    <div className="home">
-      <h2 className="center">Search By</h2>
-      <section className="selectors">
-        <div>Personalized Selection</div>
-        <div>Provinces</div>
-      </section>
+    <div className="lead-banner">
+      <img src="images/Pcove.jpg" />
+      <div className="banner-content">
+        <div className="wrapper">
+          <span class="title">Personalized Selection</span>
+          <span class="sub-title">Provinces</span>
+        </div>
+      </div>
     </div>
+    
+    
   )
 }
 
+
+
 export default Home;
+
