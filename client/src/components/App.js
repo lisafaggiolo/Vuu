@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import './App.scss';
 import Header from './Header';
-import Footer from './Footer';
+//import Footer from './Footer';
 import axios from "axios";
-import Province from './Province'
+//import Province from './Province'
 import City from './City';
 import Results from './Results';
 import Home from './Home';
@@ -20,6 +20,8 @@ import {
   useRouteMatch,
   useParams
 } from "react-router-dom";
+
+
 
 
 export default function App(props) {
@@ -39,7 +41,7 @@ export default function App(props) {
       const next = () => {
         const questionIds = result.data.map(question => question.id);
         let i = 0;
-        console.log("QUESTION ID", questionIds)
+        // console.log("QUESTION ID", questionIds)
         return function () {
           
           i += 1;
@@ -79,6 +81,7 @@ export default function App(props) {
   }
 
   const submitResults = () => {
+    console.log("STATE.ANSWERS", state.answers)
     // axios request post - /api/city/...
     // data sent is state.answers
     // ** submit check! redirect("/api/results")
@@ -95,11 +98,8 @@ export default function App(props) {
           <Route path="/about">
             <About />
           </Route>
-          <Route path="/cities/:id">
+          <Route path="/city/:id">
             <City />
-          </Route>
-          <Route path="/provinces/:id">
-            <Province />
           </Route>
           <Route path="/home">
             <Home />
@@ -108,15 +108,13 @@ export default function App(props) {
           <FormField
             questions={ state.questions }
             submitAnswers={ submitAnswers }
+            submitResults={ submitResults }
           />
           </Route>
           <Route path="/results">
             <Results />
           </Route>
         </Switch>
-        <ul>
-          <Footer />
-        </ul>
       </div>
     </Router>
 
