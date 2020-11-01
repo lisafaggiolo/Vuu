@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from "react-router-dom";
 import "./App.scss";
+import { Auth } from "aws-amplify";
 
 // will be Horizontal not vertical
 const Navbar = () => {

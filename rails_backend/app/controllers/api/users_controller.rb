@@ -1,6 +1,8 @@
 class Api::UsersController < ApplicationController
   before_action :authorize_request, except: :create
   before_action :find_user, except: %i[create index]
+  skip_before_action :authorized, only: [:new, :create]
+
   
   def index
     @users = User.all
@@ -10,8 +12,16 @@ class Api::UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-      render json: @user, status: :created
+      session[:user_id] = @user.id
+      redirect_to '/home'
     else
+      render json: { errors: @user.errors.full_messages },
+             status: :unprocessable_entity
+    end
+  end
+  
+  def update
+    unless @user.update(user_params)
       render json: { errors: @user.errors.full_messages },
              status: :unprocessable_entity
     end
@@ -20,11 +30,18 @@ class Api::UsersController < ApplicationController
   def show
     respond_with User.find(params[:id])
   end
-  
-  private
-  def users_params
-    params.permit(:first_name, :last_name, :email, :password)
+ 
+  def find_user
+    @user = (User.find_by_username!(params[:_username] ||  User.find_by(id: session[:user_id]))  
+    rescue ActiveRecord::RecordNotFound
+      render json: { errors: 'User not found' }, status: :not_found
   end
+    
+  private
+  def user_params
+    params.require(:user)
+          .permit(:name, :username,
+                  :email, :password, :password_confirmation)
   
 end
 

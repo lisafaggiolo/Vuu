@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import './App.scss';
 import Header from './Header';
-//import Footer from './Footer';
+import Login from './Login/';
+import Signup from "./Signup";
 import axios from "axios";
 import Province from './Province'
 import City from './City';
@@ -10,6 +11,7 @@ import Home from './Home';
 import About from './About';
 // import Questionnaire from './Questionnaire'
 import FormField from './Questionnaire';
+import { AppContext } from "./libs/contextLib";
 
 
 import {
@@ -18,12 +20,16 @@ import {
   Route,
   Link,
   useRouteMatch,
-  useParams
+  useParams, 
+  useHistory
 } from "react-router-dom";
 
 
 export default function App(props) {
   const [state, setState] = useState({questions:[], answers:[]})
+  const [isAuthenticated, userHasAuthenticated] = useState(false);
+  const [isAuthenticating, setIsAuthenticating] = useState(true);
+  
   useEffect(() => { 
 
     axios.get("/api/questions")
@@ -84,7 +90,15 @@ export default function App(props) {
    .catch( error => console.log(error))
 
   }
-   
+  
+  async function handleLogout() {
+    await Auth.signOut();
+  
+    userHasAuthenticated(false);
+    
+    history.push("/login");
+  }
+  
   return (
     <Router>
       <div>
@@ -101,6 +115,26 @@ export default function App(props) {
           </Route>
           <Route path="/home">
             <Home />
+            {isAuthenticated ? 
+             <NavItem 
+              onClick={handleLogout}>
+              Logout
+            </NavItem>
+             : <>
+                  <LinkContainer to="/signup">
+                    <NavItem>Signup</NavItem>
+                  </LinkContainer>
+                  <LinkContainer to="/login">
+                    <NavItem>Login</NavItem>
+                  </LinkContainer>
+               </>
+            }
+          </Route>
+          <Route exact path="/login">
+            <Login />
+          </Route>
+          <Route exact path="/signup">
+            <Signup />
           </Route>
           <Route path="/questions/:id">
           <FormField
@@ -116,9 +150,10 @@ export default function App(props) {
             <Results />
           </Route>
         </Switch>
-      </div>
-    </Router>
-
+      <AppContext.Provider value={{ isAuthenticated, userHasAuthenticated }}>
+        <Router />
+      </AppContext.Provider>
+    </div>
   );
 
   // set up a view/react Route for the quizz
