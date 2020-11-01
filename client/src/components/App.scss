@@ -29,3 +29,14 @@ body {
   }
 }
 
+.banner {
+  // background: url("../images/lh.jpg") no-repeat center fixed;
+  background: url("../images/fairmont.jpg") no-repeat center center fixed;
+  background-size: cover;
+  height: 75vh;
+  .container{
+    background-color: $dark80;
+    
+
+  }
+}
