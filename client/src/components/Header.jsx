@@ -8,19 +8,15 @@ const Navbar = () => {
     
     <nav>
     <div className="nav-wrapper"> 
-      <ul id="nav-mobile" className="left hide-on-med-and-down">
+      <ul id="nav-mobile" className="left">
         <li ><Link to="/home">Home</Link></li>
         <li><Link to="/about">About</Link></li>
+      </ul>
+      <ul id="nav-mobile" className="right">
         <li><Link to="/cities">Cities</Link></li>
         <li><Link to="/quizz">Quizz</Link></li>
       </ul>
-      <ul id="nav-mobile" className="right hide-on-med-and-down">
-        <li ><Link to="/home">Home</Link></li>
-        <li><Link to="/about">About</Link></li>
-        <li><Link to="/cities">Cities</Link></li>
-        <li><Link to="/quizz">Quizz</Link></li>
-      </ul>
-    <div className="brand-logo center">NuVuu</div>  
+      <div className="brand-logo center">NuVuu</div>  
     </div>
     </nav>
     

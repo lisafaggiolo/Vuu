@@ -34,9 +34,7 @@ export default function App(props) {
     <Router>
       <body>
         <Header />
-        <div class="container">
-          <h2>welcome to nuVuu!</h2>
-        </div>
+        
 
       </body>
       
