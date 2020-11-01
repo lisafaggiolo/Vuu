@@ -3,7 +3,8 @@ Rails.application.routes.draw do
   namespace :api do
     resources :users, only: [:index, :create, :show]
     resources :cities, only: [:index, :show, :create]
-    resources :questions, only: [:index, :show] 
+    resources :questions, only: [:index, :show]
+     
     resources :results, only: [:index, :show, :create]
 
     resources :provinces do
