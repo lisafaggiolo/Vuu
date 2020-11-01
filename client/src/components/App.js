@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import './App.scss';
 import Header from './Header';
-//import Footer from './Footer';
+import Footer from './Footer';
 import axios from "axios";
-//import Province from './Province'
+import Provinces from './Provinces'
 import City from './City';
 import Results from './Results';
 import Home from './Home';
@@ -35,26 +35,31 @@ export default function App(props) {
       <body>
         <Header />
         
+        <Switch>
+          <Route path="/about">
+            <About />
+          </Route>
+          <Route path="/city/:id">
+            <City />
+          </Route>
+          <Route path="/home">
+            <Home />
+          </Route>
+          <Route path="/quiz">
+            <Questionnaire submitFilters={ submitFilters } />
+          </Route>
+          <Route path="/provinces">
+            <Provinces />
+          </Route>
+          <Route path="/results">
+            <Results />
+          </Route>
+        </Switch>
 
+        <Footer />
       </body>
       
-      <Switch>
-        <Route path="/about">
-          <About />
-        </Route>
-        <Route path="/city/:id">
-          <City />
-        </Route>
-        <Route path="/home">
-          <Home />
-        </Route>
-        <Route path="/quizz">
-          <Questionnaire submitFilters={ submitFilters } />
-        </Route>
-        <Route path="/results">
-          <Results />
-        </Route>
-      </Switch>
+      
     </Router>
 
   );

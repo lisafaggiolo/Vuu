@@ -1,27 +1,29 @@
 import React from 'react'
 import './App.scss';
+import { Link } from "react-router-dom";
 // import 'js/bin/materialize';
 
 const Home = () => {
   return (
-    <div className="home-page">
-      <div className="section no-pad-bot">
-        <div className="container">
-          <br/>
-          <br/>
-          <br/>
-          <h1 className="header center">Explore</h1>
-          <div className="row center">
-            <h3 className="header col s6 light">Personalized Selection</h3>
-            <h3 className="header col s6 light">Provinces</h3>
+    <main>
+      <div className="home-page">
+        <div className="section no-pad-bot">
+          <div className="container">
+            <br/>
+            <br/>
+            <br/>
+            <h1 className="header center">Explore</h1>
+            <div className="row center">
+              <h3 className="header col s6 light"><Link to="/quiz">Personalized Selection</Link></h3>
+              <h3 className="header col s6 light"><Link to="/provinces">Provinces</Link></h3>
+            </div>
+            <br/>
+            <br/>
+            <br/>
           </div>
-          <br/>
-          <br/>
-          <br/>
         </div>
       </div>
-    </div>
-    
+    </main>
   )
 }
 
