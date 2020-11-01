@@ -7,7 +7,9 @@ class Api::ProvincesController < ApplicationController
   
   def show
     province = Province.find(params[:id])
-    render json: { status: 'SUCCESS', message: 'Loaded province', data:province }, status: :ok
+    cities = City.where(province_id: province.id)
+    province_cities = [province, cities]
+    render json: { status: 'SUCCESS', message: 'Loaded province', data:province_cities }, status: :ok
     
     unless province
       flash[:alert] = 'Province not found'
