@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
   
   namespace :api do
-    resources :users, only: [:index, :create, :show]
+    resources :users, param: :_username
+    post '/auth/login', to: 'authentication#login'
+    get '/*a', to: 'application#not_found'
+    
     resources :cities, only: [:index, :show, :create]
     resources :questions, only: [:index, :show] 
     resources :results, only: [:index, :show, :create]
@@ -9,6 +12,7 @@ Rails.application.routes.draw do
     resources :provinces do
       resources :cities, only: [:index, :show]
     end
+    
   end
   
   # get '/api/users(/:id)', to: 'users#show'

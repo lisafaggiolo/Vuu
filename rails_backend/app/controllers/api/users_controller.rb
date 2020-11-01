@@ -1,12 +1,20 @@
 class Api::UsersController < ApplicationController
+  before_action :authorize_request, except: :create
+  before_action :find_user, except: %i[create index]
   
   def index
-    @users = User.order(created_at: :desc)
-    render json: @users
+    @users = User.all
+    render json: @users, status: :ok
   end
  
   def create
-    respond_with User.create(user_params)
+    @user = User.new(user_params)
+    if @user.save
+      render json: @user, status: :created
+    else
+      render json: { errors: @user.errors.full_messages },
+             status: :unprocessable_entity
+    end
   end
 
   def show

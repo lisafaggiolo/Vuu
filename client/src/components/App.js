@@ -3,7 +3,7 @@ import './App.scss';
 import Header from './Header';
 //import Footer from './Footer';
 import axios from "axios";
-//import Province from './Province'
+import Province from './Province'
 import City from './City';
 import Results from './Results';
 import Home from './Home';
@@ -20,9 +20,6 @@ import {
   useRouteMatch,
   useParams
 } from "react-router-dom";
-import Province from "./Province";
-
-
 
 
 export default function App(props) {
