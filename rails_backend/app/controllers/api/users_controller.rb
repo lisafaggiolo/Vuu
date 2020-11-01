@@ -1,6 +1,4 @@
-class Api::UsersController < ApplicationController
-  before_action :authorize_request, except: :create
-  before_action :find_user, except: %i[create index]
+class Api::UsersController < ApplicationController  
   skip_before_action :authorized, only: [:new, :create]
 
   
@@ -13,7 +11,7 @@ class Api::UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       session[:user_id] = @user.id
-      redirect_to '/home'
+      render json {data: "User created succesfully"}
     else
       render json: { errors: @user.errors.full_messages },
              status: :unprocessable_entity
@@ -36,12 +34,15 @@ class Api::UsersController < ApplicationController
     rescue ActiveRecord::RecordNotFound
       render json: { errors: 'User not found' }, status: :not_found
   end
+  
+  def favourite_cities
+  end
     
   private
   def user_params
     params.require(:user)
           .permit(:name, :username,
-                  :email, :password, :password_confirmation)
+                  :email, :password)
   
 end
 

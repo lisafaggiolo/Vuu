@@ -1,5 +1,6 @@
 class Api::CitiesController < ApplicationController
-    
+  skip_before_action :authorized
+  
   def index
     @cities = City.order(created_at: :desc);
     render json: { status: 'SUCCESS', message: 'Loaded cities', data: @cities }, status: :ok

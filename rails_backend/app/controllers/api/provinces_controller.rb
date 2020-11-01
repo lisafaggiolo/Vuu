@@ -1,4 +1,5 @@
 class Api::ProvincesController < ApplicationController
+  skip_before_action :authorized
   
   def index
     @provinces = Province.order(created_at: :desc)
