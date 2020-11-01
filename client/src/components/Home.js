@@ -14,8 +14,8 @@ const Home = () => {
             <br/>
             <h1 className="header center">Explore</h1>
             <div className="row center">
-              <h3 className="header col s6 light"><Link to="/quiz">Personalized Selection</Link></h3>
-              <h3 className="header col s6 light"><Link to="/provinces">Provinces</Link></h3>
+              <h3 className="header col s6 light"><Link to="/quiz" className="white-text">Personalized Selection</Link></h3>
+              <h3 className="header col s6 light"><Link to="/provinces" className="white-text">Provinces</Link></h3>
             </div>
             <br/>
             <br/>

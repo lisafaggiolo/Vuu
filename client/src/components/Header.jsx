@@ -9,7 +9,7 @@ const Navbar = () => {
     <nav>
     <div className="nav-wrapper"> 
       <ul id="nav-mobile" className="left">
-        <li ><Link to="/home">Home</Link></li>
+        <li><Link to="/home">Home</Link></li>
         <li><Link to="/about">About</Link></li>
         <li><Link to="/provinces">Provinces</Link></li>
       </ul>
