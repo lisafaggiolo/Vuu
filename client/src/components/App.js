@@ -42,7 +42,6 @@ export default function App(props) {
       const next = () => {
         const questionIds = result.data.map(question => question.id);
         let i = 0;
-        // console.log("QUESTION ID", questionIds)
         return function () {
           
           i += 1;
@@ -67,7 +66,6 @@ export default function App(props) {
     .catch( error => console.log(error))
     }, []
   )
-  
 
   const submitAnswers = (id, answers) => {
     const updatedAnswers = state.answers.map(answer => {
@@ -85,7 +83,6 @@ export default function App(props) {
     console.log("STATE.ANSWERS", state.answers)
     axios.post('/api/results', state.answers)
    .catch( error => console.log(error))
-
   }
    
   return (

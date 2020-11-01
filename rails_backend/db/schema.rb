@@ -43,6 +43,7 @@ ActiveRecord::Schema.define(version: 2020_10_24_183619) do
   create_table "questions", force: :cascade do |t|
     t.string "question"
     t.string "potential_answers"
+    t.string "answer_type"
     t.string "user_answer"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

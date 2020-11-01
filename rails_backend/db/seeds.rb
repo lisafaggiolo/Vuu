@@ -12,12 +12,12 @@ require('faker')
 end
 
 
-# Question.create(question: "Do you see yourself changing your office location for more than 6 months?" , potential_answers:['Yes', 'No'], user_answer:[])
-Question.create(question: "In which timeZone is your home office located?", potential_answers:["NDT","EDT", "MDT", "PDT", "CST","AST"], user_answer:[])
-Question.create(question: "Is staying in your time Zone a requirement for work?", potential_answers:['Yes', 'No'], user_answer:[])
-#Question.create(question: "What kind of pace are you looking to experience in the next place you will live?", potential_answers:["village", "town", "city-small", "city-big"], user_answer:[])
-# Question.create(question: "What kind of activities do you see yourself doing on weekends?", potential_answers:["mountain", "lake", "country", "urban", "river", "forest", "coast"], user_answer:[])
-Question.create(question: "Are you ready to see where your future office might be?", potential_answers:[""], user_answer:[])
+# Question.create(question: "Do you see yourself changing your office location for more than 6 months?" , potential_answers:['Yes', 'No'], answer_type: "boolean")
+Question.create(question: "In which timeZone is your home office located?", potential_answers:["NDT","EDT", "MDT", "PDT", "CST","AST"], answer_type: "time_zone")
+Question.create(question: "Is staying in your time Zone a requirement for work?", potential_answers:['Yes', 'No'], answer_type: "boolean")
+# Question.create(question: "What kind of pace are you looking to experience in the next place you will live?", potential_answers:["village", "town", "city-small", "city-big"], answer_type: "location_type")
+# Question.create(question: "What kind of activities do you see yourself doing on weekends?", potential_answers:["mountain", "lake", "country", "urban", "river", "forest", "coast"], answer_type: "view_type")
+Question.create(question: "Are you ready to see where your future office might be?", potential_answers:[""])
 
 
 Province.create(name: "Newfoundland and Labrador", average_rent: 1002, shelter_cost_to_income_ratio: 82, age_group_vis_min: 3, description: "The most easterly province in Canada, Newfoundland, and Labrador sits on the Atlantic and is made up of the island of Newfoundland and the mainland Labrador (hence the name).")

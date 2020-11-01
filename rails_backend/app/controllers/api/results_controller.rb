@@ -7,20 +7,31 @@ class Api::ResultsController < ApplicationController
   end
 
   def show
-    cities = City.where({})
+    filtered_cities = filter_algorithm(results_params)
     render json: { status: 'SUCCESS', message: 'Loaded city', data:@cities }, status: :ok
   end
 
   def create
-    puts params[:_json][0][:question_id]
+    filtered_cities = filter_algorithm(results_params)
+  end
+
+  def filter_algorithm(answers_obj)
+    puts answers_obj
+    answers_obj.each do |answer_obj|
+      question_id = answer_obj[:question_id]
+      user_answer = answer_obj[:user_answers]
+      if user_answer != []
+        @question = Question.where(:id => question_id)
+        puts @question, user_answer
+      end
+    end
   end
 
   private
   def results_params
-    params.require(:result).permit(:_json, :user_answers);
+    params.require(:_json);
   end
   
-  def filter_algorithm 
-  end
+
   
 end
