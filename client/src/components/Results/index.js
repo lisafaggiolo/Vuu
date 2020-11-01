@@ -1,16 +1,17 @@
 import React, { useState, useEffect } from "react";
-import CityList from ".";
-// import {useParams} from 'react-router-dom';
+import {useParams} from 'react-router-dom';
 import './styles.scss'
 import Axios from "axios";
-
+import CityList from "../CityList";
               //  ????
-const ResultsPage  = (props) => {
+const ResultsPage  = () => {
   const [cities, setCities] = useState([])
+
   useEffect(() => { 
     Axios.get("/api/results")
     .then( result => {
-      setCities(result.data)
+      console.log(result.data)
+      setCities(result.data.data)
     })
     .catch( error => console.log(error))
     }, []
@@ -23,7 +24,7 @@ const ResultsPage  = (props) => {
       </h1>
     </div>
     <CityList 
-      results={ cities }/>
+      cities={ cities }/>
     </div>
   )
 
