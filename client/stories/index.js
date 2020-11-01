@@ -6,11 +6,11 @@ import "index.scss";
 import City from "../src/components/City";
 
 import Province from "../src/components/Province";
-import Citylist from "../src/components/Province/CityList";
+import Citylist from "../src/components/CityList";
 import CityListItem from "../src/components/Province/CityListItem";
 
-import Questionnaire from "../src/components/Questionnaire";
-import FormField from "../src/components/Questionnaire/FormField";
+// import Questionnaire from "../src/components/Questionnaire";
+import FormField from "../src/components/Questionnaire";
 import AnswerOptions from "../src/components/Questionnaire/AnswerOptions";
 
 import Button from "../src/components/Button";

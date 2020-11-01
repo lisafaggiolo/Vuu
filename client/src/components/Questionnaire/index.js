@@ -1,62 +1,66 @@
-
-// import axios from "axios";
-// import React, { useReducer, useState, useEffect } from "react";
-// import { Form, FormGroup, Label, Input, FormText } from 'reactstrap';
-
-// import FormField from "./FormField";
-// import './styles.scss';
+import React, {useState} from 'react';
+import AnswerOptions from './AnswerOptions';
+import { Form, FormGroup, Label, Input, FormText } from 'reactstrap';
+import { useParams } from 'react-router-dom';
+import { useRouteMatch, useHistory } from 'react-router-dom';
 
 
 
-// const Questionnaire = (props) => {
+const FormField = (props) =>{
+  const [questionAnswers, setQuestionAnswers] = useState([]);
 
-//   const [questions, setQuestions] = useState([]);
-//   const [answers, setAnswers] = useState([]);
-    
-//   const addCheck = (answer) => {
-//     setQuestionAnswers([...questionAnswers, answer])
-//   };
+  const {id} = useParams();
+  const question_id = parseInt(id);  
+  const question = props.questions.find(question => question.id === question_id);
+  const history = useHistory();
 
-//   const removeCheck = (answer) => {
-//     setQuestionAnswers(questionAnswers.filter(currentAnswer => (currentAnswer !== answer)))
-//   };
 
-//   const addAnswers = (questionId, questionAnswers) => {
-//     console.log("INDEX.JS", questionId, questionAnswers )
-//     setAnswers([...answers, { question_id: questionId, question_answers: questionAnswers }])
-//   }
+  const submitCheck = (event) => {
+    event.preventDefault()
+    if (!question.last_question) {
 
-//   const questionsList = questions.map( questionObj => {
-//     return (
-//       <FormField
-//         key={questionObj.id}
-//         id={questionObj.id}
-//         question={questionObj.question}
-//         potential_answers={JSON.parse(questionObj.potential_answers)}
-//         updateAnswers={ addAnswers }
-//         addCheck={ addCheck }
-//         removeCheck={ removeCheck }
-//       />
-//     )
-//   });
+      props.submitAnswers(question_id, questionAnswers)
+      setQuestionAnswers([]);
+      history.push(`/questions/${question.next_question}`)
+    } else {
+      props.submitResults()  
+    }  
+  };
 
   
+  const addCheck = (answer) => {
+    setQuestionAnswers(prev =>([...prev, answer]))
+  };
+
+  const removeCheck = (answer) => {
+    setQuestionAnswers(prev => prev.filter(currentAnswer => currentAnswer !== answer))
+  };
+
+  const answerOptionsList = question && question.potential_answers.map( potential_answer => {
+    if (!question.last_question) {
+    return (
+      <AnswerOptions
+         key={ potential_answer }   
+         potential_answer={ potential_answer }
+         addCheck={ addCheck }
+         removeCheck={ removeCheck }
+      />
+    )}
+  });
+
+  return (
+    <Form>
+      <FormGroup check>
+        <h1>
+          { question && question.question }
+        </h1>
+        <ul>
+          { answerOptionsList }
+        </ul> 
+      </FormGroup>
+    <button onClick={ submitCheck }> {question && question.last_question ? "Yes let's do it!" : "Next"}</button>
+    </Form>
+    );
+};
   
-//   // One by one rendering of questions logic goes here?
-//   // setting of state goes here
-
-//   return (
-    
-//     <div>
-//       <h3>Questionnaire</h3>
-//       <Form>
-//         <ul>
-//           { questionsList }
-//       </ul>
-//         <button >Submit</button>
-//       </Form>
-//     </div>
-//   );
-// };
-
-// export default Questionnaire;
+export default FormField;

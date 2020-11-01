@@ -9,7 +9,7 @@ import Results from './Results';
 import Home from './Home';
 import About from './About';
 // import Questionnaire from './Questionnaire'
-import FormField from './Questionnaire/FormField';
+import FormField from './Questionnaire';
 
 
 import {
@@ -20,6 +20,7 @@ import {
   useRouteMatch,
   useParams
 } from "react-router-dom";
+import Province from "./Province";
 
 
 
@@ -82,9 +83,9 @@ export default function App(props) {
 
   const submitResults = () => {
     console.log("STATE.ANSWERS", state.answers)
-    // axios.post('/api/questionnai')
-    // data sent is state.answers
-    // ** submit check! redirect("/api/results")
+    axios.post('/api/results', state.answers)
+   .catch( error => console.log(error))
+
   }
    
   return (
@@ -111,6 +112,9 @@ export default function App(props) {
             submitResults={ submitResults }
           />
           </Route>
+          <Route path="/provinces/:id">
+            <Province />
+          </Route>
           <Route path="/results">
             <Results />
           </Route>
@@ -122,11 +126,6 @@ export default function App(props) {
 
   // set up a view/react Route for the quizz
   // pass submitFilter via prop, Questions
-  function submitFilters(userAnswers) {
-    console.log(userAnswers);
-    axios.get('')
-    
-    
-  }
+
 
 }
