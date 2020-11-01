@@ -6,7 +6,7 @@ import Axios from "axios";
 import CityList from "../CityList";
 import { useParams } from "react-router-dom";
 
-const Province = (props) =>{
+const Province = () =>{
   const [province, setProvince] = useState([]);
   const [cities, setCities] = useState([]);
   
@@ -23,12 +23,11 @@ const Province = (props) =>{
     .catch(error => console.log(error))
   }, [])
   
-  // const cityByProvince = cities && cities.filter(city => city.province_id !== province_id )
   
   return (
     <div>
       <div><img src=""/></div>
-      <h1>{ province.name}</h1>
+      <h1>{ province.name }</h1>
       <h2>{ province.description }</h2>
       <ProvinceStats />
       <CityList cities={ cities } />    

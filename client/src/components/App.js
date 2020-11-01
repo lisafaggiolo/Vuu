@@ -76,14 +76,25 @@ export default function App(props) {
       return answer
     })
     setState({ ...state, answers: updatedAnswers })
-
   }
+
+
+  const [cities, setCities] = useState([])
 
   const submitResults = () => {
     console.log("STATE.ANSWERS", state.answers)
-    axios.post('/api/results', state.answers)
-   .catch( error => console.log(error))
-  }
+    // axios.get('/api/results')
+
+    Promise.all([
+      axios.post('/api/results', state.answers),
+      axios.get("/api/results")
+    ])
+    .then( all => { 
+      console.log(all[1].data.data)
+      setCities(all[1].data.data)
+    })
+    .catch( error => console.log(error))      
+   }
    
   return (
     <Router>
@@ -113,7 +124,7 @@ export default function App(props) {
             <Province />
           </Route>
           <Route path="/results">
-            <Results />
+            <Results cities={ cities } />
           </Route>
         </Switch>
       </div>
