@@ -20,7 +20,6 @@ import {
   useRouteMatch,
   useParams
 } from "react-router-dom";
-import Axios from "axios";
 import Province from "./Province";
 
 
@@ -84,7 +83,9 @@ export default function App(props) {
 
   const submitResults = () => {
     console.log("STATE.ANSWERS", state.answers)
-    Axios.get()
+    axios.post('/api/results', state.answers)
+   .catch( error => console.log(error))
+
   }
    
   return (
@@ -125,11 +126,6 @@ export default function App(props) {
 
   // set up a view/react Route for the quizz
   // pass submitFilter via prop, Questions
-  function submitFilters(userAnswers) {
-    console.log(userAnswers);
-    axios.get('')
-    
-    
-  }
+
 
 }

@@ -6,7 +6,7 @@ import Axios from "axios";
 import CityList from "../CityList";
 import { useParams } from "react-router-dom";
 
-export default function Province(props) {
+const Province = (props) =>{
   const [province, setProvince] = useState([]);
   const [cities, setCities] = useState([]);
   
@@ -37,4 +37,4 @@ export default function Province(props) {
   )
 };
 
-// export default Province;
+export default Province;
