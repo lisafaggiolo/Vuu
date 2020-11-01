@@ -1,16 +1,16 @@
 import React, { useState, useEffect } from "react";
 import './App.scss';
 import Header from './Header';
-//import Footer from './Footer';
+import Footer from './Footer';
 import axios from "axios";
-//import Province from './Province'
+import Provinces from './Provinces'
 import City from './City';
 import Results from './Results';
 import Home from './Home';
 import About from './About';
-// import Questionnaire from './Questionnaire'
+import "sass/materialize.scss";
+import Questionnaire from './Questionnaire'
 import FormField from './Questionnaire';
-
 
 import {
   BrowserRouter as Router,
@@ -90,11 +90,9 @@ export default function App(props) {
    
   return (
     <Router>
-      <div>
-        <ul>
-          <Header />
-        </ul>
-
+      <body>
+        <Header />
+        
         <Switch>
           <Route path="/about">
             <About />
@@ -105,21 +103,29 @@ export default function App(props) {
           <Route path="/home">
             <Home />
           </Route>
+          <Route path="/quiz">
+            <Questionnaire />
+          </Route>
           <Route path="/questions/:id">
-          <FormField
-            questions={ state.questions }
-            submitAnswers={ submitAnswers }
-            submitResults={ submitResults }
-          />
+            <FormField
+              questions={ state.questions }
+              submitAnswers={ submitAnswers }
+              submitResults={ submitResults }
+            />
           </Route>
           <Route path="/provinces/:id">
             <Province />
+          </Route>
+          <Route path="/provinces">
+            <Provinces />
           </Route>
           <Route path="/results">
             <Results />
           </Route>
         </Switch>
-      </div>
+
+        <Footer />
+      </body>
     </Router>
 
   );

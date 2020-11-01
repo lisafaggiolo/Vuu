@@ -5,19 +5,22 @@ import "./App.scss";
 // will be Horizontal not vertical
 const Navbar = () => {
   return (
-    <header>
-      <nav id="main-nav"> 
-        <div className="wrapper">
-          <ul >
-            <li><Link to="/home">Home</Link></li>
-            <li><Link to="/about">About</Link></li>
-            <li className="brand-logo">Viewfinder</li>
-            <li><Link to="/cities">Cities</Link></li>
-            <li><Link to="/questions/1">Quizz</Link></li>
-          </ul>
-        </div>
-      </nav>
-    </header>
+    
+    <nav>
+    <div className="nav-wrapper"> 
+      <ul id="nav-mobile" className="left">
+        <li><Link to="/home">Home</Link></li>
+        <li><Link to="/about">About</Link></li>
+        <li><Link to="/provinces">Provinces</Link></li>
+      </ul>
+      <ul id="nav-mobile" className="right">
+        <li><Link to="/cities">Cities</Link></li>
+        <li><Link to="/quiz" className="btn-flat disabled">Quiz</Link></li>
+      </ul>
+      <div className="brand-logo center">NuVuu</div>  
+    </div>
+    </nav>
+    
   )
 }
 
