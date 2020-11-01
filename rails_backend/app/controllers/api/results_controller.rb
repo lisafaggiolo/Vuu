@@ -23,4 +23,12 @@ class Api::ResultsController < ApplicationController
   def filter_algorithm 
   end
   
+  def create
+    result = results_params
+    puts result.answers
+  end
+  
+  private
+  def results_params
+    params.require(:result).permit(:answers);
 end
