@@ -9,7 +9,7 @@ import Results from './Results';
 import Home from './Home';
 import About from './About';
 import "sass/materialize.scss";
-// import Questionnaire from './Questionnaire'
+import Questionnaire from './Questionnaire'
 import FormField from './Questionnaire';
 
 import {
@@ -104,7 +104,7 @@ export default function App(props) {
             <Home />
           </Route>
           <Route path="/quiz">
-            <Questionnaire submitFilters={ submitFilters } />
+            <Questionnaire />
           </Route>
           <Route path="/questions/:id">
             <FormField

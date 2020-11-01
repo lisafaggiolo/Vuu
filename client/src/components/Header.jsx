@@ -15,7 +15,7 @@ const Navbar = () => {
       </ul>
       <ul id="nav-mobile" className="right">
         <li><Link to="/cities">Cities</Link></li>
-        <li><Link to="/quiz">Quiz</Link></li>
+        <li><Link to="/quiz" className="btn-flat disabled">Quiz</Link></li>
       </ul>
       <div className="brand-logo center">NuVuu</div>  
     </div>
