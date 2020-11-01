@@ -10,9 +10,9 @@ import {
 function Cities() {
   let match = useRouteMatch();
 
-//   return (
-//     <div class="container">
-//       <h2 class="center">Cities</h2>
+  return (
+    <div class="container">
+      <h2 class="center">Cities</h2>
 
       <ul>
         <li>
