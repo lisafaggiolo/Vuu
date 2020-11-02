@@ -26,7 +26,7 @@ const Province = () =>{
   
   return (
     <div>
-      <div><img src=""/></div>
+       <div><img src=""/>{/*province image */}</div>
       <h1>{ province.name }</h1>
       <h2>{ province.description }</h2>
       <ProvinceStats />

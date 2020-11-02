@@ -1,16 +1,16 @@
 import React, { useState, useEffect } from "react";
-import ProvinceList from "../CityList"
+import ProvinceList from "./ProvinceList"
 // import {useParams} from 'react-router-dom';
 // import './styles.scss'
 import Axios from "axios";
 
-const City = props => {;
+const Province = props => {;
   const [provinces, setProvinces] = useState([]);
   useEffect(() => {
     Axios.get("/api/provinces")
     .then(result => {
       console.log(result)
-      setProvinces(result.data)
+      setProvinces(result.data.data)
     })
     .catch(error => console.log(error))
   }, [])
@@ -26,10 +26,10 @@ const City = props => {;
       </div>
       <div className="city-stats"> 
       </div>
-      <ProvinceList cities={ provinces }/>
+      <ProvinceList provinces={ provinces } />
       
     </>
   )
 };
   
-export default City;
+export default Province;

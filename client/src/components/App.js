@@ -30,7 +30,7 @@ export default function App(props) {
           <Route path="/about">
             <About />
           </Route>
-          <Route path="/city/:id">
+          <Route path="/cities/:id">
             <City />
           </Route>
           <Route path="/home">

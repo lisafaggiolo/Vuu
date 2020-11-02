@@ -8,10 +8,18 @@ $font-stack: Roboto;
 $bannerHeading: 2.6rem;
 $sectionHeading: 1.5rem;
 body {
-  background: url("../images/Pcove.jpg") no-repeat center center fixed;
-  background-size: cover;
   margin: 0;
 }
+
+html {
+  background: url("../images/mount.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+}
+
 a, a:visited, a:hover, a:active {
   text-decoration: none;
   color: inherit;
