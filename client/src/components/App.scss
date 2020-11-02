@@ -1,9 +1,14 @@
 @import "styles/variables.scss";
+<<<<<<< HEAD
 // @import "styles/reset.scss";
 // @import "styles/mixins.scss";
+=======
+@import "sass/materialize.scss";
+>>>>>>> main
 
-$font-stack: Roboto;
+$font-stack: Roboto, sans-serif;
 // , regular, 24
+<<<<<<< HEAD
 // Font sizes
 $bannerHeading: 2.6rem;
 $sectionHeading: 1.5rem;
@@ -24,3 +29,31 @@ a, a:visited, a:hover, a:active {
   text-decoration: none;
   color: inherit;
 }
+=======
+$primary-color: $light;
+
+body {
+  font-family: $font-stack;
+  color: $dark;
+  background-color: $primary-color;
+
+}
+
+.nav-wrapper {
+  background: $dark;
+}
+
+.home-page {
+  // background: url("../images/lh.jpg") no-repeat center fixed;
+  background: url("../images/Pcove.jpg") no-repeat center center;
+  background-size: cover;
+  // margin-bottom: 5em;
+  .container {
+    color: white;
+  }
+  h3 {
+    text-decoration: none;
+  }
+}
+
+>>>>>>> main

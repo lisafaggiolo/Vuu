@@ -5,6 +5,7 @@ import "./Header.scss";
 // will be Horizontal not vertical
 const Header = () => {
   return (
+<<<<<<< HEAD
         <nav className="navbar">
             <div class='navbar__item'>
               <Link to="/about">About </Link>
@@ -25,5 +26,25 @@ const Header = () => {
         )
     
 };
+=======
+    
+    <nav>
+    <div className="nav-wrapper"> 
+      <ul id="nav-mobile" className="left">
+        <li><Link to="/home">Home</Link></li>
+        <li><Link to="/about">About</Link></li>
+        <li><Link to="/provinces">Provinces</Link></li>
+      </ul>
+      <ul id="nav-mobile" className="right">
+        <li><Link to="/cities">Cities</Link></li>
+        <li><Link to="/quiz" className="btn-flat disabled">Quiz</Link></li>
+      </ul>
+      <div className="brand-logo center">NuVuu</div>  
+    </div>
+    </nav>
+    
+  )
+}
+>>>>>>> main
 
 export default Header;
