@@ -1,16 +1,10 @@
 import React, { useState, useEffect } from "react";
 import './App.scss';
 import Header from './Header';
-<<<<<<< HEAD
-// import axios from "axios";
 import Province from './Province'
 import Provinces from "./Provinces"
-=======
-import Footer from './Footer';
-import axios from "axios";
-import Provinces from './Provinces'
->>>>>>> main
 import City from './City';
+import Cities from './Cities';
 import Results from './Results';
 import Home from './Home';
 import About from './About';
@@ -36,9 +30,13 @@ export default function App(props) {
 
   return (
     <Router>
+
          <body>
       <Header />
         <Switch>
+          <Route path="/cities">
+            <Cities />
+          </Route>
           <Route path="/about">
             <About />
           </Route>

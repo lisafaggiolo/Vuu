@@ -8,8 +8,8 @@ const Footer = () =>{
       <div className="container">
         <div className="row">
           <div className="col l6 s12">
-            <h5 className="white-text">Footer Content</h5>
-            <p className="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+            <h5 className="white-text">NuVuu</h5>
+            <p className="grey-text text-lighten-4">With WFM culture gaining ground, your next office view might be closer than you think.</p>
           </div>
           <div className="col l4 offset-l2 s12">
             <h5 className="white-text">Links</h5>

@@ -31,7 +31,6 @@ const Header = () => {
     <nav>
     <div className="nav-wrapper"> 
       <ul id="nav-mobile" className="left">
-        <li><Link to="/home">Home</Link></li>
         <li><Link to="/about">About</Link></li>
         <li><Link to="/provinces">Provinces</Link></li>
       </ul>
@@ -39,7 +38,7 @@ const Header = () => {
         <li><Link to="/cities">Cities</Link></li>
         <li><Link to="/quiz" className="btn-flat disabled">Quiz</Link></li>
       </ul>
-      <div className="brand-logo center">NuVuu</div>  
+      <div className="brand-logo center"><Link to="/home">NuVuu</Link></div>  
     </div>
     </nav>
     
