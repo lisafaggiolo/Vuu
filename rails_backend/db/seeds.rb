@@ -44,12 +44,12 @@ City.create(name: "Vancouver", province_id: 10,  image: '/images/', population: 
             location_type: "city-large", view_type: ["coast", "mountain", "urban"], time_zone: "PDT", 
             healthcare_index: 75.37, crime_index: 36.73, pollution_index: 23.85)
 
-City.create(name: "Gaspe Peninsula", province_id: 5,  image: '/images/Provinces_img/5-QC/Rocher-Perce.jpg', population: 15163, 
+City.create(name: "Gaspe Peninsula", province_id: 5,  image: '/images/5-QC/Rocher-Perce.jpg', population: 15163, 
             description: "“Stunning coastal scenery.” “Breathtaking.” “A trip of a lifetime.” That’s how visitors describe Quebec’s Gaspé Peninsula, a spot home to an unlikely amount of varied, untamed landscapes packed onto one 155-mile-long peninsula jutting into the Gulf of St. Lawrence. A National Geographic top travel destination a few years back, it's a place of stirring natural beauty and serenity, rugged seascapes, gorgeous beaches, and small-town charm. Lucky for us, it’s still largely undiscovered.", 
             location_type: "town", view_type: ["coast"], time_zone: "EDT", 
             healthcare_index: 0, crime_index: 0, pollution_index: 0)
 
-City.create(name: "Magdalen Islands", province_id: 5,  image: '/images/Provinces_img/5-QC/Magdalen-picture.jpg', population: 12010, 
+City.create(name: "Magdalen Islands", province_id: 5,  image: '/images/5-QC/Magdalen-picture.jpg', population: 12010, 
             description: "Located in the middle of the Gulf of St. Lawrence, this green archipelago surrounded by white-sand beaches and red cliffs exerts a magnetic attraction on visitors. Renowned for their warm hospitality, the Islanders are also talented chefs, artists and artisans. During your stay, enjoy exquisite seafood, wind sports, sea excursions, visits to local art galleries and studios, hikes and more.", 
             location_type: "town", view_type: ["coast"], time_zone: "ADT", 
             healthcare_index: 0, crime_index: 0, pollution_index: 0)
@@ -74,22 +74,22 @@ City.create(name: "Banff", province_id: 9,  image: '/images/', population: 7847,
             location_type: "town", view_type: ["mountain", "lake"], time_zone: "MDT", 
             healthcare_index: 0, crime_index: 0, pollution_index: 0)
 
-City.create(name: "Halifax", province_id: 3,  image: '/images/Provinces_img/3-NS/1-Halifax.jpg', population: 431479, 
+City.create(name: "Halifax", province_id: 3,  image: '/images/3-NS/1-Halifax.jpg', population: 431479, 
             description: "Compared to conurbations such as Vancouver and Toronto, Halifax barely qualifies as a city, but this seaside town punches well above its size: it's dotted with red-brick heritage buildings, public parks and a landmark citadel, blessed with some first-rate museums, and home to a truly epic 4km seafront boardwalk.", 
             location_type: "city-medium", view_type: ["coast"], time_zone: "ADT", 
             healthcare_index: 69.60, crime_index: 40.36, pollution_index: 22.57)
 
-City.create(name: "Charlottetown", province_id: 2,  image: '/images/Provinces_img/2-PEI/2-Charlottetown.jpg', population: 36094, 
+City.create(name: "Charlottetown", province_id: 2,  image: '/images/2-PEI/2-Charlottetown.jpg', population: 36094, 
             description: "Charlottetown might be a small city, but it’s bursting with big energy and infectious island vibes. It’s got all the charm and hospitality PEI is famous for, plus culinary experiences and an arts and culture scene that take visitors by surprise—in the best way possible. Soak in the romance and nostalgia of the postcard-perfect streetscapes. Wander along a boardwalk where lobster boats and sailboats cozy up. Stay in a B&B that will give you serious Anne energy. Sound good? It’s time to discover Charlottetown.", 
             location_type: "city-small", view_type: ["coast"], time_zone: "ADT", 
             healthcare_index: 50.69, crime_index: 34.14, pollution_index: 5.69)
 
-City.create(name: "St-Johns", province_id: 1, image: '/images/Provinces_img/1-NFLD/1-St-Johns.jpg', population: 113948,
+City.create(name: "St-Johns", province_id: 1, image: '/images/1-NFLD/1-St-Johns.jpg', population: 113948,
             description: "St. John's, Newfoundland Labrador's capital, is the perfect combination of big-city luxury and traditional small-town charm. It is one of the most easterly cities in North America, and has become a rare destination full of character and charisma, with a contemporary, sophisticated edge. St. John’s is the oldest city in North America, appearing on maps as early as 1519.", 
             location_type: "city-medium", view_type: ["coast"], time_zone: "NDT",
             healthcare_index: 64.01, crime_index: 47.61, pollution_index: 22.95)
 
-City.create(name: "Moncton", province_id: 4,  image: '/images/Provinces_img/4-NB/1-Moncton.jpg', population: 85198, 
+City.create(name: "Moncton", province_id: 4,  image: '/images/4-NB/1-Moncton.jpg', population: 85198, 
             description: "New Brunswick's transportation hub is vibrant Moncton, one of the country's fastest growing cities and a community steeped in history. Its storied past is brought to life in its many cultural institutions and museums, from the Acadian Museum to Le Centre Culturel Aberdeen. The city's largest green space, Centennial Park, includes many attractions and activities, from hiking and skiing trails to an artificial beach to an aerial treetop obstacle course and zip line.", 
             location_type: "city-small", view_type: ["urban"], time_zone: "ADT",
             healthcare_index: 77.14, crime_index: 40.90, pollution_index: 16.89)
@@ -209,17 +209,17 @@ City.create(name: "Gimli", province_id: 7,  image: '/images/', population: 2246,
             location_type: "village", view_type: ["lake"], time_zone: "CST",
             healthcare_index: 0, crime_index: 0, pollution_index: 0)
  
-City.create(name: "Fredericton", province_id: 4,  image: '/images/Provinces_img/4-NB/2-Fredericton.jpg', population: 58220, 
+City.create(name: "Fredericton", province_id: 4,  image: '/images/4-NB/2-Fredericton.jpg', population: 58220, 
             description: "Spread along both sides of the majestic St. John River, Fredericton combines the coziness of a small town with the world-class institutions of a city much larger than this humble capital. Tree-lined streets and suburban neighborhoods of Victorian-era homes live harmoniously alongside three universities, countless historic sites, museums, riverfront trails and restaurants featuring local and international cuisines. Fredericton also boasts a number of world-renowned festivals.", 
             location_type: "city-small", view_type: ["river"], time_zone: "AST",
             healthcare_index: 52.45, crime_index: 29.87, pollution_index: 18.47)
             
-City.create(name: "Saint John", province_id: 4,  image: '/images/Provinces_img/4-NB/3-Saint-John.jpg', population: 67575, 
+City.create(name: "Saint John", province_id: 4,  image: '/images/4-NB/3-Saint-John.jpg', population: 67575, 
             description: "Saint John, New Brunswick, is the only city on the shore of the Bay of Fundy, home to the world’s highest tides. Canada’s oldest incorporated city, Saint John is a popular tourist destination known for its historic uptown streetscapes, cultural attractions and natural wonders. Popular sights include the Reversing Rapids, where the Bay collides with the St. John River, the City Market with local vendors and artisans, the New Brunswick Museum and the trails and beauty of Rockwood Park.", 
             location_type: "city-small", view_type: ["river"], time_zone: "AST",
             healthcare_index: 76.65, crime_index: 35.10, pollution_index: 66.59)
             
-City.create(name: "Saint Andrews", province_id: 4,  image: '/images/Provinces_img/4-NB/4-Saint-Answers.jpg', population: 1786, 
+City.create(name: "Saint Andrews", province_id: 4,  image: '/images/4-NB/4-Saint-Answers.jpg', population: 1786, 
             description: "Saint Andrews is a town in Charlotte County, New Brunswick, Canada. The historic town is a national historic site of Canada, bearing many characteristics of a typical 18th century British colonial settlement, including the original grid layout with its market square, and the classical architecture. ", 
             location_type: "village", view_type: ["coast"], time_zone: "AST",
             healthcare_index: 0, crime_index: 0, pollution_index: 0)
@@ -229,47 +229,47 @@ City.create(name: "Grand Falls", province_id: 4,  image: '/images/', population:
             location_type: "town", view_type: ["river"], time_zone: "AST",
             healthcare_index: 0, crime_index: 0, pollution_index: 0)
             
-City.create(name: "Lunenburg", province_id: 3,  image: '/images/Provinces_img/3-NS/2-Lunenburg.jpg', population: 2263, 
+City.create(name: "Lunenburg", province_id: 3,  image: '/images/3-NS/2-Lunenburg.jpg', population: 2263, 
             description: "Established in 1753, this historic Nova Scotia coastal community is now a UNESCO World Heritage Site. Wander among its colourful galleries and shops, arranged on a tidy grid of walkable streets. Visit the Fisheries Museum of the Atlantic to understand the town's maritime history.", 
             location_type: "village", view_type: ["coast"], time_zone: "AST",
             healthcare_index: 0, crime_index: 0, pollution_index: 0)
    
-City.create(name: "Baddeck", province_id: 3,  image: '/images/Provinces_img/3-NS/3-Baddeck.jpg', population: 769, 
+City.create(name: "Baddeck", province_id: 3,  image: '/images/3-NS/3-Baddeck.jpg', population: 769, 
             description: "Baddeck, on Cape Breton Island, is a great base for the Cabot Trail, Cape Breton Highlands National Park and Louisbourg’s fortress. Easily explored on foot, Baddeck’s sole street offers an appealing array of accommodation, restaurants and stores and lovely views of Bras d’Or Lake. Take a kayak tour on the North River, visit Kidston Lighthouse or hike the national park’s trails, cliffs and coves. Back in the town, don’t miss the museum devoted to famed inventor Alexander Graham Bell.", 
             location_type: "village", view_type: ["coast"], time_zone: "AST",
             healthcare_index: 0, crime_index: 0, pollution_index: 0)
             
-City.create(name: "Sydney", province_id: 3,  image: '/images/Provinces_img/3-NS/4-Sydney.jpg', population: 29904, 
+City.create(name: "Sydney", province_id: 3,  image: '/images/3-NS/4-Sydney.jpg', population: 29904, 
             description: "Sydney is a former city and current community located in the Cape Breton Regional Municipality of Cape Breton Island, Nova Scotia, Canada. Situated on Cape Breton Island's east coast, it belongs administratively to the Cape Breton Regional Municipality. Sydney was founded in 1785 by the British, was incorporated as a city in 1904, and dissolved on 1 August 1995, when it was amalgamated into the regional municipality.", 
             location_type: "town", view_type: ["coast"], time_zone: "AST",
             healthcare_index: 61.11, crime_index: 37.22, pollution_index: 10.34)
             
-City.create(name: "Dartmouth", province_id: 3,  image: '/images/Provinces_img/3-NS/5-Darthmouth.jpg', population: 65741, 
+City.create(name: "Dartmouth", province_id: 3,  image: '/images/3-NS/5-Darthmouth.jpg', population: 65741, 
             description: "Dartmouth is a former city and current community located in the Halifax Regional Municipality of Nova Scotia, Canada. Dartmouth is located on the eastern shore of Halifax Harbour. Dartmouth has been nicknamed the City of Lakes, after the large number of lakes located within its boundaries.", 
             location_type: "city-small", view_type: ["coast"], time_zone: "AST",
             healthcare_index: 0, crime_index: 0, pollution_index: 0)
             
-City.create(name: "Cavendish", province_id: 2,  image: '/images/Provinces_img/2-PEI/2-Cavendish.jpg', population: 7500, 
+City.create(name: "Cavendish", province_id: 2,  image: '/images/2-PEI/2-Cavendish.jpg', population: 7500, 
             description: "'Anne of Green Gables' enthusiasts flock to the appealing beach town on PEI’s north coast where Lucy Maud Montgomery lived and set her books. Visit Green Gables House, the author’s childhood home, and the Anne theme park of Avonlea Village. Those who want their vacation to turn a different page can hop on the trolley and explore 25 miles of sand dunes on Cavendish Beach in Prince Edward Island National Park, play champion golf courses, bike, sail and visit various family-friendly theme parks.", 
             location_type: "town", view_type: ["coast"], time_zone: "AST",
             healthcare_index: 0, crime_index: 0, pollution_index: 0)
             
-City.create(name: "Corner Brook", province_id: 1,  image: '/images/Provinces_img/1-NFLD/2-Corner_Brook.jpg', population: 19806, 
+City.create(name: "Corner Brook", province_id: 1,  image: '/images/1-NFLD/2-Corner_Brook.jpg', population: 19806, 
             description: "Located on the Bay of Islands at the mouth of the Humber River, the city is the second-largest population centre in the province behind St. John's, and smallest of three cities behind St. John's and Mount Pearl. As such, Corner Brook functions as a service centre for western and northern Newfoundland. It is located on the same latitude as Gaspé, Quebec, a city of similar size and landscape on the other side of the Gulf of St. Lawrence. Corner Brook is the most northern city in Atlantic Canada.", 
             location_type: "town", view_type: ["coast"], time_zone: "NDT",
             healthcare_index: 0, crime_index: 28.68, pollution_index: 5.60)
 
-City.create(name: "Deer Lake", province_id: 1,  image: '/images/Provinces_img/1-NFLD/3-Deer_lake.jpg', population: 5249, 
+City.create(name: "Deer Lake", province_id: 1,  image: '/images/1-NFLD/3-Deer_lake.jpg', population: 5249, 
             description: "Deer Lake is a town in the western part of the island of Newfoundland. The town derives its name from Deer Lake and is situated at the outlet of the upper Humber River at the northeastern end of the lake. Enjoy bird watching along the Humber River, hike along beautiful walking trails, sunbathe and play on beautiful sandy beaches. Eat local strawberries and enjoy family-oriented activities at the famous Deer Lake Strawberry Festival!", 
             location_type: "town", view_type: ["lake"], time_zone: "NDT",
             healthcare_index: 0, crime_index: 0, pollution_index: 0)
 
-City.create(name: "Gander", province_id: 1,  image: '/images/Provinces_img/1-NFLD/4-Gander.jpg', population: 11688, 
+City.create(name: "Gander", province_id: 1,  image: '/images/1-NFLD/4-Gander.jpg', population: 11688, 
             description: "Gander is a town located in the northeastern part of the island of Newfoundland. Located on the northeastern shore of Gander Lake, it is the site of Gander International Airport, once an important refuelling stop for transatlantic aircraft and the largest airport in the world. Gander’s name derives from the river (and the abundant wild geese in the area) that feeds the lake.", 
             location_type: "town", view_type: ["lake"], time_zone: "NDT",
             healthcare_index: 0, crime_index: 0, pollution_index: 0)
 
-City.create(name: "Twillingate", province_id: 1,  image: '/images/Provinces_img/1-NFLD/5-Twillingate.jpg', population: 2196, 
+City.create(name: "Twillingate", province_id: 1,  image: '/images/1-NFLD/5-Twillingate.jpg', population: 2196, 
             description: "Twillingate is a town located on the Twillingate Islands ('Toulinquet') in Notre Dame Bay, off the north eastern shore of the island of Newfoundland. Imagine yourself seated on a patch of long grass, looking out over the pristine waters of the Atlantic Ocean. Fishing boats bounce softly over the waves as the light from the setting sun reflects off the side of a 10,000-year-old iceberg. This is just a tiny piece of the beauty you will experience in Twillingate.", 
             location_type: "village", view_type: ["coast"], time_zone: "NDT",
             healthcare_index: 0, crime_index: 0, pollution_index: 0)

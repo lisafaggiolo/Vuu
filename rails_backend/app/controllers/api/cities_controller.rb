@@ -39,7 +39,7 @@ class Api::CitiesController < ApplicationController
   
   private 
   def city_params
-    params.permit(:name, :province, :population, :local_temperature)
+    params.permit(:name, :province, :population, :image)
   end
   
 end
