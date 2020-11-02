@@ -1,4 +1,3 @@
-
 import React from 'react';
 import CityListItem from "./CityListItem"
 
@@ -16,7 +15,7 @@ const CityList = props => {
   });
 
   return (
-    <div>
+    <div class="cards">
       <ul>
       { cityList }
       </ul>

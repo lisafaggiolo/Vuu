@@ -1,0 +1,41 @@
+.card {
+  background: $oats;
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  padding: 15px;
+  flex: 1 100%;
+  text-align: right;
+}
+
+.aside1 {
+  flex-grow: 1; 
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.card-info {
+  flex-grow: 1;
+}
+
+.card-title {
+  font-weight: bold;
+}
+
+.card-desc {
+  font-size: 80%;
+}
+
+.card button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: $oats;
+  background-color: $maroon;
+  text-align: center;
+  font-size: 18px;
+}
+
+.card button:hover {
+  opacity: 0.7;
+}

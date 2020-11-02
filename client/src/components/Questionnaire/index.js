@@ -1,66 +1,81 @@
-import React, {useState} from 'react';
-import AnswerOptions from './AnswerOptions';
-import { Form, FormGroup, Label, Input, FormText } from 'reactstrap';
+import React, {useState, useEffect} from 'react';
+import FormField from './FormField';
 import { useParams } from 'react-router-dom';
-import { useRouteMatch, useHistory } from 'react-router-dom';
+import axios from "axios";
 
 
 
-const FormField = (props) =>{
-  const [questionAnswers, setQuestionAnswers] = useState([]);
+const Questionnaire = () => {
+  const [cities, setCities] = useState([]);
+  const [state, setState] = useState({questions:[], answers:[]})
+  useEffect(() => { 
 
-  const {id} = useParams();
-  const question_id = parseInt(id);  
-  const question = props.questions.find(question => question.id === question_id);
-  const history = useHistory();
+  axios.get("/api/questions")
+  .then( result => {
+    const answersList = result.data.map((question, index) => {
+      return {
+        question_id: question.id,
+        user_answers: [],
+        
+      }
+    })
+
+    const next = () => {
+      const questionIds = result.data.map(question => question.id);
+      let i = 0;
+      return function () {
+        
+        i += 1;
+        if (i === questionIds.length ) {
+          return null;
+        }
+        return questionIds[i];
+      }
+    
+    };
+    const nextQuestion = next();
+
+    const questionList = result.data.map((question, index )=> {
+      question.potential_answers = JSON.parse(question.potential_answers);
+      question.id = parseInt(question.id);
+      question.last_question = index === result.data.length - 1;
+      question.next_question = nextQuestion(); 
+      return question;
+    })
+    setState({ ...state, questions: questionList, answers: answersList })
+  })
+  .catch( error => console.log(error))
+  }, [])
 
 
-  const submitCheck = (event) => {
-    event.preventDefault()
-    if (!question.last_question) {
+  const submitAnswers = (id, answers) => {
+    const updatedAnswers = state.answers.map(answer => {
+      if (answer.question_id  === id) {
+        answer.user_answers = answers
+      }
+        return answer
+      })
+      setState({ ...state, answers: updatedAnswers })
+  }
 
-      props.submitAnswers(question_id, questionAnswers)
-      setQuestionAnswers([]);
-      history.push(`/questions/${question.next_question}`)
-    } else {
-      props.submitResults()  
-    }  
-  };
-
-  
-  const addCheck = (answer) => {
-    setQuestionAnswers(prev =>([...prev, answer]))
-  };
-
-  const removeCheck = (answer) => {
-    setQuestionAnswers(prev => prev.filter(currentAnswer => currentAnswer !== answer))
-  };
-
-  const answerOptionsList = question && question.potential_answers.map( potential_answer => {
-    if (!question.last_question) {
-    return (
-      <AnswerOptions
-         key={ potential_answer }   
-         potential_answer={ potential_answer }
-         addCheck={ addCheck }
-         removeCheck={ removeCheck }
-      />
-    )}
-  });
+  const submitResults = () => {
+    Promise.all([
+      axios.post('/api/results', state.answers),
+      axios.get("/api/results")
+    ])
+    .then( all => { 
+      
+      setCities(all[1].data.data)
+    })
+    .catch( error => console.log(error))      
+  } 
 
   return (
-    <Form>
-      <FormGroup check>
-        <h1>
-          { question && question.question }
-        </h1>
-        <ul>
-          { answerOptionsList }
-        </ul> 
-      </FormGroup>
-    <button onClick={ submitCheck }> {question && question.last_question ? "Yes let's do it!" : "Next"}</button>
-    </Form>
+    <FormField        
+      questions={ state.questions }
+      submitAnswers={ submitAnswers }
+      submitResults={ submitResults }/>
     );
-};
-  
-export default FormField;
+}
+
+export default Questionnaire;

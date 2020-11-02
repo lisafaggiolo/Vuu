@@ -6,6 +6,7 @@ class Api::ProvincesController < ApplicationController
   end
   
   def show
+    
     province = Province.find(params[:id])
     cities = City.where(province_id: province.id)
     province_cities = [province, cities]

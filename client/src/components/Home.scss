@@ -1,1 +1,9 @@
-// not used atm
+.home {
+  color: $oats;
+  display: flex;
+  flex-direction: column;
+  
+  .selectors {
+    flex-direction: row;  
+  }
+}

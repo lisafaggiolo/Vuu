@@ -4,8 +4,11 @@ const CityListItem = props => {
   const city = props;
     return (
       <div>
-        <h1>{city.name}</h1>
-        <h4>{city.description}</h4> 
+        <div>
+          <h2>{city.name}</h2>
+          <p>{city.description}</p>
+          <button>Learn More</button>
+        </div>
       </div>
     )
 }
