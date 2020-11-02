@@ -84,7 +84,7 @@ City.create(name: "Charlottetown", province_id: 2,  image: '/images/Provinces_im
             location_type: "city-small", view_type: ["coast"], time_zone: "ADT", 
             healthcare_index: 50.69, crime_index: 34.14, pollution_index: 5.69)
 
-City.create(name: "St-Johns", province_id: 1, image: '/images/Provinces_img/1-NFLD/1-St-Johns.jpg', image: '/images/', population: 113948,
+City.create(name: "St-Johns", province_id: 1, image: '/images/Provinces_img/1-NFLD/1-St-Johns.jpg', population: 113948,
             description: "St. John's, Newfoundland Labrador's capital, is the perfect combination of big-city luxury and traditional small-town charm. It is one of the most easterly cities in North America, and has become a rare destination full of character and charisma, with a contemporary, sophisticated edge. St. John’s is the oldest city in North America, appearing on maps as early as 1519.", 
             location_type: "city-medium", view_type: ["coast"], time_zone: "NDT",
             healthcare_index: 64.01, crime_index: 47.61, pollution_index: 22.95)
