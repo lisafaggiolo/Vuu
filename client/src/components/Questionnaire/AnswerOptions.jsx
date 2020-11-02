@@ -1,8 +1,4 @@
 import React, { useState } from 'react';
-<<<<<<< HEAD
-
-=======
->>>>>>> main
 
 
 const AnswerOptions = (props) =>{
@@ -21,20 +17,11 @@ const AnswerOptions = (props) =>{
   return (
     <li>
       <label for={ props.potential_answer }>{ props.potential_answer }</label>
-<<<<<<< HEAD
       <input
         name={ props.potential_answer }
         type="checkbox" 
         checked={ checked } 
         onChange={ updateCheck }/> 
-=======
-      <input 
-        name={ props.potential_answer }
-        type="checkbox" 
-        checked={ checked } 
-        onChange={ updateCheck }>  
-      </input>
->>>>>>> main
     </li>  
   );
 };
