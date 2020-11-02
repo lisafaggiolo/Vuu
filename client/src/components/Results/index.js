@@ -1,21 +1,11 @@
 import React, { useState, useEffect } from "react";
 import {useParams} from 'react-router-dom';
 import './styles.scss'
-import Axios from "axios";
 import CityList from "../CityList";
               //  ????
 const ResultsPage  = (props) => {
-  const [cities, setCities] = useState([])
 
-  useEffect(() => { 
-    Axios.get("/api/results")
-    .then( result => {
-      console.log(result.data)
-      setCities(result.data.data)
-    })
-    .catch( error => console.log(error))
-    }, []
-  )
+
    return (
     <div>
     <div className="results-top">
@@ -24,7 +14,7 @@ const ResultsPage  = (props) => {
       </h1>
     </div>
     <CityList 
-      cities={ cities }/>
+      cities={ props.cities }/>
     </div>
   )
 

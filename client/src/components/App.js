@@ -21,7 +21,14 @@ import {
 } from "react-router-dom";
 
 
-export default function App(props) { 
+
+
+export default function App(props) {
+  
+  const [cities, setCities] = useState([]);
+
+  
+
   return (
     <Router>
       <Header />
@@ -37,7 +44,7 @@ export default function App(props) {
             <Home />
           </Route>
           <Route path="/questions/:id">
-          <Questionnaire />
+          <Questionnaire setCities={setCities} />
           </Route>
           <Route path="/provinces/:id">
             <Provinces />
@@ -46,7 +53,7 @@ export default function App(props) {
             <Province />
           </Route>
           <Route path="/results">
-            <Results />
+            <Results cities={cities}/>
           </Route>
         </Switch>
       </div>

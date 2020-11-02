@@ -46,7 +46,7 @@ const FormField = (props) => {
   });
 
   return (
-    <form>
+    <form onSubmit={ e => e.preventDefault()}>
       <formGroup check>
         <h1>
           { question && question.question }
