@@ -9,7 +9,7 @@ import Results from './Results';
 import Home from './Home';
 import About from './About';
 import Questionnaire from './Questionnaire';
-import Footer from './Footer'
+import Footer from './Footer';
 
 import {
   BrowserRouter as Router,
@@ -72,8 +72,6 @@ export default function App(props) {
 
   );
 
-  // set up a view/react Route for the quizz
-  // pass submitFilter via prop, Questions
 
 
 }
