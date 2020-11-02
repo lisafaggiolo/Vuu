@@ -1,42 +1,26 @@
 @import "styles/variables.scss";
-@import "sass/materialize.scss";
+// @import "styles/reset.scss";
+// @import "styles/mixins.scss";
 
-$font-stack: Roboto, sans-serif;
+$font-stack: Roboto;
 // , regular, 24
-$primary-color: $light;
-
+// Font sizes
+$bannerHeading: 2.6rem;
+$sectionHeading: 1.5rem;
 body {
-  font-family: $font-stack;
-  color: $dark;
-  background-color: $primary-color;
-
+  margin: 0;
 }
 
-.nav-wrapper {
-  background: $dark;
-}
-
-.home-page {
-  // background: url("../images/lh.jpg") no-repeat center fixed;
-  background: url("../images/Pcove.jpg") no-repeat center center;
+html {
+  background: url("../images/mount.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
-  // margin-bottom: 5em;
-  .container {
-    color: white;
-  }
-  h3 {
-    text-decoration: none;
-  }
+
 }
 
-.banner {
-  // background: url("../images/lh.jpg") no-repeat center fixed;
-  background: url("../images/fairmont.jpg") no-repeat center center fixed;
-  background-size: cover;
-  height: 75vh;
-  .container{
-    background-color: $dark80;
-    
-
-  }
+a, a:visited, a:hover, a:active {
+  text-decoration: none;
+  color: inherit;
 }

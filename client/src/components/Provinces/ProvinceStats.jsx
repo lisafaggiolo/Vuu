@@ -1,20 +1,20 @@
 import React, { useState, useEffect } from "react";
 import Axios from 'axios';
+import { useParams } from "react-router-dom";
 
 export default function ProvinceStats(props) {
   const [data, setData] = useState({});
-  
+  const {id} = useParams();
   useEffect(() => {
-    Axios.get("/api/provinces/1", 
-      { params: { id: 1 }} )
+ 
+    Axios.get(`/api/provinces/${id} `, 
+    )
     .then(result => {
       console.log(result)
-      setData(result.data.data)
+      setData(result.data.data[0])
     })
     .catch(error => console.log(error))
   }, [])
-    
-  //add api COVID  call in here 
 
   return (
     <div>

@@ -1,14 +1,10 @@
 import React, {useState, useEffect} from 'react';
 import FormField from './FormField';
 import { useParams } from 'react-router-dom';
-import axios from "axios";
+import { useRouteMatch, useHistory } from 'react-router-dom';
 
-
-
-const Questionnaire = () => {
-  const [cities, setCities] = useState([]);
-  const [state, setState] = useState({questions:[], answers:[]})
-  useEffect(() => { 
+const [state, setState] = useState({questions:[], answers:[]})
+useEffect(() => { 
 
   axios.get("/api/questions")
   .then( result => {
@@ -47,35 +43,8 @@ const Questionnaire = () => {
   .catch( error => console.log(error))
   }, [])
 
-
-  const submitAnswers = (id, answers) => {
-    const updatedAnswers = state.answers.map(answer => {
-      if (answer.question_id  === id) {
-        answer.user_answers = answers
-      }
-        return answer
-      })
-      setState({ ...state, answers: updatedAnswers })
-  }
-
-  const submitResults = () => {
-    Promise.all([
-      axios.post('/api/results', state.answers),
-      axios.get("/api/results")
-    ])
-    .then( all => { 
-      
-      setCities(all[1].data.data)
-    })
-    .catch( error => console.log(error))      
-  } 
-
   return (
     <FormField        
       questions={ state.questions }
-      submitAnswers={ submitAnswers }
-      submitResults={ submitResults }/>
+      submitAnswers={ submitAnswers }/>
     );
-}
-
-export default Questionnaire;

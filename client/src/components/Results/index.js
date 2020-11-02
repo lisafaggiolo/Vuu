@@ -4,7 +4,7 @@ import './styles.scss'
 import Axios from "axios";
 import CityList from "../CityList";
               //  ????
-const ResultsPage  = () => {
+const ResultsPage  = (props) => {
   const [cities, setCities] = useState([])
 
   useEffect(() => { 
@@ -16,7 +16,7 @@ const ResultsPage  = () => {
     .catch( error => console.log(error))
     }, []
   )
-  return (
+   return (
     <div>
     <div className="results-top">
       <h1>
