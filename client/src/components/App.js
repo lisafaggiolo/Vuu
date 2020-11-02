@@ -66,14 +66,12 @@ export default function App(props) {
             <Results cities={cities}/>
           </Route>
         </Switch>
-        <Footer />
+        {/* <Footer /> */}
       </body>
     </Router>
 
   );
 
-  // set up a view/react Route for the quizz
-  // pass submitFilter via prop, Questions
 
 
 }
