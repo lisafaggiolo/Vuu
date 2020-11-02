@@ -13,14 +13,12 @@ class Api::ResultsController < ApplicationController
 
   def create
     filtered_cities = filter_algorithm(results_params)
-    
   end
 
   def filter_algorithm(answers_array)
-    # puts answers_array
-    
     
     filters = Hash.new
+    @filtered_cities = []
 
     answers_array.each do |answer_obj|
 
@@ -28,18 +26,22 @@ class Api::ResultsController < ApplicationController
       user_answer = answer_obj[:user_answers]
   
       if user_answer != []
-        question = Question.find(:id => question_id)
-        key = question.answer_type
-        filters[:key] = user_answer
+        question = Question.find_by(:id => question_id)
+
+        filters[question.answer_type] = user_answer
       end
     end
     
- 
-    if filters(:boolean) == "No"
-      filters.delete(:time_zone)
+    boolean = filters["boolean"][0]
+
+
+    if boolean == "Yes"
+      @filtered_cities = City.where(time_zone: filters["time_zone"])
+    else 
+      @filtered_cities = City.all
     end
-    puts filters  
-  end
+
+end
 
   private
   def results_params

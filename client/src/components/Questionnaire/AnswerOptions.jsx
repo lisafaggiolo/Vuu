@@ -17,13 +17,13 @@ const AnswerOptions = (props) =>{
   
   return (
     <li>
-      <label for={ props.potential_answer }>{ props.potential_answer }</label>
-      <input 
+      <Label for={ props.potential_answer }>{ props.potential_answer }</Label>
+      <Input 
         name={ props.potential_answer }
         type="checkbox" 
         checked={ checked } 
         onChange={ updateCheck }>  
-      </input>
+      </Input>
     </li>  
   );
 };

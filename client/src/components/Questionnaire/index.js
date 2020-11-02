@@ -49,17 +49,17 @@ const FormField = (props) =>{
   });
 
   return (
-    <form>
-      <formGroup check>
+    <Form>
+      <FormGroup check>
         <h1>
           { question && question.question }
         </h1>
         <ul>
           { answerOptionsList }
         </ul> 
-      </formGroup>
+      </FormGroup>
     <button onClick={ submitCheck }> {question && question.last_question ? "Yes let's do it!" : "Next"}</button>
-    </form>
+    </Form>
     );
 };
   
