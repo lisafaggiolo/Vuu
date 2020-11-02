@@ -38,7 +38,8 @@ const FormField = (props) => {
     return (
       <AnswerOptions
          key={ potential_answer }   
-         potential_answer={ potential_answer }
+         potential_answer={ potential_answer[0] }//index 0
+         descriptive_answer={ potential_answer[1] }//index 1
          addCheck={ addCheck }
          removeCheck={ removeCheck }
       />

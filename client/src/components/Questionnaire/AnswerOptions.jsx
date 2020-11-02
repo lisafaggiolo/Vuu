@@ -16,7 +16,7 @@ const AnswerOptions = (props) =>{
   
   return (
     <li>
-      <label for={ props.potential_answer }>{ props.potential_answer }</label>
+      <label for={ props.potential_answer }>{ props.descriptive_answer }</label>
       <input 
         name={ props.potential_answer }
         type="checkbox" 
