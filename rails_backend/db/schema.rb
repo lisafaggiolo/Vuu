@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(version: 2020_10_24_183619) do
     t.float "healthcare_index"
     t.float "crime_index"
     t.float "pollution_index"
+    t.binary "image"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -36,6 +37,7 @@ ActiveRecord::Schema.define(version: 2020_10_24_183619) do
     t.integer "shelter_cost_to_income_ratio"
     t.integer "age_group_vis_min"
     t.text "description"
+    t.binary "image"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
