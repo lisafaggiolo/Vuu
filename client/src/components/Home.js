@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
-    <div className="home">
+    <body className="home">
       <div className="top-of-mountain">
         <h1 className="title">Welcome to Canada</h1>
         <p className="subtitle">Find your new office view.</p>
@@ -22,7 +22,7 @@ const Home = () => {
           </Link>
           </div>
         </div>
-    </div>
+    </body>
   )
 }
 
