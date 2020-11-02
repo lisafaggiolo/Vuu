@@ -1,13 +1,15 @@
 @import "../index.scss";
 
-
+body {
+  background: url("../images/mount.jpg") no-repeat center center fixed;
+}
 .home {
-  color: #B05145;
+ 
   display: flex;
   flex-direction: column;
   align-self: center;
   align-items: baseline;
-  font-size: 3.8rem;
+  font-size: 3rem;
   font-family: "Roboto", sans-serif;
   margin: 0.5rem;
   
@@ -16,8 +18,17 @@
   }
 
   .title {
+  //         -webkit-text-stroke-width: 1rem;
+  // -webkit-text-stroke-color:$navy;
+  text-shadow: 0.2px 0.1px 3px $oats;
+    color: black;
     justify-content: center;
     padding-top: 1rem;
+  }
+
+  .subtitle {
+    text-shadow: 0.2px 0.1px 3px $oats;
+    color: $black;
   }
    
   p {
@@ -25,13 +36,13 @@
   }
    
   .selectors {
-  //     -webkit-text-stroke-width: 0.00001rem;
-  // -webkit-text-stroke-color:grey;
+ text-shadow: 0.2px 0.1px 2px black;
+    width: auto;
     padding: 0rem;
     display: flex;
-    flex-direction: column; 
-     justify-content: space-around;
-    font-size: 2rem;
-    color: $oats;
+    flex-direction: column-reverse;
+    font-size: 1.3rem;
+    color: white;
+
   }
 }

@@ -1,14 +1,9 @@
-@import "styles/variables.scss";
-<<<<<<< HEAD
+@import "../index.scss";
 // @import "styles/reset.scss";
 // @import "styles/mixins.scss";
-=======
-@import "sass/materialize.scss";
->>>>>>> main
 
 $font-stack: Roboto, sans-serif;
 // , regular, 24
-<<<<<<< HEAD
 // Font sizes
 $bannerHeading: 2.6rem;
 $sectionHeading: 1.5rem;
@@ -17,7 +12,7 @@ body {
 }
 
 html {
-  background: url("../images/mount.jpg") no-repeat center center fixed;
+  background-color: $oats;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -29,45 +24,45 @@ a, a:visited, a:hover, a:active {
   text-decoration: none;
   color: inherit;
 }
-=======
-$primary-color: $light;
 
-body {
-  font-family: $font-stack;
-  color: $dark;
-  background-color: $primary-color;
+// $primary-color: $light;
 
-}
+// body {
+//   font-family: $font-stack;
+//   color: $dark;
+//   background-color: $primary-color;
 
-.nav-wrapper {
-  background: $dark;
-}
+// }
 
-.home-page {
-  // background: url("../images/lh.jpg") no-repeat center fixed;
-  background: url("../images/Pcove.jpg") no-repeat center center;
-  background-size: cover;
-  // margin-bottom: 5em;
-  .container {
-    color: white;
-  }
-  h3 {
-    text-decoration: none;
-  }
-}
+// .nav-wrapper {
+//   background: $dark;
+// }
 
-<<<<<<< HEAD
->>>>>>> main
-=======
-.banner {
-  // background: url("../images/lh.jpg") no-repeat center fixed;
-  background: url("../images/fairmont.jpg") no-repeat center center fixed;
-  background-size: cover;
-  height: 75vh;
-  .container{
-    background-color: $dark80;
+// .home-page {
+//   // background: url("../images/lh.jpg") no-repeat center fixed;
+//   background: url("../images/Pcove.jpg") no-repeat center center;
+//   background-size: cover;
+//   // margin-bottom: 5em;
+//   .container {
+//     color: white;
+//   }
+//   h3 {
+//     text-decoration: none;
+//   }
+// }
+
+// <<<<<<< HEAD
+// >>>>>>> main
+// =======
+// .banner {
+//   // background: url("../images/lh.jpg") no-repeat center fixed;
+//   background: url("../images/fairmont.jpg") no-repeat center center fixed;
+//   background-size: cover;
+//   height: 75vh;
+//   .container{
+//     background-color: $dark80;
     
 
-  }
-}
->>>>>>> 74beb39d3f1012d935f4d7a4dc2855cc02f04ccd
+//   }
+// }
+// >>>>>>> 74beb39d3f1012d935f4d7a4dc2855cc02f04ccd
