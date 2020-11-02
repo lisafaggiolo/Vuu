@@ -1,15 +1,10 @@
 import React, {useState, useEffect} from 'react';
 import FormField from './FormField';
-import { useHistory, useParams } from 'react-router-dom';
-import axios from "axios";
+import { useParams } from 'react-router-dom';
+import { useRouteMatch, useHistory } from 'react-router-dom';
 
-
-
-const Questionnaire = (props) => {
-
-  const [state, setState] = useState({questions:[], answers:[]})
-  const history = useHistory();
-  useEffect(() => { 
+const [state, setState] = useState({questions:[], answers:[]})
+useEffect(() => { 
 
   axios.get("/api/questions")
   .then( result => {
@@ -31,11 +26,11 @@ const Questionnaire = (props) => {
           return null;
         }
         return questionIds[i];
-      } 
+      }
+    
     };
     const nextQuestion = next();
-    
-    
+
     const questionList = result.data.map((question, index )=> {
       question.potential_answers = JSON.parse(question.potential_answers);
       question.id = parseInt(question.id);
@@ -48,36 +43,8 @@ const Questionnaire = (props) => {
   .catch( error => console.log(error))
   }, [])
 
-
-  const submitAnswers = (id, answers) => {
-    const updatedAnswers = state.answers.map(answer => {
-      if (answer.question_id  === id) {
-        answer.user_answers = answers
-      }
-        return answer
-      })
-      setState({ ...state, answers: updatedAnswers })
-  }
-
-  const submitResults = () => {
-    
-      axios.post('/api/results', state.answers)
-    .then( result => { 
-      console.log(result.data.data)
-      props.setCities(result.data.data)
-      history.push('/results')
-    })
-    .catch( error => console.log(error))
-    
-
-  } 
-
   return (
     <FormField        
       questions={ state.questions }
-      submitAnswers={ submitAnswers }
-      submitResults={ submitResults }/>
+      submitAnswers={ submitAnswers }/>
     );
-}
-
-export default Questionnaire;

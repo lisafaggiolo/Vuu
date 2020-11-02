@@ -1,10 +1,32 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import { Link } from "react-router-dom";
-import "./App.scss";
+import "./Header.scss";
 
 // will be Horizontal not vertical
-const Navbar = () => {
+const Header = () => {
   return (
+<<<<<<< HEAD
+        <nav className="navbar">
+            <div class='navbar__item'>
+              <Link to="/about">About </Link>
+              <span className="span"> | </span>
+              <Link to="/provinces"> Provinces</Link>
+            </div>
+                
+            <div className='navbar__title'>
+              <Link to="/home">NuVuu</Link>
+            </div>
+                
+            <div class='navbar__item'>
+              <Link to="/login">Login </Link>
+              <div  className="span"> | </div>
+              <Link to="/register">Register</Link>
+            </div> 
+        </nav>
+        )
+    
+};
+=======
     
     <nav>
     <div className="nav-wrapper"> 
@@ -22,5 +44,6 @@ const Navbar = () => {
     
   )
 }
+>>>>>>> main
 
-export default Navbar;
+export default Header;

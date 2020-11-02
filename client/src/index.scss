@@ -1,8 +1,22 @@
-@import "~normalize.css/normalize.css";
+// @import "~normalize.css/normalize.css";
 
 // @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900");
-
-@import "styles/variables.scss";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import "styles/reset.scss";
 
 // @import "styles/typography.scss";
 
+// Colours
+$black: #000;
+$navy: #082E61; 
+$oats: #FEF5EB;
+$maroon: #70161E;
+$green-light: #213C44;
+$green-dark: #213E44;
+$fancy-orange: #F3633F;
+$fontSize: 21px;
+$lineHeight: 1.5rem;
+
+// Font sizes
+$bannerHeading: 42px;
+$sectionHeading: 24px;
