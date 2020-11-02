@@ -1,4 +1,4 @@
-@import "styles/variables.scss";
+@import "../index.scss";
 // @import "styles/reset.scss";
 // @import "styles/mixins.scss";
 
@@ -12,7 +12,7 @@ body {
 }
 
 html {
-  background: url("../images/mount.jpg") no-repeat center center fixed;
+  background-color: $oats;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;

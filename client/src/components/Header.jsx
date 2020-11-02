@@ -13,7 +13,7 @@ const Header = () => {
             </div>
                 
             <div className='navbar__title'>
-              <Link to="/home">NuVuu</Link>
+              <Link to="/home">- Vuu -</Link>
             </div>
                 
             <div class='navbar__item'>

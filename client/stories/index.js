@@ -15,7 +15,7 @@ import AnswerOptions from "../src/components/Questionnaire/AnswerOptions";
 
 import Button from "../src/components/Button";
 import Footer from "../src/components/Footer";
-import Header from "../src/components/Navbar";
+import Header from "../src/components/Header";
 import Icon from "../src/components/Icon";
 
 

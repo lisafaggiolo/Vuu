@@ -1,15 +1,14 @@
 import React, { useState, useEffect } from "react";
 import './App.scss';
 import Header from './Header';
-// import axios from "axios";
 import Province from './Province'
 import Provinces from "./Provinces"
 import City from './City';
 import Results from './Results';
 import Home from './Home';
 import About from './About';
-import Questionnaire from './Questionnaire'
-
+import Questionnaire from './Questionnaire';
+import Footer from './Footer';
 
 import {
   BrowserRouter as Router,
@@ -21,11 +20,19 @@ import {
 } from "react-router-dom";
 
 
-export default function App(props) { 
+
+
+export default function App(props) {
+  
+  const [cities, setCities] = useState([]);
+
+  
+
   return (
     <Router>
+
+         <body>
       <Header />
-      <div>
         <Switch>
           <Route path="/about">
             <About />
@@ -37,7 +44,7 @@ export default function App(props) {
             <Home />
           </Route>
           <Route path="/questions/:id">
-          <Questionnaire />
+          <Questionnaire setCities={setCities} />
           </Route>
           <Route path="/provinces/:id">
             <Provinces />
@@ -46,16 +53,15 @@ export default function App(props) {
             <Province />
           </Route>
           <Route path="/results">
-            <Results />
+            <Results cities={cities}/>
           </Route>
         </Switch>
-      </div>
+        {/* <Footer /> */}
+      </body>
     </Router>
 
   );
 
-  // set up a view/react Route for the quizz
-  // pass submitFilter via prop, Questions
 
 
 }

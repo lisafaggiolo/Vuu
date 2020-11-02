@@ -12,7 +12,8 @@ class Api::ResultsController < ApplicationController
   end
 
   def create
-    filtered_cities = filter_algorithm(results_params)
+    @filtered_cities = City.all#filter_algorithm(results_params)
+    render json: { status: 'SUCCESS', message: 'Loaded city', data:@filtered_cities }, status: :ok
     
   end
 
