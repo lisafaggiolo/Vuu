@@ -25,9 +25,6 @@ import {
 export default function App(props) {
   
   const [cities, setCities] = useState([]);
-
-
-
   /////////// DO NOT MODIFY THE ORDER OF THE ROUTES!!!!! /////////// 
   return (
     <>

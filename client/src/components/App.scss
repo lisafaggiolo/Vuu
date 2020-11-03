@@ -15,11 +15,15 @@ body {
 }
 
 html {
+  height: 100%;
+  margin: 0;
   background-color: $oats;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  width: auto;
+
 
 }
 
@@ -28,5 +32,17 @@ a, a:visited, a:hover, a:active {
   color: inherit;
 
 }
-// font-size: 5em;
+
+
+ .content {
+   padding: 20px;
+   min-height: 100%;
+   margin: 0 auto -50px;
+ }
+
+ .push{
+   height: 50px
+ }
+ font-size: 5em;
+
 
