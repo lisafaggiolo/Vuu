@@ -1,17 +1,16 @@
 @import "../../index.scss";
 
-html {
-  background: url("../../images/mount.jpg") no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
 
 p{
   padding-bottom: 0rem;
 }
 .home {
+  background: url("../../images/mount.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  max-width: 100%;
   padding-left: 1rem;
   display: flex;
   flex-direction: column;

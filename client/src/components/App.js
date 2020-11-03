@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import './App.scss';
 import Header from './Header';
 import Province from './Province'
@@ -25,11 +25,15 @@ import {
 export default function App(props) {
   
   const [cities, setCities] = useState([]);
-  return (
-    <Router>
 
-      <body>
-        <Header />
+
+
+  /////////// DO NOT MODIFY THE ORDER OF THE ROUTES!!!!! /////////// 
+  return (
+    <>
+    <Router>
+    <Header />
+      <div>
         <Switch>
         <Route path="/login">
             <Login />
@@ -43,25 +47,25 @@ export default function App(props) {
           <Route path="/cities/:id">
             <City />
           </Route>
+          <Route path="/provinces/:id">
+            <Provinces />
+          </Route>
           <Route path="/provinces">
             <Province />
           </Route>
           <Route path="/questions/:id">
           <Questionnaire setCities={setCities} />
-          </Route>
-          <Route path="/provinces/:id">
-            <Provinces />
-          </Route>
+          </Route> 
           <Route path="/results">
             <Results cities={cities}/>
           </Route>
           <Route path="/">
             <Home />
           </Route>
-        </Switch>
-        <Footer />
-      </body>
+        </Switch> 
+      </div>
+      <Footer />
     </Router>
-
+  </>
   );
 }
