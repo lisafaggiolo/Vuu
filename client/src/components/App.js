@@ -25,12 +25,12 @@ import {
 export default function App(props) {
   
   const [cities, setCities] = useState([]);
+  /////////// DO NOT MODIFY THE ORDER OF THE ROUTES!!!!! /////////// 
   return (
+    <>
     <Router>
-
-      <body>
-        <Header />
-        <div  class="content">
+    <Header />
+      <div>
         <Switch>
         <Route path="/login">
             <Login />
@@ -44,27 +44,25 @@ export default function App(props) {
           <Route path="/cities/:id">
             <City />
           </Route>
+          <Route path="/provinces/:id">
+            <Provinces />
+          </Route>
           <Route path="/provinces">
             <Province />
           </Route>
           <Route path="/questions/:id">
           <Questionnaire setCities={setCities} />
-          </Route>
-          <Route path="/provinces/:id">
-            <Provinces />
-          </Route>
+          </Route> 
           <Route path="/results">
             <Results cities={cities}/>
           </Route>
           <Route path="/">
             <Home />
           </Route>
-        </Switch>
-        <div class="push"></div>
-        </div>
-        <Footer />
-      </body>
+        </Switch> 
+      </div>
+      <Footer />
     </Router>
-
+  </>
   );
 }

@@ -22,7 +22,8 @@ html {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  height: 100%;
+  width: auto;
+
 
 }
 
@@ -32,13 +33,13 @@ a, a:visited, a:hover, a:active {
 
 }
 
-.content {
-  padding: 20px;
-  min-height: 100%;
-  margin: 0 auto -50px;
-}
+// .content {
+//   padding: 20px;
+//   min-height: 100%;
+//   margin: 0 auto -50px;
+// }
 
-.push{
-  height: 50px
-}
+// .push{
+//   height: 50px
+// }
 // font-size: 5em;
