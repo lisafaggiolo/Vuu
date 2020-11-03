@@ -7,12 +7,13 @@ class Api::ResultsController < ApplicationController
   end
 
   def show
-    @filtered_cities = City.all
+    @filtered_cities = filter_algorithm(results_params)
     render json: { status: 'SUCCESS', message: 'Loaded city', data:@filtered_cities }, status: :ok
   end
 
   def create
     @filtered_cities = filter_algorithm(results_params)
+    puts @filtered_cities
     render json: { status: 'SUCCESS', message: 'Loaded city', data:@filtered_cities }, status: :ok
     
   end
@@ -43,6 +44,12 @@ class Api::ResultsController < ApplicationController
       @filtered_cities = City.all
     end
     
+    if @filtered_cities == []
+      @filtered_cities = City.where('id = ? AND id = ? AND id = ? AND id = ? AND id = ?',17, 21, 11, 7, 1)
+      puts @filtered_cities
+      return @filtered_cities
+    end
+
     return @filtered_cities
 end
 

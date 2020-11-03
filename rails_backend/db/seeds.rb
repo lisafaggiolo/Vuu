@@ -15,7 +15,7 @@ end
 # Question.create(question: "Do you see yourself changing your office location for more than 6 months?" , potential_answers:['Yes', 'No'], answer_type: "boolean")
 Question.create(question: "In which timeZone is your home office located?", potential_answers:["NDT","EDT", "MDT", "PDT", "CST","AST"], answer_type: "time_zone")
 Question.create(question: "Is staying in your time Zone a requirement for work?", potential_answers:['Yes', 'No'], answer_type: "boolean")
-# Question.create(question: "What kind of pace are you looking to experience in the next place you will live?", potential_answers:["village", "town", "city-small", "city-big"], answer_type: "location_type")
+Question.create(question: "What kind of pace are you looking to experience in the next place you will live?", potential_answers:["village", "town", "city-small", "city-big"], answer_type: "location_type")
 # Question.create(question: "What kind of activities do you see yourself doing on weekends?", potential_answers:["mountain", "lake", "country", "urban", "river", "forest", "coast"], answer_type: "view_type")
 Question.create(question: "Are you ready to see where your future office might be?", potential_answers:["Yes"], answer_type: "final answer")
 
