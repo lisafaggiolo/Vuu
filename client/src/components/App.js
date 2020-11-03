@@ -31,8 +31,8 @@ export default function App(props) {
   return (
     <Router>
 
-         <body>
-      <Header />
+      <body>
+        <Header />
         <Switch>
           <Route path="/about">
             <About />
@@ -56,7 +56,7 @@ export default function App(props) {
             <Results cities={cities}/>
           </Route>
         </Switch>
-        {/* <Footer /> */}
+        <Footer/>
       </body>
     </Router>
 

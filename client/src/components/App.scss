@@ -1,8 +1,11 @@
 @import "../index.scss";
 // @import "styles/reset.scss";
 // @import "styles/mixins.scss";
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Averia+Libre&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
 
-$font-stack: Roboto;
+$font-stack: Roboto, sans-serif;
 // , regular, 24
 // Font sizes
 $bannerHeading: 2.6rem;
@@ -24,3 +27,48 @@ a, a:visited, a:hover, a:active {
   text-decoration: none;
   color: inherit;
 }
+
+.page-footer {
+  font-family: Roboto, sans-serif;
+  background-color: $navy65;
+  // align-items: center;
+	bottom: 0;
+	color: $oats;
+	display: flex;
+	// height: 400px;
+	justify-content: center;
+	// position: fixed;
+	width: 100%;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  p {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.2em;
+  }
+  .app-name {
+    font-size: 1.3em;
+    padding-top: 1em;
+    font-family: 'Averia Libre', cursive;
+  }
+  .linkside {
+    font-family: 'Comfortaa', cursive;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .footer-copyright {
+    display: flex;
+    justify-content: flex-start;
+    padding: 1em;
+    font-size: 0.7em;
+    width: 100%;
+    background-color: $navy80;
+    padding-left: 3%;
+  }
+}
+// font-size: 5em;
