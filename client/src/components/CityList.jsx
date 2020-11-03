@@ -8,8 +8,10 @@ const CityList = props => {
     return (
       <CityListItem 
         key={ city.id }
+        id={ city.id }
         name={ city.name }
         description={ city.description }
+        image={ city.image }
       />
     )
   });

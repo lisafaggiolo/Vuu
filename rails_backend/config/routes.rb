@@ -19,7 +19,6 @@ Rails.application.routes.draw do
   
   
   # #routes for later lol
-  # get '/about' => 'about#show'
   # get '/login' => 'sessions#new'
   # post '/login' => 'sessions#create'
   # get '/logout' => 'sessions#destroy'
