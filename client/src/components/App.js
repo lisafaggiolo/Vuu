@@ -44,7 +44,7 @@ export default function App(props) {
           <Route path="/cities/:id">
             <City />
           </Route>
-          <Route path="/">
+          <Route path="/home">
             <Home />
           </Route>
           <Route path="/quiz">
@@ -53,12 +53,12 @@ export default function App(props) {
           <Route path="/questions/:id">
           <Questionnaire setCities={setCities} />
           </Route>
-          <Route path="/provinces/:id">
-            <Provinces />
-          </Route> 
           <Route path="/provinces">
             <Province />
           </Route>
+          <Route path="/provinces/:id">
+            <Provinces />
+          </Route> 
           <Route path="/results">
             <Results cities={cities}/>
           </Route>

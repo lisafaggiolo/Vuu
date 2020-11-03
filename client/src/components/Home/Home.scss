@@ -28,14 +28,15 @@ p{
   .title {
   //         -webkit-text-stroke-width: 1rem;
   // -webkit-text-stroke-color:$navy;
+  text-shadow: 0.2px 0.1px 2px black;
   font-family: 'Bad Script', cursive;
   margin: 0;
-  font-size: 4rem;
-  height: 4.9rem;
-  text-shadow: 0.2px 0.1px 3px $oats;
+  font-size: 10rem;
+  height: 0rem;
+
     color:$oats;
     justify-content: center;
-    padding-top: 0rem;
+    padding-top: 22rem;
     padding-bottom: 0rem;
   }
 
@@ -62,7 +63,7 @@ p{
     margin-left: 1rem;
     display: flex;
     flex-direction: column-reverse;
-    font-size: 1.3rem;
+    font-size: 3rem;
     color: white;
 
   }

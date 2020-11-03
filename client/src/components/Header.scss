@@ -2,14 +2,15 @@
 
 .navbar {
   font-family: "Roboto", sans-serif;
-  width: 100%;
+  background: $black;
+  color: $oats;
   display: flex;
   flex-flow: row wrap;
   align-items: center;
   justify-content: space-between; 
-  background: $black;
-  color: #FEF5EB;
-  font-weight: 300;
+  position: inherit;
+  width: 100%;
+  height: inherit;
 }
 
 .navbar__title {
