@@ -1,0 +1,52 @@
+@import "../index.scss";
+
+html {
+  background: url("../images/mount.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.home {
+ 
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  align-items: baseline;
+  font-size: 3rem;
+  font-family: "Roboto", sans-serif;
+  margin: 0.5rem;
+  
+  .top-of-mountain {
+    margin:0.2rem;
+  }
+
+  .title {
+  //         -webkit-text-stroke-width: 1rem;
+  // -webkit-text-stroke-color:$navy;
+  text-shadow: 0.2px 0.1px 3px $oats;
+    color: black;
+    justify-content: center;
+    padding-top: 1rem;
+  }
+
+  .subtitle {
+    text-shadow: 0.2px 0.1px 3px $oats;
+    color: $black;
+  }
+   
+  p {
+    padding-top: 0rem;
+  }
+   
+  .selectors {
+ text-shadow: 0.2px 0.1px 2px black;
+    width: auto;
+    padding: 0rem;
+    display: flex;
+    flex-direction: column-reverse;
+    font-size: 1.3rem;
+    color: white;
+
+  }
+}
