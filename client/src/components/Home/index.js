@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
-    <div className="home"
+    <div className="home">
       <div className="top-of-mountain">
 
         <h2 className="title">Welcome to Canada</h2>
@@ -14,6 +14,7 @@ const Home = () => {
             <p>Get your personalized selection </p>
           </Link>
         </div>
+      </div>
     </div>
   )
 }
