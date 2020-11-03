@@ -26,8 +26,8 @@ export default function App(props) {
   return (
     <Router>
 
-         <body>
-      <Header />
+      <body>
+        <Header />
         <Switch>
           <Route path="/about">
             <About />
@@ -37,9 +37,6 @@ export default function App(props) {
           </Route>
           <Route path="/home">
             <Home />
-          </Route>
-          <Route path="/quiz">
-            <Questionnaire />
           </Route>
           <Route path="/questions/:id">
           <Questionnaire setCities={setCities} />
@@ -54,7 +51,7 @@ export default function App(props) {
             <Results cities={cities}/>
           </Route>
         </Switch>
-        {/* <Footer /> */}
+        <Footer/>
       </body>
     </Router>
 
