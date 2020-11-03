@@ -101,112 +101,112 @@ City.create(name: "Whitehorse", province_id: 11,  image: '/images/', population:
             location_type: "town", view_type: ["forest", "mountain"], time_zone: "PDT", 
             healthcare_index: 79.17, crime_index: 45.20, pollution_index: 12.96)
 
-City.create(name: "Winnipeg", province_id: 7,  image: '/images/', population: 749534, 
+City.create(name: "Winnipeg", province_id: 7,  image: '/images/7-MB/win.jpg', population: 749534, 
             description: "A cosmopolitan city known as the 'cultural cradle of Canada', Winnipeg is family friendly with plenty of charm. It boasts a dazzling arts, theatre and indie music scene, as well as lip-smacking dining options to tantalize every taste bud. Experience nine acres of shopping and interactive fun at the Forks Market or explore Winnipeg’s diverse neighborhoods like the historic French Quarter and Exchange District or the boho chic Osborne Village.", 
             location_type: "city-large", view_type: ["urban"], time_zone: "CDT",
             healthcare_index: 68.82, crime_index: 57.02, pollution_index: 36.68)
 
-City.create(name: "Iqaluit", province_id: 13,  image: '/images/', population: 7740, 
+City.create(name: "Iqaluit", province_id: 13,  image: '/images/13-NV/iq.jpg', population: 7740, 
             description: "Iqaluit is the capital and largest community in Canada’s newest territory, Nunavut. It is also the territory's only city. Iqaluit is situated at the northeast head of Frobisher Bay, on southern Baffin Island. In an area long used by the Inuit and their ancestors, it is surrounded by hills close to the Sylvia Grinnell River and looks across the bay to the mountains of the Meta Incognita Peninsula.", 
             location_type: "town", view_type: ["coast", "mountain"], time_zone: "EDT",
             healthcare_index: 63.89, crime_index:	48.82, pollution_index: 60.78)
 
-City.create(name: "Massif de Charlevoix", province_id: 5, image: '/images/', population: 29562, 
+City.create(name: "Massif de Charlevoix", province_id: 5, image: '/images/5-QC/mdc.jpg', population: 29562, 
             description: "Mentioning Charlevoix to Quebeckers evokes a heartfelt sigh. No wonder: this region is renowned for its salty breezes (coming straight from “la mer”, as the tidal Saint Lawrence river is known), stunning vistas, artsy Baie-Saint-Paul and gourmet food trails. Getting here from Québec City is easy on Le Train de Massif from Montmorency Falls. In winter, Le Massif mountain’s 770 metres offers the greatest vertical drop for downhill skiing east of the Rocky Mountains.", 
             location_type: "town", view_type: ["coast", "mountain", "forest"], time_zone: "EDT",
             healthcare_index: 0, crime_index: 0, pollution_index: 0)
             
-City.create(name: "Quebec City", province_id: 5,  image: '/images/', population: 542298, 
+City.create(name: "Quebec City", province_id: 5,  image: '/images/5-QC/qc.jpg', population: 542298, 
             description: "Dubbed the “Paris of North America”, 400-year-old Québec City is the province’s capital, and a must-visit in order to capture the spirit of New France (particularly in August’s New France Festival). Stay at the “castle” – Fairmont Chateau Frontenac – an architectural symbol of the city, recognisable for its steeply pitched copper roof and imposing turrets. Stroll along Dufferin Terrace overlooking the Saint Lawrence river – Canada’s first “highway”, it led explorers, traders, missionaries and settlers into the hinterland. Being North America’s only walled city, Old Québec is a Unesco world heritage site. Investigate the Citadel, wander the Plains of Abraham where British General Wolfe defeated French General Montcalm in 1759, then choose from many restaurants featuring le terroir (regional foods).", 
             location_type: "city-large", view_type: ["urban"], time_zone: "EDT",
             healthcare_index: 71.45, crime_index: 14.74, pollution_index: 31.94)
 
-City.create(name: "Montreal", province_id: 5,  image: '/images/', population: 1780000, 
+City.create(name: "Montreal", province_id: 5,  image: '/images/5-QC/mont.jpg', population: 1780000, 
             description: "Witness a French-infused city that's in love with festivals, the arts, good food, living well and enjoying life to the hilt. Montréal is the country’s cultural juggernaut. The city, standard bearer of an entire linguistic-cultural identity – francophone Canada – simply lives for public celebration of the arts. There are some 250 theater and dance companies, more than 90 festivals and a fascinating medley of neighborhoods where artists, writers and musicians have helped cement the city’s reputation as a great arts center.", 
             location_type: "city-large", view_type: ["urban"], time_zone: "EDT",
             healthcare_index: 64.43, crime_index: 29.18, pollution_index: 33.29)
             
-City.create(name: "Toronto", province_id: 6,  image: '/images/', population: 2930000, 
+City.create(name: "Toronto", province_id: 6,  image: '/images/6-ON/tor.jpg', population: 2930000, 
             description: "Toronto is one of Canada's largest cities and one of its best destinations to travel to in the country, full of sights and attractions such as its countless museums and parks. With its highly iconic landmark of the CN Tower gracing its skyline, Toronto is also famous for its beautiful lake scenery with much of the city straddling and rising up against the gorgeous Lake Ontario.", 
             location_type: "city-large", view_type: ["urban"], time_zone: "EDT",
             healthcare_index: 75.87, crime_index: 39.41, pollution_index: 37.88)
 
-City.create(name: "Ottawa", province_id: 6,  image: '/images/', population: 994837, 
+City.create(name: "Ottawa", province_id: 6,  image: '/images/6-ON/ott.jpg', population: 994837, 
             description: "Ottawa is Canada’s beautiful capital city, a destination filled with national sites and historic landmarks. Home to about 1.25 million people, Ottawa is located within easy driving distance of Montreal (1h 45min), Toronto (4hrs) and the US border (45min). There are countless sites to see in the capital, and many ways to see them. Boat tours on the Rideau Canada and the Ottawa River, bus tours on land, and amphibus tours on water, biplane and helicopter tours, cycling tours and a variety of themed walking tours. In fact, many of Ottawa’s most popular attractions and experiences can be found in its surprisingly compact and walkable downtown core.", 
             location_type: "city-large", view_type: ["urban"], time_zone: "EDT",
             healthcare_index: 75.34, crime_index: 26.07, pollution_index: 20.36)
 
-City.create(name: "Victoria", province_id: 10,  image: '/images/', population: 92141, 
+City.create(name: "Victoria", province_id: 10,  image: '/images/10-BC/vic.jpg', population: 92141, 
             description: "Victoria is a year-round tourism destination that offers a friendly, safe haven for all visitors. With a clean environment and charming ambience, it is no surprise that Victoria, BC is one of the world's favourite destinations. It’s a great place to spend a few days before or after your kayak tour of Vancouver Island, without fear of getting lost in the sprawl of a major city.", 
             location_type: "city-small", view_type: ["coast", "urban"], time_zone: "PDT",
             healthcare_index: 70.09, crime_index: 34.51, pollution_index: 15.46)
             
-City.create(name: "Tofino", province_id: 10,  image: '/images/', population: 1932, 
+City.create(name: "Tofino", province_id: 10,  image: '/images/10-BC/tof.jpg', population: 1932, 
             description: "The surf swept community of Tofino rests in the centre of Clayoquot Sound, an expanse of islets and inlets arranged like a collection of emeralds along the west coast of Vancouver Island. The meaning of Clayoquot comes from Tla-o- quia-aht “people who are different from who they used to be”. A fitting description any traveler should expect for themselves when journeying to this wild west coast town on the edge of the world.", 
             location_type: "village", view_type: ["coast", "forest"], time_zone: "PDT",
             healthcare_index: 0, crime_index: 0, pollution_index: 0)
 
-City.create(name: "Canmore", province_id: 9,  image: '/images/', population: 13992, 
+City.create(name: "Canmore", province_id: 9,  image: '/images/9-AB/canmore.jpg', population: 13992, 
             description: "If you’re about the outdoors lifestyle and enjoy picturesque scenary, Canmore is the place you and your family want to be living. The town of Canmore is located just west of the big city of Calgary, but is also on the boundary of Banff National Park. Canada’s oldest national park offers a beautiful view of the Rocky Mountains, and some of the most gorgeous lakes in the world.", 
             location_type: "town", view_type: ["mountain", "urban", "forest"], time_zone: "MDT",
             healthcare_index: 0, crime_index: 0, pollution_index: 0)
 
-City.create(name: "Calgary", province_id: 9,  image: '/images/', population: 1336000, 
+City.create(name: "Calgary", province_id: 9,  image: '/images/9-AB/calg.jpg', population: 1336000, 
             description: "If you like the big city with all the amenities that can be offered, Calgary is a great choice for you and your family. The city of Calgary has over 1.4 million people residing within it and is the largest city the province of Alberta has to offer. As a resident in Calgary, you’ll have no problem finding activities to do with your free time. Annual events like the Calgary Stampede bring people from all over the world to the city to enjoy the rodeo, exhibition, and festival.", 
             location_type: "city-large", view_type: ["mountain", "urban"], time_zone: "MDT",
             healthcare_index: 76.74, crime_index: 34.15, pollution_index: 24.87)
             
-City.create(name: "The Thousand Islands", province_id: 6,  image: '/images/', population: 9465, 
+City.create(name: "The Thousand Islands", province_id: 6,  image: '/images/6-ON/thou.jpg', population: 9465, 
             description: "Perhaps it starts with an inspiring sunrise on the Canadian side of the St. Lawrence Seaway or ends with a breathtaking sunset from the U.S. Maybe it includes views of storybook castles, a good fish story, a taste of craft beverages or a trip back in time. On the pristine waters or in quiet villages, there are thousands of things to see and do.", 
             location_type: "town", view_type: ["lake"], time_zone: "EDT",
             healthcare_index: 0, crime_index: 0, pollution_index: 0)
             
-City.create(name: "Niagara", province_id: 6,  image: '/images/', population: 447888, 
+City.create(name: "Niagara", province_id: 6,  image: '/images/6-ON/niag.jpg', population: 447888, 
             description: "From wining, dining and riding the vines in Niagara-on-the-Lake and off the beaten path in Twenty Valley, to the urban cool of St. Catharines or outdoor adventures on the beach and amongst the battlefields of Niagara’s South Coast, without forgetting the iconic Niagara Falls, you will indulge in moments that are sure to inspire your senses.", 
             location_type: "city-medium", view_type: ["urban", "country"], time_zone: "EDT",
             healthcare_index: 73.33, crime_index: 32.98, pollution_index: 27.68)
             
-City.create(name: "Regina", province_id: 8,  image: '/images/', population: 228928, 
+City.create(name: "Regina", province_id: 8,  image: '/images/8-SK/reg.jpg', population: 228928, 
             description: "Although situated on a flat plain with few indigenous trees, Regina boasts some of western Canada's most innovative urban landscaping, with plentiful green spaces, hiking and biking paths, playgrounds, oak-lined streets and parks throughout the city. The popular Wascana Lake plays host to summer boaters and winter skating. Regina is also home to numerous cultural and educational institutions, including museums, galleries, theaters and Canada's RCMP Training Academy Grounds.", 
             location_type: "city-medium", view_type: ["urban"], time_zone: "CST",
             healthcare_index: 68.75, crime_index: 54.60, pollution_index: 39.13)
  
-City.create(name: "Saskatoon", province_id: 8,  image: '/images/', population: 273010, 
+City.create(name: "Saskatoon", province_id: 8,  image: '/images/8-SK/sask.jpg', population: 273010, 
             description: "Named for the sweet berry that grows wild in the region, Saskatoon boasts various cultural festivals, concerts and sporting events throughout the year. Explore the trails and beaches of Beaver Creek and Cranberry Flats, cross-country ski the Meewasin Valley Trail, check out the city's many galleries and museums, and shop for bargains at Midtown Plaza.", 
             location_type: "city-medium", view_type: ["urban", "lake"], time_zone: "CST",
             healthcare_index: 63.97, crime_index: 49.47, pollution_index: 27.9)
  
-City.create(name: "Moose Jaw", province_id: 8,  image: '/images/', population: 33890, 
+City.create(name: "Moose Jaw", province_id: 8,  image: '/images/8-SK/mj.jpg', population: 33890, 
             description: "From historic character buildings, to a depth of exciting history (think roaring 20’s), incredible arts, culture, and museums to a giant Moose statue, underground tunnel tours to the trolley experience, relaxing at the spa or heart pounding adrenaline paintballing with your friends, Moose Jaw offers some incredible experiences that you’ll talk about for years to come.", 
             location_type: "city-small", view_type: ["urban"], time_zone: "CST",
             healthcare_index: 68.98, crime_index: 48.53, pollution_index: 22.13)
  
-City.create(name: "Swift Current", province_id: 8,  image: '/images/', population: 16604, 
+City.create(name: "Swift Current", province_id: 8,  image: '/images/8-SK/swift.jpg', population: 16604, 
             description: "Swift Current, also known as Speedy Creek, is the fifth largest city in the Canadian province of Saskatchewan. It is situated along the Trans Canada Highway 170 kilometres (110 mi) west from Moose Jaw, and 218 kilometres (135 mi) east from Medicine Hat, Alberta. Swift Current’s climate, with a yearly average of 2,374 hours of sunshine, ranks as one of the best overall in the country.", 
             location_type: "town", view_type: ["urban"], time_zone: "CST",
             healthcare_index: 0, crime_index: 0, pollution_index: 0)
  
-City.create(name: "Prince Albert", province_id: 8,  image: '/images/', population: 35926, 
+City.create(name: "Prince Albert", province_id: 8,  image: '/images/8-SK/prince_albert.jpg', population: 35926, 
             description: "Prince Albert is the third-largest city in Saskatchewan, Canada, after Saskatoon and Regina. It is situated near the centre of the province on the banks of the North Saskatchewan River. The city is known as the 'Gateway to the North' because it is the last major centre along the route to the resources of northern Saskatchewan. The city is also a resort and gateway to Prince Albert National Park, and the Lund Wildlife Exhibit contains numerous specimens of Canadian wildlife displayed in natural surroundings.", 
             location_type: "city-small", view_type: ["river"], time_zone: "CST",
             healthcare_index: 0, crime_index: 0, pollution_index: 0)
             
-City.create(name: "Brandon", province_id: 7,  image: '/images/', population: 48859, 
+City.create(name: "Brandon", province_id: 7,  image: '/images/7-MB/brandon.jpg', population: 48859, 
             description: "The City of Brandon was incorporated in 1882, having a history rooted in the Assiniboine River fur trade as well as its role as a major junction on the Canadian Pacific Railway. Known as The Wheat City, Brandon's economy is predominantly associated with agriculture; however, it also has strengths in health care, manufacturing, food processing, business services, and transportation. It's also one of the best places to live in Canada: housing is very affordable and the cost of living is low.", 
             location_type: "city-small", view_type: ["river"], time_zone: "CST",
             healthcare_index: 71.94, crime_index: 43.46, pollution_index: 35.63)
  
-City.create(name: "Portage la Prairie", province_id: 7,  image: '/images/', population: 13304, 
+City.create(name: "Portage la Prairie", province_id: 7,  image: '/images/7-MB/plp.jpg', population: 13304, 
             description: "Portage la Prairie is approximately 75 kilometres (47 mi) west of Winnipeg, along the Trans-Canada Highway (exactly between the provincial boundaries of Saskatchewan and Ontario). The community sits on the Assiniboine River, which flooded the town persistently until a diversion channel north to Lake Manitoba (the Portage Diversion) was built to divert the flood waters. The city is surrounded by the Rural Municipality of Portage la Prairie.", 
             location_type: "town", view_type: ["river"], time_zone: "CST",
             healthcare_index: 0, crime_index: 0, pollution_index: 0)
  
-City.create(name: "Dauphin", province_id: 7,  image: '/images/', population: 8457, 
+City.create(name: "Dauphin", province_id: 7,  image: '/images/7-MB/dauphin.jpg', population: 8457, 
             description: "Dauphin is Manitoba's 9th largest community and serves as a hub to the province's Parkland Region. Enjoy street fairs, world class music, cultural festivals and fantastic sporting events. Satisfy your need for speed, fresh air, big fish, or peaceful exploration. There is truly something for everyone here!", 
             location_type: "town", view_type: ["lake"], time_zone: "CST",
             healthcare_index: 0, crime_index: 0, pollution_index: 0)
  
-City.create(name: "Gimli", province_id: 7,  image: '/images/', population: 2246, 
+City.create(name: "Gimli", province_id: 7,  image: '/images/7-MB/gimli.jpg', population: 2246, 
             description: "A haven for settlers who founded New Iceland on the shore of Lake Winnipeg in 1875, Gimli - Norse for home of the gods - is still a welcoming harbour. Take a swim, build a sandcastle or stroll on the beach and mural-covered seawall to savour the view of an inland ocean that stretches to the horizon.", 
             location_type: "village", view_type: ["lake"], time_zone: "CST",
             healthcare_index: 0, crime_index: 0, pollution_index: 0)

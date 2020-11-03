@@ -1,21 +1,19 @@
 import React, { useState, useEffect } from "react";
 import Axios from 'axios';
-import './StatisticsItems';
+import { useParams } from "react-router-dom";
 
 export default function CityStatistics(props) {
-  const [data, setData] = useState({});
+  const [data, setData] = useState({}); 
+  const {id} = useParams();
   
   useEffect(() => {
-    Axios.get("/api/cities/1", 
-      { params: { id: 1 }} )
+    Axios.get(`/api/cities/${id}`)
     .then(result => {
       console.log(result)
       setData(result.data.data)
     })
     .catch(error => console.log(error))
-  }, [])
-    
-  //add api weather call in here 
+  }, []) 
 
   return (
     <div>

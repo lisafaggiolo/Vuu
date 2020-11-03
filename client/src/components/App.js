@@ -25,19 +25,25 @@ import {
 export default function App(props) {
   
   const [cities, setCities] = useState([]);
+<<<<<<< HEAD
 
+=======
+>>>>>>> 7ec0169ebbb00cb8423bad034cc7f593226e9fbf
   return (
     <Router>
 
-         <body>
-      <Header />
+      <body>
+        <Header />
         <Switch>
+<<<<<<< HEAD
         <Route path="/login">
             <Login />
           </Route>
           <Route path="/register">
             <Register />
           </Route>
+=======
+>>>>>>> 7ec0169ebbb00cb8423bad034cc7f593226e9fbf
           <Route path="/about">
             <About />
           </Route>
@@ -47,23 +53,27 @@ export default function App(props) {
           <Route path="/home">
             <Home />
           </Route>
-          <Route path="/quiz">
-            <Questionnaire />
-          </Route>
           <Route path="/questions/:id">
           <Questionnaire setCities={setCities} />
           </Route>
           <Route path="/provinces">
             <Province />
           </Route>
+<<<<<<< HEAD
           <Route path="/provinces/:id">
             <Provinces />
           </Route> 
+=======
+>>>>>>> 7ec0169ebbb00cb8423bad034cc7f593226e9fbf
           <Route path="/results">
             <Results cities={cities}/>
           </Route>
         </Switch>
+<<<<<<< HEAD
         <Footer />
+=======
+        <Footer/>
+>>>>>>> 7ec0169ebbb00cb8423bad034cc7f593226e9fbf
       </body>
     </Router>
 

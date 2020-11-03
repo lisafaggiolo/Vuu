@@ -1,14 +1,16 @@
 import React, { useState, useEffect } from "react";
 import CityStatistics from "./CityStatistics";
-// import {useParams} from 'react-router-dom';
+import {useParams} from 'react-router-dom';
 import './styles.scss'
 import Axios from "axios";
 
+
 const City = props => {;
-  const [city, setCity] = useState([]);
+  const [city, setCity] = useState([]); 
+  const {id} = useParams();
+  
   useEffect(() => {
-    Axios.get("/api/cities/1", 
-      { params: { id: 1 }} )
+    Axios.get(`/api/cities/${id}`)
     .then(result => {
       setCity(result.data.data)
     })

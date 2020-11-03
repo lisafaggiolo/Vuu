@@ -11,7 +11,6 @@ const Province = () =>{
   const [cities, setCities] = useState([]);
   
   const {id} = useParams();
-
    
   useEffect(() => {
     Axios.get(`/api/provinces/${id}`)
@@ -23,10 +22,10 @@ const Province = () =>{
     .catch(error => console.log(error))
   }, [])
   
-  
+  let url = (province.image)
   return (
     <div>
-       <div><img src=""/>{/*province image */}</div>
+       <div><img src={ url }/></div>
       <h1>{ province.name }</h1>
       <h2>{ province.description }</h2>
       <ProvinceStats />

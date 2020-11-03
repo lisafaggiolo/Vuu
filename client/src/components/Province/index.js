@@ -9,7 +9,7 @@ const Province = props => {;
   useEffect(() => {
     Axios.get("/api/provinces")
     .then(result => {
-      console.log(result)
+      console.log("RESULT",result)
       setProvinces(result.data.data)
     })
     .catch(error => console.log(error))

@@ -3,6 +3,7 @@
 .card {
   background: $oats;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   margin: auto;
   padding: 15px;
@@ -10,14 +11,14 @@
   text-align: right;
 }
 
-.card-image {
-  flex-grow: 1; 
+img {
+  flex-shrink: 2;
   justify-content: space-between;
   flex-direction: row;
 }
 
 .card-info {
-  flex-grow: 1;
+  flex-shrink: 1;
 }
 
 .card h2 {

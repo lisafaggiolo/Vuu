@@ -11,6 +11,7 @@ const ProvinceList = props => {
         id={province.id}
         name={ province.name }
         description={ province.description }
+        image={ province.image }
       />
     )
   });
