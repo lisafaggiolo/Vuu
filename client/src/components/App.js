@@ -9,6 +9,8 @@ import Home from './Home';
 import About from './About';
 import Questionnaire from './Questionnaire';
 import Footer from './Footer';
+import Login from "./Login";
+import Register from "./Register";
 
 import {
   BrowserRouter as Router,
@@ -29,34 +31,37 @@ export default function App(props) {
       <body>
         <Header />
         <Switch>
+        <Route path="/login">
+            <Login />
+          </Route>
+          <Route path="/register">
+            <Register />
+          </Route>
           <Route path="/about">
             <About />
           </Route>
           <Route path="/cities/:id">
             <City />
           </Route>
-          <Route path="/home">
-            <Home />
+          <Route path="/provinces">
+            <Province />
           </Route>
           <Route path="/questions/:id">
           <Questionnaire setCities={setCities} />
           </Route>
           <Route path="/provinces/:id">
             <Provinces />
-          </Route> 
-          <Route path="/provinces">
-            <Province />
           </Route>
           <Route path="/results">
             <Results cities={cities}/>
           </Route>
+          <Route path="/">
+            <Home />
+          </Route>
         </Switch>
-        <Footer/>
+        <Footer />
       </body>
     </Router>
 
   );
-
-
-
 }

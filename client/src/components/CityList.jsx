@@ -4,7 +4,7 @@ import CityListItem from "./CityListItem"
 
 const CityList = props => {
 
-  const cityList = props.cities.map( city => {
+  const cityList = props && props.cities.map( city => {
     return (
       <CityListItem 
         key={ city.id }
@@ -15,6 +15,8 @@ const CityList = props => {
       />
     )
   });
+
+  console.log("CITY LIST =>",cityList)
 
   return (
     <div class="cards">

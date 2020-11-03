@@ -7,17 +7,19 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require('faker')
 
-5.times do
-  User.create(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, email: Faker::Internet.email, password: Faker::Internet.password)
-end
+# User.create(name: "Maria Khandaker", username: "maria", email: "mariakhandaker@gmail.com", password: "Lacey1")
+
+# 5.times do
+#   User.create(name: Faker::Name.name, username: Faker::Name.username, email: Faker::Internet.email, password: Faker::Internet.password)
+# end
 
 
-# Question.create(question: "Do you see yourself changing your office location for more than 6 months?" , potential_answers:['Yes', 'No'], answer_type: "boolean")
-Question.create(question: "In which timeZone is your home office located?", potential_answers:["NDT","EDT", "MDT", "PDT", "CST","AST"], answer_type: "time_zone")
-Question.create(question: "Is staying in your time Zone a requirement for work?", potential_answers:['Yes', 'No'], answer_type: "boolean")
-Question.create(question: "What kind of pace are you looking to experience in the next place you will live?", potential_answers:["village", "town", "city-small", "city-big"], answer_type: "location_type")
+# Question.create(question: "Do you see yourself changing your office location for more than 6 months?" , potential_answers:[["Yes",""], ["No",""]], answer_type: "boolean_long_stay")
+Question.create(question: "In which timeZone is your home office located?", potential_answers:[["NDT","Newfoundland Time"],["EDT","Eastern Time"], ["MDT","Mountain Time"], ["PDT","Pacific Time"], ["CST","Central Time"],["AST","Atlantic Standard Time"]], answer_type: "time_zone")
+Question.create(question: "Is staying in your time Zone a requirement for work?", potential_answers:[['Yes', 'Yes'], ['No', 'No']], answer_type: "boolean")
+Question.create(question: "What kind of pace are you looking to experience in the next place you will live?", potential_answers:[["village", "Local foods and quiet nights, I really want slow down."], ["town", "Restaurants, small cafes, slow living with access to good internet."], ["city-small", "Different neighborhoods, access to pretty much any comodities but I do not want to feel the rush of the city."], ["city-large", "All the options, all the fun, public transport and high rises."],["No", "It doesn't matter to me, any pace is a good pace."]], answer_type: "location_type")
 # Question.create(question: "What kind of activities do you see yourself doing on weekends?", potential_answers:["mountain", "lake", "country", "urban", "river", "forest", "coast"], answer_type: "view_type")
-Question.create(question: "Are you ready to see where your future office might be?", potential_answers:["Yes"], answer_type: "final answer")
+Question.create(question: "Are you ready to see where your future office might be?", potential_answers:[["Yes","Yes"]], answer_type: "final answer")
 
 
 Province.create(name: "Newfoundland and Labrador", image: '/images/1-NFLD/nfld.jpg', average_rent: 1002, shelter_cost_to_income_ratio: 82, age_group_vis_min: 3, description: "The most easterly province in Canada, Newfoundland, and Labrador sits on thousands of metres of Atlantic coastline and is made up of the island of Newfoundland and the mainland Labrador (hence the name). Moose are not native to Newfoundland, but after being introduced in 1904, today there are more than 115,000 on the island. Newfoundland also has one of the most spectacular whale populations in the world! 22 species of whales live in the waters around the province.")
