@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import { Link } from "react-router-dom";
 import "./Header.scss";
 
@@ -6,7 +6,7 @@ import "./Header.scss";
 const Header = () => {
   return (
         <nav className="navbar">
-            <div class='navbar__item'>
+            <div className='navbar__item'>
               <Link to="/about">About </Link>
               <span className="span"> | </span>
               <Link to="/provinces"> Provinces</Link>
