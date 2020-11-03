@@ -1,25 +1,23 @@
-
 import React from 'react';
 import CityListItem from "./CityListItem"
 
 
 const CityList = props => {
-  
-  // const {id} = useParams();
-  // const city_id = parseInt(id);
-  // const city
+
   const cityList = props.cities.map( city => {
     return (
       <CityListItem 
         key={ city.id }
+        id={ city.id }
         name={ city.name }
         description={ city.description }
+        image={ city.image }
       />
     )
   });
 
   return (
-    <div>
+    <div class="cards">
       <ul>
       { cityList }
       </ul>

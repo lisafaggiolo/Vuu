@@ -2,11 +2,12 @@ class Api::ProvincesController < ApplicationController
   skip_before_action :authorized
   
   def index
-    @provinces = Province.order(created_at: :desc)
+    @provinces = Province.all
     render json: { status: 'SUCCESS', message: 'Loaded provinces', data:@provinces }, status: :ok
   end
   
   def show
+    
     province = Province.find(params[:id])
     cities = City.where(province_id: province.id)
     province_cities = [province, cities]

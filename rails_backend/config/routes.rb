@@ -5,9 +5,16 @@ Rails.application.routes.draw do
   # get '/*a', to: 'application#not_found'
   
   namespace :api do
+<<<<<<< HEAD
     
     resources :cities, only: [:index, :show]
     resources :questions, only: [:index, :show] 
+=======
+    resources :users, only: [:index, :create, :show]
+    resources :cities, only: [:index, :show, :create]
+    resources :questions, only: [:index, :show]
+     
+>>>>>>> 7ec0169ebbb00cb8423bad034cc7f593226e9fbf
     resources :results, only: [:index, :show, :create]
 
     resources :users, only: [:new, :create]
@@ -23,9 +30,17 @@ Rails.application.routes.draw do
   end
   
   # #routes for later lol
+<<<<<<< HEAD
   post 'auth/login' => 'sessions#create'
   get 'auth/logout' => 'sessions#destroy'
   post 'auth/users' => 'users#create'
+=======
+  # get '/login' => 'sessions#new'
+  # post '/login' => 'sessions#create'
+  # get '/logout' => 'sessions#destroy'
+  # get '/signup' => 'users#new'
+  # post '/users' => 'users#create'
+>>>>>>> 7ec0169ebbb00cb8423bad034cc7f593226e9fbf
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

@@ -5,12 +5,12 @@ import "index.scss";
 
 import City from "../src/components/City";
 
-import Province from "../src/components/Province";
+import Province from "../src/components/Provinces";
 import Citylist from "../src/components/CityList";
-import CityListItem from "../src/components/Province/CityListItem";
+import CityListItem from "../src/components/Provinces/CityListItem";
 
 // import Questionnaire from "../src/components/Questionnaire";
-import FormField from "../src/components/Questionnaire";
+import FormField from "../src/components/Questionnaire/FormField";
 import AnswerOptions from "../src/components/Questionnaire/AnswerOptions";
 
 import Button from "../src/components/Button";
