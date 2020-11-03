@@ -1,4 +1,7 @@
 class ProvinceController < ApplicationController
+  
+  skip_before_action :authorized
+
   def index
     @provinces = Province.order(created_at: :desc)
     render json: { status: 'SUCCESS', message: 'Loaded provinces', data:@provinces }, status: :ok

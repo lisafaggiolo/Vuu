@@ -23,7 +23,6 @@ const ResultsPage  = (props) => {
     <div>
     <div className="results-top">
       <h1>
-        <Description />
          { props && props.cities === [] ? "Here are your results!" :  noResultsMessage  }
       </h1>
     </div>

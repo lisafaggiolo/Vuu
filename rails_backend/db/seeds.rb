@@ -7,8 +7,10 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require('faker')
 
+User.create(name: "Maria Khandaker", username: "maria", email: "mariakhandaker@gmail.com", password: "Lacey1")
+
 5.times do
-  User.create(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, email: Faker::Internet.email, password: Faker::Internet.password)
+  User.create(name: Faker::Name.name, username: Faker::Name.username, email: Faker::Internet.email, password: Faker::Internet.password)
 end
 
 

@@ -1,7 +1,7 @@
 class Api::ProvincesController < ApplicationController
   
   def index
-    @provinces = Province.order(created_at: :desc)
+    @provinces = Province.order(created_at: :asc)
     render json: { status: 'SUCCESS', message: 'Loaded provinces', data:@provinces }, status: :ok
   end
   

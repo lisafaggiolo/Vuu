@@ -9,6 +9,8 @@ import Home from './Home';
 import About from './About';
 import Questionnaire from './Questionnaire';
 import Footer from './Footer';
+import Login from "./Login";
+import Register from "./Register";
 
 import {
   BrowserRouter as Router,
@@ -20,13 +22,9 @@ import {
 } from "react-router-dom";
 
 
-
-
 export default function App(props) {
   
   const [cities, setCities] = useState([]);
-
-  
 
   return (
     <Router>
@@ -34,13 +32,19 @@ export default function App(props) {
          <body>
       <Header />
         <Switch>
+        <Route path="/login">
+            <Login />
+          </Route>
+          <Route path="/register">
+            <Register />
+          </Route>
           <Route path="/about">
             <About />
           </Route>
           <Route path="/cities/:id">
             <City />
           </Route>
-          <Route path="/home">
+          <Route path="/">
             <Home />
           </Route>
           <Route path="/quiz">
@@ -59,7 +63,7 @@ export default function App(props) {
             <Results cities={cities}/>
           </Route>
         </Switch>
-        {/* <Footer /> */}
+        <Footer />
       </body>
     </Router>
 
