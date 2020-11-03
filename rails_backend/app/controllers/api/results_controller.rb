@@ -54,7 +54,7 @@ class Api::ResultsController < ApplicationController
   
     puts "FILTERED CITIES", @filtered_cities
   
-
+  return @filtered_cities
 end
 
   private

@@ -24,11 +24,11 @@ const ResultsPage  = (props) => {
     <div className="results-top">
       <h1>
         <Description />
-         { props && props.cities === [] ?  noResultsMessage : "Here are your results!"}
+         { props && props.cities === [] ? "Here are your results!" :  noResultsMessage  }
       </h1>
     </div>
     <CityList 
-      cities={ props && props.cities ? props.cities : cities }/>
+      cities={ props && props.cities === [] ? props.cities : cities }/>
     </div>
   )
 

@@ -3,5 +3,5 @@ class City < ApplicationRecord
   validates :province, presence: true
   validates :population, presence: true
   belongs_to :province
-  has_one_attached :image
+  validates :image, presence: true
 end
