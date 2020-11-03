@@ -63,6 +63,10 @@ const Questionnaire = (props) => {
     
       axios.post('/api/results', state.answers)
     .then( result => { 
+
+      // //if the result = wateverI make it {
+           
+      // }
       console.log(result.data.data)
       props.setCities(result.data.data)
       history.push('/results')
