@@ -1,5 +1,5 @@
 import "./Signup.scss";
-import "React" from "react";
+import React from "react";
 
 export default function Register() {
   const signup = () => {
@@ -29,7 +29,7 @@ export default function Register() {
               type="password"
               placeholder="password"
             />
+            <button onClick={signup} type="submit">Register!</button>
           </div>
-          <button onClick={signup} type="submit">Register!</button>
           );
 }

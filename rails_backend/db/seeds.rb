@@ -7,11 +7,11 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require('faker')
 
-User.create(name: "Maria Khandaker", username: "maria", email: "mariakhandaker@gmail.com", password: "Lacey1")
+# User.create(name: "Maria Khandaker", username: "maria", email: "mariakhandaker@gmail.com", password: "Lacey1")
 
-5.times do
-  User.create(name: Faker::Name.name, username: Faker::Name.username, email: Faker::Internet.email, password: Faker::Internet.password)
-end
+# 5.times do
+#   User.create(name: Faker::Name.name, username: Faker::Name.username, email: Faker::Internet.email, password: Faker::Internet.password)
+# end
 
 
 # Question.create(question: "Do you see yourself changing your office location for more than 6 months?" , potential_answers:[["Yes",""], ["No",""]], answer_type: "boolean_long_stay")

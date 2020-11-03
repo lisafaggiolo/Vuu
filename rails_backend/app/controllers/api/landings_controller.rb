@@ -9,8 +9,8 @@ class ProvinceController < ApplicationController
   
   def show
     
-    @provinces = Province.order(created_at: :desc)
-    render json: { status: 'SUCCESS', message: 'Loaded province', data:@provinces }, status: :ok
+    @provinces = Province.find(params[:id])
+    render json: { status: 'SUCCESS', message: 'Loaded province', data:@province }, status: :ok
     
     unless province
       flash[:alert] = 'Province not found'

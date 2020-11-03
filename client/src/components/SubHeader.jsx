@@ -13,7 +13,7 @@ const SubHeader = (props) =>{
         </p>
       </div> 
       <div className="card-image">
-          <img src=""/> 
+          <img src={props.image}/> 
       </div>
      </div>
     );
