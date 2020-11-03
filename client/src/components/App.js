@@ -30,6 +30,7 @@ export default function App(props) {
 
       <body>
         <Header />
+        <div  class="content">
         <Switch>
         <Route path="/login">
             <Login />
@@ -59,6 +60,8 @@ export default function App(props) {
             <Home />
           </Route>
         </Switch>
+        <div class="push"></div>
+        </div>
         <Footer />
       </body>
     </Router>
