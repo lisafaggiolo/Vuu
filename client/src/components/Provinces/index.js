@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import CityListItem from "../CityListItem";
+// import CityListItem from "../CityListItem";
 import ProvinceStats from "./ProvinceStats";
 import './styles.scss';
 import Axios from "axios";

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const CityListItem = props => {
   const city = props;
-  console.log(city)
+  // console.log(city)
   const cityIdLink = `/cities/${city.id}`;
     return (
       <div className="card">

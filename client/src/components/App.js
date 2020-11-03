@@ -4,7 +4,6 @@ import Header from './Header';
 import Province from './Province'
 import Provinces from "./Provinces"
 import City from './City';
-import Cities from './Cities';
 import Results from './Results';
 import Home from './Home';
 import About from './About';
@@ -35,9 +34,6 @@ export default function App(props) {
          <body>
       <Header />
         <Switch>
-          <Route path="/cities">
-            <Cities />
-          </Route>
           <Route path="/about">
             <About />
           </Route>
@@ -58,9 +54,6 @@ export default function App(props) {
           </Route> 
           <Route path="/provinces">
             <Province />
-          </Route>
-          <Route path="/provinces">
-            <Provinces />
           </Route>
           <Route path="/results">
             <Results cities={cities}/>
