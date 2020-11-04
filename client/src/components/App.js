@@ -10,7 +10,7 @@ import About from './About';
 import Questionnaire from './Questionnaire';
 import Footer from './Footer';
 import Login from "./Login";
-import Register from "./Register";
+import Registration from "./auth/Registration";
 
 import {
   BrowserRouter as Router,
@@ -36,7 +36,7 @@ export default function App(props) {
             <Login />
           </Route>
           <Route path="/register">
-            <Register />
+            <Registration />
           </Route>
           <Route path="/about">
             <About />
