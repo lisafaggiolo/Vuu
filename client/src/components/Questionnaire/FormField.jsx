@@ -47,16 +47,16 @@ const FormField = (props) => {
   });
 
   return (
-    <form onSubmit={ e => e.preventDefault()}>
-      <formGroup check>
+    <form className="demo" onSubmit={ e => e.preventDefault()}>
+      <formgroup check>
         <h1>
           { question && question.question }
         </h1>
         <ul>
           { answerOptionsList }
         </ul> 
-      </formGroup>
-    <button onClick={ question && question.last_question ? props.submitResults : submitCheck }> {question && question.last_question ? "let's do it!" : "Next"}</button>
+      </formgroup>
+    <button className="my-btn" onClick={ question && question.last_question ? props.submitResults : submitCheck }> {question && question.last_question ? "let's do it!" : "Next"}</button>
     </form>
     );
 };

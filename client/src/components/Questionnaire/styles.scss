@@ -1,0 +1,13 @@
+@import "../../index.scss";
+@import "../Button.scss";
+@import "../CheckBox.scss";
+
+.body {
+  display: flex;
+  background-color: black;  
+}
+
+form {
+  height: calc(100vh - 90px);
+
+}
