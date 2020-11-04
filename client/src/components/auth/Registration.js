@@ -9,7 +9,7 @@ export default class Registration extends Component {
       password: "",
       password_confirmation: "", 
       registrationErrors: ""
-    };
+    }
     
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
@@ -18,7 +18,7 @@ export default class Registration extends Component {
   handleChange(event) {
     this.setState({
       [event.target.name]: event.target.value
-    });
+    })
   }
  
   handleSubmit(event) {

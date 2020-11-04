@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import Axios from "axios";
+// var cors = require('cors');    
+// app.use(cors({credentials: true, origin: 'http://localhost:5000'}));
 
 export default class Login extends Component {
   constructor(props) {
