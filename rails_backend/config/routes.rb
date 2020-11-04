@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   resources :sessions, only: [:create]
   resources :registrations, only: [:create]
   delete :logout, to: "sessions#logout"
-  get :logged_in, to "sessions#logged_in"
+  get :logged_in, to: "sessions#logged_in"
   
   namespace :api do
    
@@ -12,7 +12,6 @@ Rails.application.routes.draw do
     resources :questions, only: [:index, :show] 
     resources :results, only: [:index, :show, :create]
 
-    resources :users, only: [:new, :create]
     resources :provinces do
       resources :cities, only: [:index, :show]
     end
