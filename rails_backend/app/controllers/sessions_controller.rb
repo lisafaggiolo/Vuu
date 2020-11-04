@@ -1,14 +1,37 @@
 class SessionsController < ApplicationController
- 
-  skip_before_action :authorized, only: [:create]
-
+  include CurrentUserConcern
+  
   def create
-     @user = User.find_by(email: params[:email])
-     if @user && @user.authenticate(params[:password])
-        session[:user_id] = @user.id
-        render json: {message:"Logged in succesful", user:{name:@user.name, username:@user.username, id:@user.id, email:@user.email}
+     user = User.find_by(email: params["user"]["email"])
+                 .try(:authenticate, params["user"]["password"])
+                 
+     if user
+        session[:user_id] = user.id
+        render json: {
+           status: :created, 
+           message:"Logged in succesful",
+           logged_in: true,
+           user: user
+         }
       else
-         render json: {message:"Cannot log in"}
+         render json: { status: 401 }
      end
+  end
+  
+  def logged_in
+   if @current_user
+      render json: {
+         logged_in: true,
+         user: @current_user
+      }
+   else
+      render json: {
+         logged_in: false
+      }
+  end
+  
+  def logout
+   reset_session 
+   render json: { status: 200, logged_out: true }
   end
 end 
