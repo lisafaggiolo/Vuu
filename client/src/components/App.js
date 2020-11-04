@@ -9,16 +9,13 @@ import Home from './Home';
 import About from './About';
 import Questionnaire from './Questionnaire';
 import Footer from './Footer';
-import Login from "./Login";
-import Register from "./Register";
+import Login from "./auth/Login";
+import Registration from "./auth/Registration";
 
 import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link,
-  useRouteMatch,
-  useParams
 } from "react-router-dom";
 
 
@@ -36,7 +33,7 @@ export default function App(props) {
             <Login />
           </Route>
           <Route path="/register">
-            <Register />
+            <Registration />
           </Route>
           <Route path="/about">
             <About />
