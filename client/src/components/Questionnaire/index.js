@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import FormField from './FormField';
 import { useHistory, useParams } from 'react-router-dom';
 import axios from "axios";
+import "./styles.scss"
 
 
 
@@ -77,10 +78,12 @@ const Questionnaire = (props) => {
   } 
 
   return (
-    <FormField        
-      questions={ state.questions }
-      submitAnswers={ submitAnswers }
-      submitResults={ submitResults }/>
+    <div className="body">
+      <FormField        
+        questions={ state.questions }
+        submitAnswers={ submitAnswers }
+        submitResults={ submitResults }/>
+    </div>
     );
 }
 

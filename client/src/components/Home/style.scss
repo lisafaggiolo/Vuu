@@ -1,35 +1,28 @@
 @import "../../index.scss";
 
-p{
-  padding-bottom: 0rem;
-}
+
 .home {
   background: url("../../images/mount.jpg") no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
   background-size: cover;
-  max-width: 100%;
-  padding-left: 1rem;
+  ;
   display: flex;
   flex-direction: column;
   align-self: center;
-  justify-content: center;
+  justify-content: flex-end;
   font-size: 10rem;
   font-family: "Roboto", sans-serif;
-  margin: 0rem;
-  width: 100%;
+  // margin: 0rem;
+  // width: 100%;
   height: calc(100vh - 90px);
 
   .title {
-  //         -webkit-text-stroke-width: 1rem;
-  // -webkit-text-stroke-color:$navy;
-  text-shadow: 0.2px 0.1px 2px black;
-  font-family: 'Bad Script', cursive;
-  margin: 0;
-  font-size: 100%;
-  height: 0rem;
-  width: 100%;
+    padding-left: 1rem;
+    text-shadow: 0.4px 0.1px 2px black;
+    font-family: 'Bad Script', cursive;
+    margin: 0;
+    font-size: 100%;
+    height: 0rem;
+    width: 100%;
 
     color:$oats;
     justify-content: center;

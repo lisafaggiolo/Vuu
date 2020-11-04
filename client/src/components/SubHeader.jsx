@@ -1,19 +1,19 @@
 
 import React from 'react';
-
+import "./SubHeader.scss"
 const SubHeader = (props) =>{
     return (
-     <div>
-      <div>
-        <h1>
+     <div className="sub__header">
+      <div className="description__div">
+        <h1 className="page__name">
           {props.pageName}
         </h1> 
-        <p>
+        <p className="description">
           {props.description}
         </p>
       </div> 
-      <div className="card-image">
-          <img src={props.image}/> 
+      <div>
+          <img className="image" src={props.image}/> 
       </div>
      </div>
     );

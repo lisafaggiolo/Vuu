@@ -15,16 +15,24 @@ const AnswerOptions = (props) =>{
   }
   
   return (
-    <li>
-      <label for={ props.potential_answer }>{ props.descriptive_answer }</label>
+    <li className="form-checkbox">
+      <div>
       <input 
         name={ props.potential_answer }
-        type="checkbox" 
+        type="checkbox"
+        // className="form-checkbox" 
         checked={ checked } 
         onChange={ updateCheck }>  
       </input>
+      <label className="form_label"for={ props.potential_answer }>{ props.descriptive_answer }</label>
+      </div>
     </li>  
   );
 };
   
 export default AnswerOptions;
+
+{/* <div class="form-checkbox">
+<input class="checkbox" type="checkbox" id="checkbox1">
+<label for="checkbox1" tabindex="1">Shawn Carter</label>
+</div> */}

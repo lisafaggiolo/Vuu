@@ -1,1 +1,30 @@
-@import
+@import "../index.scss";
+
+.sub__header {
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+
+}
+
+.description__div {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 1rem;
+}
+
+.page__name {
+  font-size: 5rem;
+  justify-self: center;
+}
+
+.description {
+   
+}
+
+.image {
+  width: 43rem;
+  height: 41rem;
+}

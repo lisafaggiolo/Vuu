@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import './styles.scss'
 import CityList from "../CityList";
-import Description from "../Description";
+
 import axios from "axios"
               //  ????
 const ResultsPage  = (props) => {
