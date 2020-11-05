@@ -5,7 +5,17 @@ import { useParams } from "react-router-dom";
 export default function ProvinceStats(props) {
   const [data, setData] = useState({});
   const {id} = useParams();
+  
+  // function getCOVIDinfo(provinceID) {
+  //   const provinceID = ["YT", "NT", "NU", "BC", "AB", "SK", "MB", "ON", "QC", "NL", "NB", "PE", "NS"]	
+    
+  //   for (provinceID = 0; provinceID <= 13; provinceID++) {
+  //     Axios.get(`https://api.covid19tracker.ca/cases?province=${provinceID}&per_page=50`)
+  //   }
+  // } 
   useEffect(() => {
+
+
  
     Axios.get(`/api/provinces/${id} `, 
     )

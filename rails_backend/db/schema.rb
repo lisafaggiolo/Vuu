@@ -48,6 +48,7 @@ ActiveRecord::Schema.define(version: 2020_11_02_194231) do
     t.float "crime_index"
     t.float "pollution_index"
     t.binary "image"
+    t.string "postal_code"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -59,6 +60,7 @@ ActiveRecord::Schema.define(version: 2020_11_02_194231) do
     t.integer "age_group_vis_min"
     t.text "description"
     t.binary "image"
+    t.string "COVIDid"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
